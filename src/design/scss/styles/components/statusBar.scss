@@ -1,0 +1,62 @@
+.sb-status-bar-container {
+    display: flex;
+    margin-left: auto;
+    margin-right: 18px;
+
+    .sb-status-line {
+        width: 240px;
+        margin-left: 8px;
+
+        &.sb-status-line-disabled {
+            opacity: 0.6;
+        }
+
+        .line {
+            height: 3px;
+            border-radius: 2px;
+        }
+
+        &.sb-status-line-active .line {
+            height: 8px;
+            border-radius: 4px;
+        }
+
+        .sb-status-bar-text {
+            display: flex;
+            align-items: center;
+            color: $gunmetal;
+            line-height: 24px;
+
+            .sb-status-bar-name {
+                font-weight: bold;
+                margin-left: 8px;
+                text-transform: uppercase;
+            }
+
+            .sb-status-bar-duration {
+                font-weight: 600;
+                margin-left: auto;
+            }
+        }
+    }
+
+    .sb-status-line-assigned .line {
+        background-color: #f52623;
+    }
+
+    .sb-status-line-attempted .line {
+        background-color: #f57c23;
+    }
+
+    .sb-status-line-engaged .line {
+        background-color: #a3d00f;
+    }
+
+    .sb-status-line-sales-nurture .line {
+        background-color: #fbb427;
+    }
+
+    .sb-status-line-suspended .line {
+        background-color: #f4d508;
+    }
+}

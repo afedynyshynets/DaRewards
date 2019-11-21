@@ -1,0 +1,23 @@
+.sb-lead-list-columns-dropdown {
+  min-width: 320px;
+
+  .sb-lead-list-columns-dropdown-item-container {
+    max-height: 60vh;
+    overflow-y: scroll;
+  }
+
+  .sb-lead-list-columns-dropdown-item {
+    border-bottom: 1px solid #d7d7d7;
+    padding: 16px 16px 0px 16px;
+  }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+	.sb-lead-list-columns-dropdown {
+	  min-width: round(320*0.79px);
+
+	  .sb-lead-list-columns-dropdown-item {
+	    padding: round(16*0.79px) round(16*0.79px) 0px round(16*0.79px);
+	  }
+	}
+}

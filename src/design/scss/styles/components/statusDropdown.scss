@@ -1,0 +1,158 @@
+.sb-status-dropdown {
+  .dropdown-menu {
+    width: 270px;
+    border: 0;
+    background: none;
+    margin-left: -55px;
+  }
+
+  .sb-status-dropdown-holder {
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.25);
+    border: 1px solid $azure;
+    margin-bottom: 10px;
+    background: $white;
+    color: $black-two;
+    line-height: 1.43;
+
+    [class^="icon-"], [class*=" icon-"] {
+      font-size: 32px;
+      margin-right: 10px;
+    }
+
+    .icon-trash,
+    .icon-disqualified {
+      color: $warm-grey;
+    }
+
+    p {
+      font-size: 0.625rem;
+      color: $warm-grey;
+      margin: 0;
+    }
+  }
+
+  .sb-status-dropdown-item {
+    @include transition(background);
+    padding: 10px 20px 10px 10px;
+
+    &:hover {
+      cursor: pointer;
+      background: $white-two-2;
+    }
+  }
+
+  .btn {
+    color: $white;
+    border: 0;
+    line-height: 21px;
+    font-size: 14px;
+    height: 32px;
+    text-transform: capitalize;
+
+    [class^="icon-"], .btn-secondary [class*=" icon-"] {
+      color: $white;
+    }
+
+    &.sb-drop-btn-trash {
+      cursor: not-allowed;
+    }
+
+    &.sb-drop-btn-trash,
+    &.sb-drop-btn-disqualified,
+    &.sb-drop-btn-default {
+      @include background($warm-grey);
+
+      &:hover {
+        background: $warm-grey-three;
+      }
+    }
+
+    &.sb-drop-btn-assigned {
+      @include background($vermillion);
+
+      &:hover {
+        background: $coral;
+      }
+    }
+
+    &.sb-drop-btn-attempted {
+      @include background($tangerine);
+
+      &:hover {
+        background: $pale-orange;
+      }
+    }
+
+    &.sb-drop-btn-sales-nurture {
+      @include background($mango-two);
+
+      &:hover {
+        background: $butterscotch;
+      }
+    }
+
+    &.sb-drop-btn-suspended {
+      @include background($goldenrod);
+
+      &:hover {
+        background: $maize;
+      }
+    }
+
+    &.sb-drop-btn-engaged {
+      @include background($yellowish-green);
+
+      &:hover {
+        background: $yellowish-green-two;
+      }
+    }
+
+    &.sb-drop-btn-opportunity {
+      @include background($green-apple);
+
+      &:hover {
+        background: $green-apple-two;
+      }
+    }
+  }
+  .show > {
+    .btn-secondary {
+      &.dropdown-toggle {
+        background: $azure;
+      }
+    }
+  } 
+}
+
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .sb-status-dropdown {
+    .dropdown-menu {
+      width: round(270*0.79px);
+      margin-left: round(-55*0.79px);
+    }
+
+    .sb-status-dropdown-holder {
+      margin-bottom: round(10*0.79px);
+
+      [class^="icon-"], [class*=" icon-"] {
+        font-size: round(32*0.79px);
+        margin-right: round(10*0.79px);
+      }
+
+      p {
+        font-size: 0.625*0.79rem;
+      }
+    }
+
+    .sb-status-dropdown-item {
+      padding: round(10*0.79px) round(20*0.79px) round(10*0.79px) round(10*0.79px);
+    }
+
+    .btn {
+      line-height: round(21*0.79px);
+      font-size: round(14*0.79px);
+      height: round(32*0.79px);
+    }
+  }  
+}

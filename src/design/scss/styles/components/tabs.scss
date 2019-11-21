@@ -1,0 +1,59 @@
+.sb-tabs {
+  font-size: 14px;
+  .icon-search {
+    font-size: 16px;
+  }  
+
+  .btn {
+    @include transition;
+    flex-grow: 1;
+    flex-basis: 0;
+    cursor: pointer;
+    padding: 0 10px 10px;
+    border: solid transparent;
+    border-width: 0 0 4px;
+    border-bottom: 1px solid $white-three;
+    line-height: 24px;
+    color: $black-two;
+    text-align: center;
+    border-radius: 0;
+
+    &:hover,
+    &.active {
+      // border-color: $azure;
+      border-bottom: 4px solid#01a0ec;
+      font-weight: 600;
+
+      i {
+        color: #01a0ec;
+      }
+    }
+
+    [class^="icon-"], [class*=" icon-"] {
+      font-size: 24px;
+      vertical-align: -5px;
+      margin-right: 2px;
+      color: $warm-grey;
+    }
+  }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .sb-tabs {
+    font-size: round(14*0.79px);
+    .icon-search {
+      font-size: round(16*0.79px);
+    }  
+
+    .btn {
+      padding: 0 round(10*0.79px) round(10*0.79px);
+      line-height: round(24*0.79px);
+
+      [class^="icon-"], [class*=" icon-"] {
+        font-size: round(24*0.79px);
+        vertical-align: round(-5*0.79px);
+        margin-right: round(2*0.79px);
+      }
+    }
+  }  
+}

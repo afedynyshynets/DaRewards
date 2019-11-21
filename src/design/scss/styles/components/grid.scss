@@ -1,0 +1,284 @@
+.sb-p-8 {
+  padding: 4px !important;
+}
+
+.sb-p-16 {
+  padding: 16px !important;
+}
+
+.sb-p-20 {
+  padding: 20px !important;
+}
+
+.sb-pt-4 {
+  padding-top: 4px !important;
+}
+
+.sb-pt-8 {
+  padding-top: 8px !important;
+}
+
+.sb-pt-12 {
+  padding-top: 12px !important
+}
+
+.sb-pt-16 {
+  padding-top: 16px !important;
+}
+
+.sb-pt-24 {
+  padding-top: 24px !important;
+}
+
+.sb-pt-32 {
+  padding-top: 32px !important;
+}
+
+.sb-pb-0 {
+  padding-bottom: 0 !important;
+}
+
+.sb-pb-4 {
+  padding-bottom: 4px !important;
+}
+
+.sb-pb-8 {
+  padding-bottom: 8px !important;
+}
+
+.sb-pb-16 {
+  padding-bottom: 16px !important;
+}
+
+.sb-pb-24 {
+  padding-bottom: 24px !important;
+}
+
+.sb-pb-32 {
+  padding-bottom: 32px !important;
+}
+
+.sb-pr-24 {
+  padding-right: 24px !important;
+}
+
+.sb-pl-8 {
+  padding-left: 8px !important;
+}
+
+.sb-pl-16 {
+  padding-left: 16px !important;
+}
+
+.sb-pr-12 {
+  padding-right: 12px !important;
+}
+
+.sb-plr-24 {
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
+.sb-plr-30 {
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+
+.sb-ml-4 {
+  margin-left: 4px !important;
+}
+
+.sb-ml-8 {
+  margin-left: 8px !important;
+}
+
+.sb-ml-12 {
+  margin-left: 12px !important;
+}
+
+.sb-ml-15 {
+  margin-left: 15px !important;
+}
+
+.sb-ml-24 {
+  margin-left: 24px !important;
+}
+
+.sb-mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.sb-mb-8 {
+  margin-bottom: 8px !important;
+}
+
+.sb-mb-16 {
+  margin-bottom: 16px !important;
+}
+
+.sb-mb-24 {
+  margin-bottom: 24px !important;
+}
+
+.sb-mb-32 {
+  margin-bottom: 32px !important;
+}
+
+.sb-mr-4 {
+  margin-right: 4px !important;
+}
+
+.sb-mr-8 {
+  margin-right: 8px !important;
+}
+
+.sb-mr-12 {
+  margin-right: 12px !important;
+}
+
+.sb-mr-15 {
+  margin-right: 15px !important;
+}
+
+.sb-mr-20 {
+  margin-right: 20px !important;
+}
+
+.sb-mr-24 {
+  margin-right: 24px !important;
+}
+
+.sb-flex-fill {
+	flex: 1;
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .sb-p-8 {
+    padding: round(4*0.79px) !important;
+  }
+
+  .sb-p-16 {
+    padding: round(16*0.79px) !important;
+  }
+
+  .sb-pt-4 {
+    padding-top: round(4*0.79px) !important;
+  }
+
+  .sb-pt-8 {
+    padding-top: round(8*0.79px) !important;
+  }
+
+  .sb-pt-12 {
+    padding-top: round(12*0.79px) !important
+  }
+
+  .sb-pt-16 {
+    padding-top: round(16*0.79px) !important;
+  }
+
+  .sb-pt-24 {
+    padding-top: round(24*0.79px) !important;
+  }
+
+  .sb-pt-32 {
+    padding-top: round(32*0.79px) !important;
+  }
+
+  .sb-pb-4 {
+    padding-bottom: round(4*0.79px) !important;
+  }
+
+  .sb-pb-8 {
+    padding-bottom: round(8*0.79px) !important;
+  }
+
+  .sb-pb-16 {
+    padding-bottom: round(16*0.79px) !important;
+  }
+
+  .sb-pb-24 {
+    padding-bottom: round(24*0.79px) !important;
+  }
+
+  .sb-pb-32 {
+    padding-bottom: round(32*0.79px) !important;
+  }
+
+  .sb-pr-24 {
+    padding-right: round(24*0.79px) !important;
+  }
+
+  .sb-pl-8 {
+    padding-left: round(8*0.79px) !important;
+  }
+
+  .sb-pl-16 {
+    padding-left: round(16*0.79px) !important;
+  }
+
+  .sb-plr-24 {
+    padding-left: round(24*0.79px) !important;
+    padding-right: round(24*0.79px)!important;
+  }
+
+  .sb-ml-4 {
+    margin-left: round(4*0.79px) !important;
+  }
+
+  .sb-ml-8 {
+    margin-left: round(8*0.79px) !important;
+  }
+
+  .sb-ml-12 {
+    margin-left: round(12*0.79px) !important;
+  }
+
+  .sb-ml-15 {
+    margin-left: round(15*0.79px) !important;
+  }
+
+  .sb-ml-24 {
+    margin-left: round(24*0.79px) !important;
+  }
+
+  .sb-mb-8 {
+    margin-bottom: round(8*0.79px) !important;
+  }
+
+  .sb-mb-16 {
+    margin-bottom: round(16*0.79px) !important;
+  }
+
+  .sb-mb-24 {
+    margin-bottom: round(24*0.79px) !important;
+  }
+
+  .sb-mb-32 {
+    margin-bottom: round(32*0.79px) !important;
+  }
+
+  .sb-mr-4 {
+    margin-right: round(4*0.79px) !important;
+  }
+
+  .sb-mr-8 {
+    margin-right: round(8*0.79px) !important;
+  }
+
+  .sb-mr-12 {
+    margin-right: round(12*0.79px) !important;
+  }
+
+  .sb-mr-15 {
+    margin-right: round(15*0.79px) !important;
+  }
+
+  .sb-mr-20 {
+    margin-right: round(20*0.79px) !important;
+  }
+
+  .sb-mr-24 {
+    margin-right: round(24*0.79px) !important;
+  }  
+}

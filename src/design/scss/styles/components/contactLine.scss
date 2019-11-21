@@ -1,0 +1,211 @@
+.sb-contact-line {
+  padding: 5px 0 10px;
+  color: $black-two;
+  line-height: 1.43;
+  position: relative;
+
+  &.sb-campaign-mode {
+    padding: 20px 0;
+    border-bottom: 1px solid $white-three;
+
+    .sb-text .semi-bold.sb-mr-15 {
+      max-width: 120px;
+    }
+    
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    .sb-description {
+      // width: 40%;
+      max-width: 45%;
+      margin-right: 10px;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    .sb-user {
+      margin-left: auto;
+      width: 220px;
+      //min-width: 220px;
+
+      .sb-icon {
+        // width: 32px;
+        // height: 32px;
+      }
+    }
+  }
+  
+  &.sb-edit-mode {
+    padding: 20px 0;
+    border-bottom: 1px solid $white-three;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    .sb-text {
+      margin-left: 12px;
+      width: 20%;
+      max-width: 20%;
+      min-width: 20%;
+    }
+
+    .sb-position {
+      width: 15%;
+      min-width: 15%;
+      max-width: 15%;
+      margin-left: 12px;
+    }
+
+    .sb-description {
+      width: 45%;
+      max-width: 50%;
+      min-width: 30%;
+      margin-left: 12px;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    .sb-btn-group {
+      a {
+        margin-left: 12px;
+      }
+    }
+  }
+
+  .sb-btn-edit {
+    margin-left: 3%;
+  }
+
+  .sb-icon-in-circle {
+    position: relative;
+    z-index: 1;
+  }
+  
+
+  .sb-tel {
+    display: block;
+    color: $azure;
+    line-height: 1.5;
+    font-size: 0.75rem;
+  }
+
+  .sb-btn-group {
+    margin-left: auto;
+    font-size: 24px;
+
+    a {
+      color: $warm-grey;
+      margin-left: 16px;
+
+      &[disabled] {
+        opacity: 0.3;
+        pointer-events: none;
+      }
+
+      &:hover {
+        color: $black-two;
+        text-decoration: none;
+      }
+    }
+
+    .btn {
+      margin-left: 16px;
+    }
+  }
+
+  .sb-text {
+    margin-left: 12px;
+    font-size: 14px;
+    width: 25%;
+    // width: 170px;
+    // min-width: 170px;
+    overflow: hidden;
+
+    p {
+      margin-bottom: 0;
+      color: $black-6;
+      line-height: 1.5;
+      font-size: 12px;
+    }
+  }
+}
+
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .sb-contact-line {
+    padding: round(5*0.79px) 0 round(10*0.79px);
+
+    &.sb-campaign-mode {
+      padding: round(20*0.79px) 0;
+
+      .sb-text .semi-bold.sb-mr-15 {
+        max-width: round(120*0.79px);
+      }
+      
+
+      .sb-description {
+        margin-right: round(10*0.79px);
+      }
+
+      .sb-user {
+        width: round(220*0.79px);
+        min-width: round(220*0.79px);
+      }
+    }
+    
+    &.sb-edit-mode {
+      padding: round(20*0.79px) 0;
+
+
+      .sb-text {
+        margin-left: round(12*0.79px);
+      }
+
+      .sb-position {
+        margin-left: round(12*0.79px);
+      }
+
+      .sb-description {
+        margin-left: round(12*0.79px);
+      }
+
+      .sb-btn-group {
+        a {
+          margin-left: round(12*0.79px);
+        }
+      }
+    }
+    
+
+    .sb-tel {
+      font-size: 0.75*0.79rem;
+    }
+
+    .sb-btn-group {
+      font-size: round(24*0.79px);
+
+      a {
+        margin-left: round(16*0.79px);
+      }
+
+      .btn {
+        margin-left: round(16*0.79px);
+      }
+    }
+
+    .sb-text {
+      margin-left: round(12*0.79px);
+      font-size: round(14*0.79px);
+
+      p {
+        font-size: round(12*0.79px);
+      }
+    }
+  }  
+}

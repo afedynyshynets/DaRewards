@@ -1,0 +1,82 @@
+.react-bodymovin-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 256px !important;
+    height: 256px !important;
+
+    path {
+      stroke: #01A0EC;
+    }
+  }
+}
+
+button.d-flex.btn.btn-link .react-bodymovin-container{
+  width: auto;
+}
+
+.btn .react-bodymovin-container svg {
+  width: 24px !important;
+  height: 24px !important;
+
+  path {
+    stroke: #01A0EC;
+  }
+}
+
+.sb-activity-line .btn.activity-loader .react-bodymovin-container svg {
+  width: 24px !important;
+  height: 24px !important;
+
+  @media screen and (-webkit-device-pixel-ratio: 1.25) {
+    padding-bottom: 5px;
+  }
+
+  path {
+    stroke-width: 80;
+    stroke: $azure;
+  }
+}
+
+.sb-icon .react-bodymovin-container svg {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+span .react-bodymovin-container {
+  display: inline;
+
+  svg {
+    width: 21px !important;
+    height: 21px !important;
+  }
+}
+
+.sb-activity-stream .react-bodymovin-container svg {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.sb-contacts-panel .react-bodymovin-container svg {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.sb-activity-stream .sb-scroll-edit-activities .react-bodymovin-container svg {
+  width: 128px !important;
+  height: 128px !important;
+}
+
+.sb-status-bar-duration .react-bodymovin-container svg {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.sb-edit-head .react-bodymovin-container svg {
+  width: 20px !important;
+  height: 20px !important;
+}

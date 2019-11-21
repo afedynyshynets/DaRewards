@@ -1,0 +1,13 @@
+.sb-error-404 {
+  color: $black-two;
+  height: calc(100vh - 48px);
+
+  img {
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 0 0 24px;
+  }
+}

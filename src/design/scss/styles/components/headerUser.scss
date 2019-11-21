@@ -1,0 +1,34 @@
+.sb-header-user {
+  background: $white-9;
+  margin-left: 16px;
+  padding: 0 14px 0 20px;
+  display: flex;
+  align-items: center;
+  // min-width: 255px;
+  color: $white;
+
+  // .sb-icon {
+  //   width: 32px;
+  //   height: 32px;
+  // }
+
+  .sb-name {
+    width: 150px;
+  }
+
+  .sb-btn-wrapper {
+    margin-left: auto;
+  }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .sb-header-user {
+    margin-left: round(16 * 0.79px);
+    padding: 0 round(14 * 0.79px) 0 round(20 * 0.79px);
+    min-width: round(255 * 0.79px);
+
+    .sb-name {
+      width: round(150 * 0.79px);
+    }
+  }
+}

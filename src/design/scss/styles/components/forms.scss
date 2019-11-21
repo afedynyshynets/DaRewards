@@ -1,0 +1,47 @@
+.sb-label-required {
+  color: $tomato;
+}
+
+.sb-mb-8 {
+  label {
+    margin-bottom: 0;
+  }
+}
+
+.form-group {
+  .sb-text-inline {
+    line-height: 32px;
+  }
+
+  .icon-arrow-right {
+    position: absolute;
+    bottom: 7px;
+    left: -30px;
+    font-size: 20px;
+    color: $warm-grey;
+  }
+}
+
+.input-group-text {
+  padding: 2px 7px;
+}
+
+.form-group.source-field {
+  height: 81px;
+
+  @media screen and (-webkit-device-pixel-ratio: 1.25) { 
+    height: 64px;
+  }
+}
+
+.form-group.source-field ~ .icon-arrow-right {
+  position: absolute;
+  bottom: 42px;
+  left: -10px;
+  font-size: 20px;
+  color: $warm-grey;
+
+  @media screen and (-webkit-device-pixel-ratio: 1.25) {
+    bottom: 34px;
+  }
+}

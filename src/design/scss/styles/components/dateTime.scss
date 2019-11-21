@@ -1,0 +1,581 @@
+// fix width of react-time-picker for Edge
+@supports (-ms-ime-align:auto) {
+  input.react-time-picker__inputGroup__input {
+    &.react-time-picker__inputGroup__minute {
+      width: 18px !important;
+    }
+
+    &.react-time-picker__inputGroup__hour {
+      width: 17px !important;
+    }
+  }
+}
+
+.rdt {
+  position: relative;
+}
+
+.sb-datetime-bottom .rdtPicker {
+  bottom: auto;
+  top: 40px;
+}
+
+.sb-datetime-left .rdtPicker {
+  left: -200px;
+}
+
+.sb-datetime-calendar-center .rdtPicker {
+  left: -70px;
+}
+
+.rdtPicker {
+  display: none;
+  position: absolute;
+  left: -8px;
+  bottom: 40px;
+  padding: 24px 16px;
+  z-index: 9999 !important;
+  width: 318px;
+  border-radius: 2px;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.02);
+  background: $white;
+  border: 1px solid $azure;
+  color: $black-two;
+  
+}
+
+.rdtOpen .rdtPicker {
+  display: block;
+}
+
+.rdtStatic .rdtPicker {
+  box-shadow: none;
+  position: static;
+}
+
+.rdtPicker table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.rdtPicker {
+  td,
+  th {
+    @include transition;
+    text-align: center;
+    border: 0;
+    padding: 0;
+  }
+}
+
+.rdtPicker {
+  td {
+    cursor: pointer;
+    border: solid #fff;
+    border-width: 10px 16px;
+
+    &.rdtMonth,
+    &.rdtDay,
+    &.rdtHour,
+    &.rdtMinute,
+    &.rdtSecond {
+      &:hover {
+        background: $azure;
+        color: $white;
+        cursor: pointer;
+      }
+    }
+
+    &.rdtTimeToggle {
+      line-height: 32px;
+      position: relative;
+      top: 15px;
+      letter-spacing: 2px;
+
+      &:before {
+        @include transition;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 6px;
+        border: 1px solid $white-two;
+      }
+      
+      &:hover {
+        &:before {
+          border-color: $azure;
+        }
+        
+        cursor: pointer;
+      }
+    }
+
+    &.rdtOld,
+    &.rdtNew {
+      color: $black-4;
+    }
+
+    &.rdtToday {
+      background: #f3f3f3 !important;
+      color: $black-two !important;
+      font-weight: 600 !important;
+    }
+
+    &.rdtActive,
+    &.rdtActive:hover {
+      background: $azure;
+      color: $white;
+    }
+
+    &.rdtDisabled,
+    &.rdtDisabled:hover {
+      background: none;
+      color: $black-4;
+      cursor: not-allowed;
+    }
+
+    span {
+      &.rdtOld {
+        color: $black-4;
+      }
+
+      &.rdtDisabled,
+      &.rdtDisabled:hover {
+        background: none;
+        color: $black-4;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .dow {
+    width: 14.2857%;
+    padding: 20px 0 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: $black-6;
+    cursor: default;
+  }
+
+  th {
+    &.rdtSwitch {
+      font-size: 16px;
+      font-weight: 600;
+    
+      &:hover {
+        color: $azure;
+      }
+    }
+
+    &.rdtNext,
+    &.rdtPrev {
+      font-size: 21px;
+      vertical-align: top;
+    }
+
+    &.rdtDisabled,
+    &.rdtDisabled:hover {
+      background: none;
+      color: $black-4;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.rdtNext,
+.rdtPrev {
+  span {
+    @include transition;
+    display: block;
+    user-select: none;
+    font-size: 0;
+    margin-left: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 18px;
+    color: $warm-grey;
+    background: $white;
+    border: 1px solid $white-three;
+
+    &:hover {
+      border-color: $azure;
+      color: $azure;
+    }
+
+    &:before {
+      @extend .sb-icomoon;
+      content: "\e900";
+      display: inline-block;
+      vertical-align: top;
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}
+
+.rdtNext {
+  span {
+    margin-left: auto;
+    margin-right: 10px;
+
+    &:before {
+      transform: rotate(180deg);
+      position: relative;
+      top: -1px;
+    }
+  }
+}
+
+.rdtPicker thead tr:first-child th {
+  cursor: pointer;
+}
+
+.rdtPicker button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.rdtPicker button:hover {
+  background-color: #f3f3f3;
+}
+
+.rdtPicker thead button {
+  width: 100%;
+  height: 100%;
+}
+
+td.rdtMonth,
+td.rdtYear {
+  height: 50px;
+  width: 25%;
+  cursor: pointer;
+}
+td.rdtMonth:hover,
+td.rdtYear:hover {
+  background: #f3f3f3;
+}
+
+.rdtCounters {
+  margin-top: 15px;
+  display: flex;
+  border: 1px solid $azure;
+  border-radius: 6px;
+  justify-content: center;
+}
+
+.rdtCounter {
+  height: 60px;
+}
+
+.rdtCounter {
+  width: 40px;
+}
+
+.rdtCounterSeparator {
+  line-height: 60px;
+}
+
+.rdtCounter {
+  .rdtBtn {
+    @include transition;
+    height: 40%;
+    cursor: pointer;
+    display: block;
+    user-select: none;
+    opacity: 0.4;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .rdtCount {
+    height: 20%;
+    line-height: 12px;
+  }
+}
+
+.rdtMilli {
+  vertical-align: middle;
+  padding-left: 8px;
+  width: 48px;
+}
+
+.rdtMilli input {
+  width: 100%;
+  font-size: 1.2em;
+  margin-top: 37px;
+}
+
+.rdtTime td {
+  cursor: default;
+}
+
+.time-picker-container {
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px !important;
+
+  .react-time-picker__wrapper {
+    border: none;
+  }
+
+  .react-time-picker__inputGroup__minute {
+    max-width: 30px;
+  }
+
+  select.react-time-picker__inputGroup__input {
+    transition: none;
+    -webkit-appearance: none;
+    width: 48px;
+  }
+
+  .react-time-picker__inputGroup__input {
+    transition: none;
+  }
+}
+
+.ag-grid-datetime-container {
+  // top: -15px;
+  // position: relative;
+
+  .rdt {
+    width: 155px;
+    position: fixed;
+    z-index: 9;
+
+    input[type=text].form-control {
+      height: 32px;
+      text-overflow: ellipsis;
+    }
+
+    i.icon-close {
+      position: absolute;
+      z-index: 9;
+      top: 9px;
+      right: 9px;
+      cursor: pointer;
+    }
+  }
+}
+
+.DayPickerInput {
+  position: relative;
+  width: 100%;
+
+  i.icon-close {
+    cursor: pointer;
+  }
+
+  input {
+    height: 32px;
+    border-radius: 6px;
+    border: 1px solid #d7d7d7;
+    padding: 6px 8px;
+
+    &:focus {
+      border-color: $azure;
+    }
+  }
+}
+
+.DayPickerInput-OverlayWrapper {
+  position: fixed;
+  z-index: 9999;
+}
+
+.DayPickerInput-Overlay {
+  width: 560px;
+  border: 1px solid #d7d7d7;
+  left: -290px; // -160px
+  margin-top: 5px;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+  background-color: #f0f8ff !important;
+  color: #4a90e2;
+}
+.DayPicker-Day {
+  border-radius: 0 !important;
+}
+
+// uncomment below if you need round corners on start and end date at datetime range picker
+//
+// .DayPicker-Day--start {
+//   border-top-left-radius: 50% !important;
+//   border-bottom-left-radius: 50% !important;
+// }
+// .DayPicker-Day--end {
+//   border-top-right-radius: 50% !important;
+//   border-bottom-right-radius: 50% !important;
+// }
+
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .sb-datetime-bottom .rdtPicker {
+    top: round(40*0.79px);
+  }
+
+  .sb-datetime-left .rdtPicker {
+    left: round(-200*0.79px);
+  }
+
+  .sb-datetime-calendar-center .rdtPicker {
+    left: round(-70*0.79px);
+  }
+
+  .rdtPicker {
+    left: round(-8*0.79px);
+    bottom: round(40*0.79px);
+    padding: round(24*0.79px) round(16*0.79px);
+    width: round(318*0.79px);
+  }
+
+  .rdtPicker {
+    td {
+      border-width: round(10*0.79px) round(16*0.79px);
+
+      &.rdtTimeToggle {
+        line-height: round(32*0.79px);
+        top: round(15*0.79px);
+
+        &:before {
+          border-radius: round(6*0.79px);
+        }
+      }
+    }
+
+    .dow {
+      width: 14.2857%;
+      padding: round(20*0.79px) 0 0;
+      font-size: round(16*0.79px);
+    }
+
+    th {
+      &.rdtSwitch {
+        font-size: round(16*0.79px);
+      }
+
+      &.rdtNext,
+      &.rdtPrev {
+        font-size: round(21*0.79px);
+      }
+    }
+  }
+
+  .rdtNext,
+  .rdtPrev {
+    span {
+      margin-left: round(10*0.79px);
+      width: round(32*0.79px);
+      height: round(32*0.79px);
+      border-radius: round(18*0.79px);
+
+      &:before {
+        font-size: round(24*0.79px);
+        line-height: round(32*0.79px);
+      }
+    }
+  }
+
+  .rdtNext {
+    span {
+      margin-left: auto;
+      margin-right: round(10*0.79px);
+    }
+  }
+
+  td.rdtMonth,
+  td.rdtYear {
+    height: round(50*0.79px);
+  }  
+
+  .rdtCounters {
+    margin-top: round(15*0.79px);
+    border-radius: round(6*0.79px);
+  }
+
+  .rdtCounter {
+    height: round(60*0.79px);
+  }
+
+  .rdtCounter {
+    width: round(40*0.79px);
+  }
+
+  .rdtCounterSeparator {
+    line-height: round(60*0.79px);
+  }
+
+  .rdtCounter {
+    .rdtCount {
+      line-height: round(12*0.79px);
+    }
+  } 
+
+  .rdtMilli {
+    padding-left: round(8*0.79px);
+    width: round(48*0.79px);
+  }
+
+  .rdtMilli input {
+    font-size: 1.2*0.79em;
+    margin-top: round(37*0.79px);
+  }
+
+  .time-picker-container {
+    height: round(32*0.79px);
+    padding: 0 round(4*0.79px) !important;
+
+    .react-time-picker__inputGroup__minute {
+      max-width: round(30*0.79px);
+    }
+
+    select.react-time-picker__inputGroup__input {
+      width: round(48*0.79px);
+    }
+  }
+
+  .ag-grid-datetime-container {
+
+    .rdt {
+      width: round(155*0.79px);
+
+      input[type=text].form-control {
+        height: round(32*0.79px);
+      }
+
+      i.icon-close {
+        top: round(9*0.79px);
+        right: round(9*0.79px);
+      }
+    }
+  }
+
+  .DayPicker{
+    font-size:1*0.79rem;
+  }
+
+  .DayPickerInput {
+    input {
+      height: round(32*0.79px);
+      border-radius: round(6*0.79px);
+      padding: round(6*0.79px) round(8*0.79px);
+    }
+  }
+
+  .DayPickerInput-Overlay {
+    width: round(560*0.79px);
+    left: round(-290*0.79px);
+    margin-top: round(5*0.79px);
+  }        
+
+}

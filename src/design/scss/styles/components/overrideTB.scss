@@ -1,0 +1,50 @@
+@import './variables';
+
+// Variables
+$primary: $azure;
+$danger: $vermillion;
+
+$border-color: $grey-300;
+
+// Scaffolding
+$body-color: $black;
+
+// Typography
+$font-family-base: 'Open Sans', sans-serif;
+$font-size-base: 0.7rem;
+
+// Forms
+$input-border-radius: 6px;
+$input-border-color: $white-two;
+$input-padding-x: 8px;
+$input-focus-border-color: $azure;
+$input-height: 32px;
+$input-color: $black-two;
+$input-box-shadow: none;
+$input-focus-box-shadow: none;
+$input-placeholder-color: $black-4;
+$input-group-addon-color: $input-color;
+$input-group-addon-bg: $white-seven;
+$input-group-addon-border-color: $input-border-color;
+
+// Buttons
+$btn-border-radius: 18px;
+$btn-font-weight: 600;
+$btn-padding-x: 14px;
+$btn-padding-y: 0;
+$btn-focus-box-shadow: none !important;
+$btn-line-height: 24px;
+
+// Grid column
+$grid-gutter-width: 40px;
+
+// Dropdowns
+$dropdown-border-color: $azure;
+$dropdown-border-radius: 2px;
+
+// Modals
+$modal-inner-padding: 40px;
+$modal-footer-border-width: 0;
+$modal-content-border-width: 0;
+$modal-backdrop-bg: #2d3336;
+$modal-md: 650px;

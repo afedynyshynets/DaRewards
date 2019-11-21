@@ -1,0 +1,22 @@
+.sb-main-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - #{$headerHeight});
+  overflow: hidden;
+
+  .sb-main-container-holder {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 0;
+  }
+
+  .sb-main-content-holder {
+    background: $white-four;
+    flex: auto;
+    display: flex;
+    min-height: 0;
+  }
+}
+

@@ -1,0 +1,110 @@
+:root {
+  --azure: #01a0ec;
+  --warm-grey: #828282;
+  --vermillion: rgba(245, 38, 35, 0.08);
+  --white-three: #dddddd;
+}
+
+.fb-50 {
+  flex-basis: 50%;
+}
+
+.digest-page {
+  width: 100%;
+
+  button.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+  }
+
+  .digest-container {
+    background: $white-four;
+    min-height: 100%;
+  }
+
+  .column-name {
+    color: var(--azure);
+  }
+
+  .no-items-label
+  , .header-date-label
+  , .ag-header-row
+  , .no-cell-value-label
+  , .panel-item-count-label {
+    color: var(--warm-grey);
+  }
+
+  .panel-item-count-label {
+    margin-left: 8px;
+  }
+
+  .panel-header-label
+  , .panel-item-count-label {
+    font-size: 20px;
+  }
+
+  .ag-cell-value
+  , .ag-header-cell {
+    line-height: 48px;
+  }
+
+  .sb-panel {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .sb-panel-body {
+    padding: 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .ag-row
+  , .ag-header-row {
+    padding: 0 1rem;
+  }
+
+  .ag-header-cell:first-child,
+  div.ag-cell[col-id=leadName],
+  div.ag-cell[col-id=opportunityName] {
+    padding-left: 1rem;
+  }
+
+  .ag-body-viewport.ag-layout-auto-height {
+    overflow-x: unset;
+  }
+
+  .grid-row-overdue {
+    background-color: var(--vermillion);
+  }
+
+  .cell-icon {
+    font-size: 1.3rem;
+    vertical-align: middle;
+    margin: 0 8px 0 -2px;
+
+    &.red {
+      color: #f52623;
+    }
+
+    &.green {
+      color: #62ce19;
+    }
+
+    &.yellow {
+      color: #fe890f;
+    }
+  }
+
+  .section-container {
+    padding: 0 16px;
+  }
+
+  .section-header {
+    padding: 16px 0 16px 4px;
+  }
+
+  .section-border {
+    border-right: 1px var(--white-three) dashed;
+  }
+}

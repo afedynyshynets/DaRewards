@@ -1,0 +1,195 @@
+.sb-tile-item {
+  margin-top: 8px;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  cursor: pointer;
+  position: relative;
+
+  .sb-panel {
+    padding: 0.7rem;
+  }
+
+  &.sb-tile-active {
+    opacity: 1 !important;
+
+    .sb-panel {
+      background: $azure-5;
+      border-color: $azure;
+    }
+  }
+
+  &.sb-tile-marked {
+    .sb-rating {
+      color: $azure;
+    }
+  }
+
+  h3 {
+    font-size: 0.875rem;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  p {
+    margin: 0 0 12px;
+  }
+
+  .text-right.full-width .sb-checkbox {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  .sb-tile-sub-menu .sb-activity-count {
+    display: inline;
+    opacity: 0.5;
+    font-weight: normal;
+    margin-left: 10px;
+  }
+
+  .sb-tile-holder {
+    display: flex;
+    position: relative;
+  }
+
+  .sb-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    margin-right: 12px;
+
+    .sb-icon-in-circle {
+      margin-bottom: 8px
+    }
+
+    .sb-rounded-bar:not(:last-of-type) {
+      margin-bottom: 6px;
+    }
+  }
+
+  .sb-content {
+    max-width: 325px;
+    padding: 0 30px 0 0;
+    font-size: 0.875rem;
+    
+    &-subtitle {
+      opacity: 0.6;
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+
+      a {
+        color: initial;
+      }
+    }
+  }
+
+  .sb-date {
+    .sb-icon-in-circle {
+      margin-right: 8px;
+    }
+  }
+
+  .sb-rating {
+    cursor: pointer;
+    position: absolute;
+    right: -3px;
+    top: -6px;
+    font-size: 20px;
+    color: $warm-grey;
+  }
+  
+  .sb-tile-item-label {
+    position: absolute;
+    bottom: 0rem;
+    right: 0;
+    width: 44px;
+    height: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .sb-tile-item {
+    margin-top: round(8*0.79px);
+    font-size: 0.75*0.79rem;
+
+    .sb-panel {
+      padding: 0.7*0.79rem;
+    }
+
+    h3 {
+      font-size: 0.875*0.79rem;
+      line-height: round(20*0.79px);
+    }
+
+    p {
+      margin: 0 0 round(12*0.79px);
+    }
+
+    .text-right.full-width .sb-checkbox {
+      margin-bottom: 0;
+      font-size: round(14*0.79px);
+    }
+
+    .sb-tile-sub-menu .sb-activity-count {
+      margin-left: round(10*0.79px);
+    }
+
+    .sb-col {
+      width: round(48*0.79px);
+      margin-right: round(12*0.79px);
+
+      .sb-icon-in-circle {
+        margin-bottom: round(8*0.79px)
+      }
+
+      .sb-rounded-bar:not(:last-of-type) {
+        margin-bottom: round(6*0.79px);
+      }
+    }
+
+    .sb-content {
+      max-width: round(325*0.79px);
+      padding: 0 round(30*0.79px) 0 0;
+      font-size: 0.875*0.79rem;
+      
+      &-subtitle {
+        margin-bottom: round(8*0.79px);
+        font-size: 0.85*0.79rem;
+      }
+    }
+
+    .sb-date {
+      .sb-icon-in-circle {
+        margin-right: round(8*0.79px);
+      }
+    }
+
+    .sb-rating {
+      font-size: round(20*0.79px);
+    }
+    .sb-tile-holder .sb-icon-in-circle i{
+      font-size: round(20*0.79px)!important;
+    }
+    .sb-tile-holder .sb-icon-in-circle .icon-industry-travel{
+      font-size: round(10*0.79px)!important;
+    }
+    .sb-tile-holder .sb-date .sb-icon-in-circle i{
+      font-size: 11px !important;
+      line-height: 13px;
+    }
+
+    .sb-tile-item-label {
+      width: round(44 * 0.79px);
+      height: round(20 * 0.79px);
+      font-size: 0.5925rem;
+    }
+  }  
+}

@@ -1,0 +1,415 @@
+@mixin system-activity-background($background) {
+  &:after {
+    background: $background;
+  }
+}
+
+.sb-activity-line {
+  @extend .sb-contact-line;
+
+  padding: 12px 12px;
+  margin-left: calc(-68px - 1rem);
+  margin-right: -1rem;
+  padding-left: calc(68px + 1rem);
+  padding-right: 1rem;
+  overflow: hidden;
+
+  &:first-child {
+    &:before {
+      display: none;
+	}
+	
+	.sb-icon-in-circle {
+		&:before {
+			position: absolute;
+			content: "";
+			width: 4px;
+			top: -200px;
+			bottom: 100%;
+			background: #fff;
+		}
+	}
+  }
+
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+
+  > div {
+    position: relative;
+    z-index: 3;
+  }
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    left: 99px;
+    top: 50px;
+    z-index: 1;
+    bottom: -1000px;
+    border-left: 2px dashed $white-five;
+  }
+
+  &:before {
+    bottom: auto;
+    top: -3px;
+    height: 45px;
+  }
+
+  &.sb-open {
+    background: $white-20;
+  }
+
+  &.sb-status {
+    .sb-status-icon {
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      font-size: 24px;
+    }
+  }
+
+  &.sb-activity-disqualified,
+  &.sb-activity-trash,
+  &.sb-activity-assigned,
+  &.sb-activity-suspended,
+  &.sb-activity-engaged,
+  &.sb-activity-opportunity,
+  &.sb-activity-salesnurture,
+  &.sb-activity-attempted,
+  &.sb-activity-user,
+  &.sb-activity-avatar  {
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+      border-left: none;
+      background: $vermillion2;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+
+  
+
+  .sb-btn-group  {
+    white-space: nowrap;
+    display: flex;
+
+    .btn {
+      margin-left: 5px;
+      font-size: 12px;
+      
+      &.disabled, &[disabled] {
+        background: none !important;
+        border-color: $white-three;
+
+        i {
+          color: $white-three !important;
+        }
+      }
+    }
+  }
+
+  .sb-text {
+    // width: 180px;
+    // min-width: 180px;
+    // max-width: 180px;
+    width: auto;
+    font-size: 14px;
+    max-width: 60%;
+  }
+
+  &.sb-without-buttons {
+    .sb-text {
+      margin-left: 12px;
+      width: auto;
+    }
+  }
+
+  .sb-sub-text {
+    padding-top: 8px;
+  }
+  
+
+  &.user,  {
+    &:after {
+      z-index: 2;
+      background: $azure-1;
+    }
+
+    &:before {
+      display: none;
+    }
+
+    .icon-user {
+      color: $azure;
+    }
+
+    .sb-icon {
+      // width: 30px;
+      // height: 30px;
+
+      &.avatar {
+        background: none;
+      }
+    }
+  }
+
+  &.sb-activity-mql {
+    @include system-activity-background(#f6f3fa);
+
+    .sb-icon.avatar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .icon-disqualified::before {
+        color: rgb(114, 81, 152);
+      }
+    }
+  }
+
+  &.sb-activity-disqualified,
+  &.sb-activity-trash {
+    @include system-activity-background(#ededed);
+
+    .sb-status-icon {
+      color: $warm-grey;
+    }
+  }
+
+  &.sb-activity-attempted { @include system-activity-background($tangerine-1); }
+  &.sb-activity-suspended { @include system-activity-background($mango-1); }
+  &.sb-activity-salesnurture { @include system-activity-background($mango-two-1); }
+  &.sb-activity-engaged { @include system-activity-background($yellowish-green-1); }
+  &.sb-activity-opportunity { @include system-activity-background($green-apple-bg); }
+
+  &.system-activity {
+
+    &.user .sb-status-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .sb-icon.avatar {
+        margin: 0
+      }
+    }
+    .sb-text {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+
+.sb-activity-holder {
+  position: relative;
+  overflow: hidden;
+  padding-left: calc(68px + 1rem);
+  padding-right: 1rem;
+  margin-left: calc(-68px - 1rem);
+  margin-right: -1rem;
+
+  .connection-line {
+    height: 11px;
+    max-height: 11px;
+    overflow: hidden;
+    
+    &:first-child, &:last-child {
+      display: none;
+    }
+
+    &:after {
+      content: '';
+      position: relative;
+      left: 15px;
+      top: 0px;
+      z-index: 0;
+      bottom: -1000px;
+      border-left: 2px dashed $white-five;
+    }
+  }
+}
+
+.sb-activity-contact {
+	padding: 12px 0 0 56px;
+
+	.sb-name {
+		margin: 0 8px;
+		max-width: 200px;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	a {
+		font-size: 12px;
+	}
+
+	.sb-icon-active-contact {
+		color: $green-apple;
+	}
+
+	.sb-icon-not-active-contact {
+		color: $warm-grey;
+	}
+
+	.sb-icon-overdue-activity {
+		color: $tomato;
+	}
+}
+
+.icon-flag-opportunity .path1:before {
+  content: "\e90b";
+  color: $green-apple;
+}
+
+.sb-activity-line {
+  padding-top: 16px;
+  padding-bottom: 20px;
+  
+  &.sb-activity-selected {
+    background-color: rgba(1, 160, 236, 0.05);
+    border: 1px solid $azure;
+    margin-left: -16px;
+    padding-left: 15px;
+
+    &:after,
+    &:before {
+      left: 30px;
+    }
+  }
+
+  .sb-activity-line-subject {
+    word-break: break-word;
+
+    &.short {
+      max-height: 40px;
+      overflow: hidden;
+    }
+  }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+
+  .sb-activity-line {
+    padding: round(12*0.79px) round(12*0.79px);
+    margin-left: calc(-54px - 1rem);
+    margin-right: -1rem;
+    padding-left: calc(54px + 1rem);
+    padding-right: 1rem;
+
+    &:first-child {
+
+    
+      .sb-icon-in-circle {
+        &:before {
+          width: round(4*0.79px);
+          top: round(-200*0.79px);
+        }
+      }
+    }
+
+
+    &:after,
+    &:before {
+      left: 82px;
+      top: round(50*0.79px);
+      bottom: -1000px;
+    }
+
+    &:before {
+      top: round(-3*0.79px);
+      height: round(45*0.79px);
+    }
+
+    &.sb-status {
+      .sb-status-icon {
+        width: round(32*0.79px);
+        height: round(32*0.79px);
+        line-height: round(32*0.79px);
+        font-size: round(24*0.79px);
+      }
+    }
+
+
+    .sb-btn-group  {
+
+      .btn {
+        margin-left: round(5*0.79px);
+        font-size: round(12*0.79px);
+      }
+    }
+
+    .sb-text {
+      font-size: round(14*0.79px);
+    }
+
+    &.sb-without-buttons {
+      .sb-text {
+        margin-left: round(12*0.79px);
+      }
+    }
+
+    .sb-sub-text {
+      padding-top: round(8*0.79px);
+    }
+  }
+
+
+  .sb-activity-holder {
+    padding-left: calc(54px + 1rem);
+    padding-right: 1rem;
+    margin-left: calc(-54px - 1rem);
+    margin-right: -1rem;
+
+    .connection-line {
+      height: round(11*0.79px);
+      max-height: round(11*0.79px);
+      
+      &:after {
+        left: round(15*0.79px);
+      }
+    }
+  }
+
+  .sb-activity-contact {
+    padding: round(12*0.79px) 0 0 round(56*0.79px);
+
+    .sb-name {
+      margin: 0 round(8*0.79px);
+      max-width: round(200*0.79px);
+    }
+
+    a {
+      font-size: round(12*0.79px);
+    }
+  }
+
+
+  .sb-activity-line {
+    padding-top: round(16*0.79px);
+    padding-bottom: round(20*0.79px);
+    
+    &.sb-activity-selected {
+      margin-left: round(-16*0.79px);
+      padding-left: round(15*0.79px);
+
+      &:after,
+      &:before {
+        left: round(30*0.79px);
+      }
+    }
+  }  
+}

@@ -1,0 +1,52 @@
+.sb-main-bottom-panel {
+  background: linear-gradient(to bottom, $white-four-089, $white-four);
+  padding: 15px 0;
+  border-top: 1px solid $white-three;
+
+  .sb-panel {
+    padding: 0.5rem;
+  }
+
+  .sb-bottom-total {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: $black-two;
+
+    i {
+      font-size: 24px;
+      margin-right: 8px;
+    }
+
+    .sb-title {
+      margin-right: 12px;
+    }
+
+    .btn-link {
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .sb-main-bottom-panel {
+    padding: round(15*0.79px) 0;
+
+    .sb-panel {
+      padding: 0.5*0.79rem;
+    }
+
+    .sb-bottom-total {
+      font-size: 0.8*0.79rem;
+
+      i {
+        font-size: round(24*0.79px);
+        margin-right: round(8*0.79px);
+      }
+
+      .sb-title {
+        margin-right: round(12*0.79px);
+      }
+
+    }
+  }  
+}

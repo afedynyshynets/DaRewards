@@ -1,0 +1,60 @@
+.sb-tile-items-group {
+  padding: 0 0 0 16px;
+  margin-bottom: 16px;
+  position: relative;
+
+  &.sb-group-not-active {
+    .sb-tile-item,
+    .sb-type,
+    &:before {
+      // opacity: 0.5;
+      // pointer-events: none;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    border-radius: 3px;
+    background: $white;
+    left: 6px;
+    top: 2px;
+    bottom: 0;
+  }
+
+  .sb-type {
+    text-transform: uppercase;
+    color: $black-two;
+  }
+
+  &.sb-group-favorite {
+    &:before {
+      background: $azure;
+    }
+  }
+
+  &.sb-group-overdue {
+    &:before {
+      background: $tomato;
+    }
+  }
+
+  &.sb-group-next-week {
+    &:before {
+      background: $mango;
+    }
+  }
+
+  &.sb-group-this-week {
+    &:before {
+      background: $tangerine;
+    }
+  }
+
+  &.sb-group-no-activities {
+    &:before {
+      background: $warm-grey;
+    }
+  }
+}

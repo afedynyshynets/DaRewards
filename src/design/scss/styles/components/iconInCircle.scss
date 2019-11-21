@@ -1,0 +1,128 @@
+.sb-icon-in-circle {
+  @include icon-in-circle($icon-color: $warm-grey, $bg-color: $white-six);
+  display: inline-flex;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+
+  // i {
+  //   position: relative;
+  //   vertical-align: middle;
+  //   top: -1px;
+  // }
+
+  &.sb-icon-active-contact {
+    @include icon-in-circle($diameter: 32px, $icon-size: 24px, $bg-color: $green-apple);
+  }
+
+  &.sb-icon-not-active-contact {
+    @include icon-in-circle($diameter: 32px, $icon-size: 24px, $icon-color: $warm-grey)
+  }
+
+   &.sb-icon-active-campaign {
+    @include icon-in-circle($bg-color: $green-apple, $icon-size: 19px);
+  }
+
+  &.sb-icon-not-active-campaign {
+    @include icon-in-circle($icon-color: $warm-grey, $icon-size: 19px);
+  }
+
+  &.sb-icon-overdue-activity {
+    @include icon-in-circle($diameter: 32px, $icon-size: 24px, $bg-color: $tomato);
+  }
+
+  &.sb-icon-planned-activity {
+    @include icon-in-circle($diameter: 32px, $icon-size: 24px, $icon-color: $warm-grey);
+  }
+
+  &.sb-icon-overdue-tile-activity {
+    @include icon-in-circle($diameter: 20px, $icon-size: 14px, $bg-color: $tomato);
+  }
+
+  &.sb-icon-planned-tile-activity {
+    @include icon-in-circle($diameter: 24px, $icon-size: 18px, $bg-color: $green-apple);
+  }
+
+  &.sb-icon-header-user {
+    @include icon-in-circle($icon-size: 16px, $bg-color: $graphite-black);
+  }
+
+  &.sb-icon-grid-industry-col {
+    @include icon-in-circle($diameter: 40px, $icon-size: 22px);
+  }
+
+  &.sb-icon-label-tooltip {
+    @include icon-in-circle($diameter: 12px, $icon-size: 9px);
+  }
+}
+
+.ag-react-container {
+  .sb-icon {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .sb-icon-in-circle.sb-icon-not-active-contact {
+      @include icon-in-circle($diameter: 24px, $icon-size: 18px, $icon-color: $warm-grey)
+    }
+  }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .sb-icon-in-circle {
+
+    &.sb-icon-active-contact {
+      @include icon-in-circle-zoom($diameter: round(32*0.79px), $icon-size: round(24*0.79px), $bg-color: $green-apple);
+    }
+
+    &.sb-icon-not-active-contact {
+      @include icon-in-circle-zoom($diameter: round(32*0.79px), $icon-size: round(24*0.79px), $icon-color: $warm-grey)
+    }
+
+    &.sb-icon-active-campaign {
+      @include icon-in-circle-zoom($bg-color: $green-apple, $icon-size: round(19*0.79px));
+    }
+
+    &.sb-icon-not-active-campaign {
+      @include icon-in-circle-zoom($icon-color: $warm-grey, $icon-size: round(19*0.79px));
+    }
+
+    &.sb-icon-overdue-activity {
+      @include icon-in-circle-zoom($diameter: round(32*0.79px), $icon-size: round(24*0.79px), $bg-color: $tomato);
+    }
+
+    &.sb-icon-planned-activity {
+      @include icon-in-circle-zoom($diameter: round(32*0.79px), $icon-size: round(24*0.79px), $icon-color: $warm-grey);
+    }
+
+    &.sb-icon-overdue-tile-activity {
+      @include icon-in-circle-zoom($diameter: round(20*0.79px), $icon-size: round(14*0.79px), $bg-color: $tomato);
+    }
+
+    &.sb-icon-planned-tile-activity {
+      @include icon-in-circle-zoom($diameter: round(24*0.79px), $icon-size: round(18*0.79px), $bg-color: $green-apple);
+    }
+
+    &.sb-icon-header-user {
+      @include icon-in-circle-zoom($icon-size: round(16*0.79px), $bg-color: $graphite-black);
+    }
+
+    &.sb-icon-grid-industry-col {
+      @include icon-in-circle-zoom($diameter: round(40*0.79px), $icon-size: round(22*0.79px));
+    }
+
+    &.sb-icon-label-tooltip {
+      @include icon-in-circle-zoom($diameter: round(12*0.79px), $icon-size: round(9*0.79px));
+    }
+  }
+
+  .ag-react-container {
+    .sb-icon {
+
+      .sb-icon-in-circle.sb-icon-not-active-contact {
+        @include icon-in-circle-zoom($diameter: round(24*0.79px), $icon-size: round(18*0.79px), $icon-color: $warm-grey)
+      }
+    }
+  }  
+}

@@ -1,0 +1,267 @@
+.btn {
+  box-shadow: none !important;
+  vertical-align: top;
+  font-size: 0.875rem;
+  padding: 3px 14px;
+  border-radius: 18px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  [class^="icon-"],
+  [class*=" icon-"] {
+    // @include transition;
+    margin-right: 5px;
+    margin-left: -3px;
+
+    &:before {
+      font-size: 24px;
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  &.dropdown-toggle {
+    &:after {
+      margin-left: 7px;
+      vertical-align: 2px;
+    }
+  }
+
+  &.sb-btn-circle {
+    width: 32px;
+    height: 32px;
+    padding-left: 0;
+    padding-right: 0;
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      margin: 0;
+      &::before {
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &.sb-btn-round {
+    border-radius: 6px;
+  }
+
+  &.sb-btn-mw-160 {
+    min-width: 160px;
+    text-align: left;
+
+    &:after {
+      position: absolute;
+      right: 15px;
+      top: 13px;
+    }
+  }
+}
+
+.btn-primary {
+  &:hover {
+    background: $azure-two;
+    border-color: $azure-two;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  &:active {
+    background: $cerulean;
+    border-color: $cerulean;
+  }
+
+  &[disabled] {
+    cursor: default;
+    opacity: 0.4;
+    background: $azure !important;
+    border-color: $azure !important;
+  }
+}
+
+.btn-secondary {
+  border-color: $white-three;
+  background: $white;
+  color: $black-two;
+
+  &:hover {
+    background: $white;
+    color: $azure;
+    border-color: $azure;
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      color: $azure;
+    }
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  &:active {
+    border-color: $azure;
+    color: $white;
+    background: $azure;
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      color: $white;
+    }
+  }
+
+  &.btn-circle {
+    color: $warm-grey;
+  }
+
+  [class^="icon-"],
+  [class*=" icon-"] {
+    color: $warm-grey;
+  }
+
+  //TODO REFACTOR
+  // To override css props in the next class we have to use important as complasory (bad practice)
+  &[disabled]:not(.sb-drop-btn-trash),
+  &.disabled:not(.sb-drop-btn-trash) {
+    cursor: default;
+    opacity: 1;
+    background: rgba(221, 221, 221, 0.3) !important;
+    border-color: $white-three !important;
+    color: $black-6 !important;
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      color: $black-6 !important;
+    }
+  }
+}
+
+.btn-secondary.invert {
+  background: $white;
+  color: $azure;
+  border-color: $azure;
+
+  &:hover {
+    border-color: $azure;
+    color: $white;
+    background: $azure;
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      color: $white;
+    }
+  }
+}
+
+.btn-success {
+  border-color: $shamrock-green;
+  background: $shamrock-green;
+
+  &:hover {
+    background: $green-apple-two;
+    border-color: $green-apple-two;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  &:focus,
+  &:active,
+  &:active:focus {
+    background: $green-apple;
+    border-color: $green-apple;
+  }
+}
+
+.btn-link {
+  padding-left: 0;
+  padding-right: 0;
+  text-decoration: none !important;
+
+  &.sb-link-success {
+    color: $shamrock-green;
+
+    &:hover {
+      color: $green-apple;
+    }
+  }
+}
+
+.show > {
+  .btn {
+    &.dropdown-toggle {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .btn-secondary {
+    &.dropdown-toggle {
+      border-color: $azure;
+      color: $white;
+      background: $azure;
+
+      i {
+        color: white;
+      }
+    }
+  }
+
+  .btn-success {
+    &.dropdown-toggle {
+      border-color: $green-apple;
+      background: $green-apple;
+    }
+  }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .btn {
+    font-size: 0.875 * 0.79rem;
+    line-height: 19px;
+    padding: 2px 11px;
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      margin-right: 4px;
+      margin-left: -2px;
+
+      &:before {
+        font-size: 19px;
+      }
+    }
+
+    &.dropdown-toggle {
+      &:after {
+        margin-left: round(7 * 0.79px);
+        vertical-align: 2px;
+      }
+    }
+
+    &.sb-btn-circle {
+      width: round(32 * 0.79px);
+      height: round(32 * 0.79px);
+
+      [class^="icon-"],
+      [class*=" icon-"] {
+        &::before {
+          font-size: round(24 * 0.79px);
+          line-height: round(24 * 0.79px);
+        }
+      }
+    }
+
+    &.sb-btn-mw-160 {
+      min-width: round(160 * 0.79px);
+
+      &:after {
+        right: round(15 * 0.79px);
+        top: round(13 * 0.79px);
+      }
+    }
+  }
+
+  .btn-link {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

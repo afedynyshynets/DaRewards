@@ -1,0 +1,44 @@
+.sb-icon-input {
+  position: relative;
+  
+  &.sb-icon-input-clickable {
+    cursor: pointer;
+  }
+
+  .form-control {
+    padding-right: 30px;
+  }
+
+  [class^="icon-"], [class*=" icon-"] {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    color: $warm-grey;
+    font-size: 16px;
+  }
+
+  &.sb-icon-input-hoverable {
+    [class^="icon-"], [class*=" icon-"] {
+      color: #cccccc;
+      
+      &:hover {
+        color: #999999;
+      }
+    }
+  }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .sb-icon-input {
+
+    .form-control {
+      padding-right: round(30*0.79px);
+    }   
+
+    [class^="icon-"], [class*=" icon-"] {
+      right: round(8*0.79px);
+      top: round(8*0.79px);
+      font-size: round(16*0.79px);
+    }     
+  }
+}

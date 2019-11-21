@@ -1,0 +1,31 @@
+.sb-tooltip-container {
+  display: inline-block;
+  margin-left: 6px;
+
+  svg {
+    margin-bottom: 1px;
+  }
+
+  &.in-text {
+    margin-left: 3px;
+  }
+}
+
+$tooltip-color: $white-six;
+
+.tooltip {
+  &.show {
+    opacity: 1;
+  }
+
+  .arrow::before {
+    border-top-color: $tooltip-color;
+    border-bottom-color: $tooltip-color;
+  }
+
+  .tooltip-inner {
+    color: $black;
+    background-color: $white;
+    border: 1px solid $tooltip-color;
+  }
+}

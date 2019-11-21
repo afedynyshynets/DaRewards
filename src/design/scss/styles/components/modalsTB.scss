@@ -1,0 +1,365 @@
+.modal{
+  font-size:0;
+  text-align:center;
+
+  &:after{
+    content: '';
+    display: inline-block;
+    width:0;
+    height:100%;
+    vertical-align:middle;
+  }
+}
+.modal-dialog-centered::before{
+  height: 30vh !important;
+}
+.modal-dialog {
+  width: 100%;
+  display:inline-block;
+  margin: auto;
+  color: $black-two;
+  font-size: 0.875rem;
+  vertical-align:middle;
+  text-align:left;
+
+  .modal-content {
+    padding-bottom: 15px;
+    padding-top: 55px;
+    border-radius: 6px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+    
+  }
+
+  .modal-header {
+    padding: 0 40px 24px;
+  }
+
+  .modal-body {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+    line-height: 0.83;
+  }
+
+  &.size-custom-save-changes {
+    max-width: 450px;
+
+    .size-custom-save-changes-center {
+      width: 370px;
+    }
+
+    .modal-title strong {
+      line-height: 32px;
+    }
+  }
+}
+
+.modal-dialog.modal-add-contact {
+  width: 650px;
+}
+
+.modal-dialog.email-modal {
+  max-width: 70vh;
+
+  .modal-body {
+    max-height: 600px;
+    overflow: auto;
+  }
+
+  .modal-content {
+    padding-top: 10px;
+
+    button.close {
+      font-size: 48px;
+    }
+
+    .sb-email-body{
+      width: 100%;
+    
+      .sb-email-time {
+        opacity: 0.5;
+        margin-left: auto;
+      }
+
+      .sb-email-text {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+    }
+  }
+}
+
+.modal-dialog.opportunities-modal {
+  width: 800px; 
+  max-width: 800px;
+  max-height: 800px;
+
+  .modal-content {
+    height: 100%;
+    padding: 60px;
+  }
+
+  .modal-title {
+    font-size: 1rem;
+  }
+  
+  button.close {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+  }
+  
+  .modal-header,
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    min-height: 0px;
+  }
+
+  .modal-body .opportunities-table {
+    width: 100%;
+    margin-top: 50px;
+    max-height: 550px;
+    overflow: auto;
+
+    .table-row {
+      justify-content: initial;
+
+      .opportunity-name-column {
+        width: 35%;
+      }
+  
+      .value-column {
+        width: 25%;
+      }
+  
+      .expected-closed-date-column {
+        width: 40%;
+
+        &.overdue-alert {
+          width: auto;
+          margin-left: 175px;
+          flex-grow: 1;
+          
+          @media screen and (-webkit-device-pixel-ratio: 1.25) {
+            margin-left: 110px;
+          }
+        }
+      }
+    }
+
+    .table-container {
+      padding-right: 25px;
+    }
+  }
+
+  h1.count {
+    margin-top: 24px;
+    font-size: 64px;
+    font-weight: 600;
+  }
+}
+
+
+.modal-dialog.convertToSQLLeadModal {
+  .modal-header {
+    padding: 0 64px;
+    margin-bottom: 35px;
+  }
+  
+  .modal-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 32px;
+    margin: 0 auto;
+
+    img {
+      width: 232px;
+      height: 102px;
+    }
+
+    
+    strong {
+      margin-top: 28px;
+
+      font-weight: bold;
+      color: #4b4345;
+    }
+  }
+
+  .sb-select,
+  .sb-select.is-invalid ~ .invalid-feedback {
+    width: 450px;
+    margin: 0 auto;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .modal-footer {
+    padding: 56px 24px 9px 32px;
+  }
+}
+
+.modal-dialog.rejectMQLLeadModal {
+  width: 584px;
+  height: 440px;
+
+  @media screen and (-webkit-device-pixel-ratio: 1.25) {
+    width: calc(584px * 0.79);
+    height: calc(440px * 0.79);
+  }
+
+  .modal-header {
+    padding: 0 64px;
+    margin-bottom: 35px;
+
+    @media screen and (-webkit-device-pixel-ratio: 1.25) {
+      margin-bottom: calc(35px * 0.79);
+    }
+  }
+  
+  .modal-body {
+    padding: 0px 24px 0px 32px;
+    @media screen and (-webkit-device-pixel-ratio: 1.25) {
+      padding: 0px calc(24px * 0.79) 0px calc(32px * 0.79);
+    }
+  }
+
+  .modal-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 32px;
+    margin: 0 auto;
+
+    img {
+      width: 96px;
+      height: 85px;
+    }
+
+    
+    strong {
+      margin-top: 32px;
+      font-weight: bold;
+      color: #4b4345;
+    }
+  }
+
+  textarea {
+    width: 528px;
+    height: 64px;
+    border-radius: 6px;
+    border: solid 1px $pale-sky-blue;
+    padding: 6px 12px 0;
+
+    &::placeholder {
+      color: #7c9ba2;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 2px #0066ff;
+    }
+
+    @media screen and (-webkit-device-pixel-ratio: 1.25) {
+      width: calc(528px * 0.79);
+      height: calc(64px * 0.79);
+    }
+  }
+
+  p {
+    text-align: center;
+    line-height: 24px;
+  }
+
+  .modal-footer {
+    padding: 24px 24px 9px 32px;
+    
+    @media screen and (-webkit-device-pixel-ratio: 1.25) {
+      padding: calc(24px * 0.79) calc(24px * 0.79) calc(9px * 0.79) calc(32px * 0.79);
+    }
+    
+    button.btn-danger {
+      background-color: $coral-pink;
+      width: 136px;
+    }
+
+    button.btn-link {
+      font-weight: 600;
+    }
+  }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .create-contact-modal {
+    width: 100%;
+
+    .form-group .icon-arrow-right {
+      bottom: 3px;
+    }
+  }
+
+  .modal{
+    font-size:0;
+  }
+  .modal-dialog {
+    font-size: 0.875*0.79rem;
+
+    .modal-content {
+      padding-bottom: round(15*0.79px);
+      padding-top: round(55*0.79px);
+      border-radius: round(6.79px);
+      box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .modal-header {
+      padding: 0 round(40*0.79px) round(24*0.79px);
+    }
+    .modal-title {
+      font-size: 1.5*0.79rem;
+      line-height: 0.83*0.79;
+    }
+
+    &.size-custom-save-changes {
+      max-width: round(450*0.79px);
+
+      .size-custom-save-changes-center {
+        width: round(370*0.79px);
+      }
+    }
+  }
+
+
+  .modal-dialog.email-modal {
+
+    .modal-body {
+      max-height: round(600*0.79px);
+    }
+
+    .modal-content {
+      padding-top: round(10*0.79px);
+
+      button.close {
+        font-size: round(48*0.79px);
+      }
+    }
+  }  
+
+  .modal-dialog.opportunities-modal {
+    width: 800 * 0.79px; 
+    max-width: 800 * 0.79px;
+    height: 800 * 0.79px;
+    max-height: 800 * 0.79px;
+  }
+
+}

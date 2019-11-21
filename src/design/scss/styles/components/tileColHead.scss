@@ -1,0 +1,58 @@
+.sb-tile-col-head {
+  background-color: $white-four;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1rem;
+  align-items: center;
+  color: $black-two;
+  border-bottom: 1px solid $white-three;
+  border-right: 1px dashed $white-three;
+  min-width: 420px;
+  height: 46px;
+
+  i {
+    font-size: 20px;
+    margin-right: 8px;
+  }
+
+  .sb-title {
+    margin-right: 12px;
+  }
+
+  .sb-number {
+    opacity: 0.6;
+    font-size: 0.75rem;
+    // I don't really understand why we should align text using this. Perhaps we should investigate
+    // TODO: investigate
+    margin-bottom: -3px;
+  }
+
+  .btn-link {
+    padding: 0;
+  }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .sb-tile-col-head {
+    font-size: 1*0.79rem;
+    padding: 1*0.79rem;
+    min-width: round(420*0.79px);
+    height: 36px;
+
+    i {
+      font-size: round(20*0.79px);
+      margin-right: round(8*0.79px);
+    }
+
+    .sb-title {
+      margin-right: round(12*0.79px);
+    }
+
+    .sb-number {
+      font-size: 0.75*0.75rem;
+      // I don't really understand why we should align text using this. Perhaps we should investigate
+      // TODO: investigate
+      margin-bottom: round(-3*0.79px);
+    }
+  }  
+}

@@ -1,0 +1,58 @@
+.banner {
+  margin-top: -20px;
+  margin-bottom: 14px;
+  width: 100%;
+  background-color: #814ECE;
+  // position: fixed;
+  display: flex;
+  align-items: center;
+  padding: 5px 50px;
+  justify-content: space-between;
+  z-index: 9997;
+
+  > * {
+      display: flex;
+      align-items: center;
+  }
+
+  svg {
+    width: 40px;
+  }
+
+  p {
+      color: white;
+      margin-left: 24px;
+      margin-bottom: 0;
+      font-size: 20px;
+  }
+
+  a {
+      border: none;
+      background-color: white;
+      padding: 6px 35px;
+      border-radius: 15px;
+      color: #814ECE;
+      margin-right: 30px;
+      margin-left: 30px;
+  }
+
+  .close-banner {
+      background-color: transparent;
+      border: none;
+  }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .banner {
+    padding-top: 5px;
+    padding-bottom: 3px;
+
+    p {
+      font-size: round(20*0.79px);
+    }
+
+    svg {
+      width: round(40*0.79px);
+    }
+  }
+}

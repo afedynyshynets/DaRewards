@@ -1,0 +1,56 @@
+.sb-btn-empty {
+  @include transition;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: 0;
+  display: inline-block;
+  cursor: pointer;
+
+  &[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+.sb-btn-group {
+  .btn-group {
+    margin-right: 8px;
+  }
+}
+
+.sb-btn-favorite {
+  [class^="icon-"], 
+  [class*=" icon-"] {
+    color: $azure;
+
+    &:before {
+      content: "\e927";
+    }
+  }
+}
+
+.sb-reject-lead-button {
+  background-color: $coral-pink;
+  width: 80px;
+  margin-right: 16px;
+  
+  &.disabled {
+    background-color: $coral-pink;
+    border-color: $coral-pink;
+    opacity: 0.5;
+  }
+}
+
+.sb-accept-lead-button {
+  width: 80px;
+  margin-right: 16px;
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .sb-btn-group {
+    .btn-group {
+      margin-right: round(8*0.79px);
+    }
+  }  
+}

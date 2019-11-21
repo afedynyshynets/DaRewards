@@ -1,0 +1,51 @@
+.sb-activity-stream {
+  .nav-tabs :last-child .nav-link {
+    border-left: none;
+  }
+
+  .nav-item {
+    flex: 1;
+    background-color: $white-four;
+
+    .nav-link {
+      transition: none;
+      border-color: $white-three;
+      border-bottom: none;
+      border-radius: 0;
+      height: 60px;
+      font-weight: bold;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .sb-tab-count {
+        display: inline;
+        opacity: 0.5;
+        font-weight: normal;
+        margin-left: 10px;
+      }
+
+      &.disabled {
+        cursor: not-allowed;
+      }
+
+      &:not(.active) {
+        font-weight: normal;
+        border-bottom: 1px solid $white-three;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  .tab-content {
+    // border: 1px solid $white-three;
+    border-top: none;
+    background-color: $white;
+    // padding: 12px;
+  }
+
+  .sb-panel {
+    border-top: none;
+  }
+}

@@ -1,0 +1,36 @@
+.sb-edit-top-panel {
+  max-width: 1575px;
+  width: 100%;
+  padding-top: 13px;
+  margin: 0 auto;
+
+  .sb-edit-head {
+    line-height: 20px;
+
+    .sb-btn-empty {
+      color: $warm-grey;
+      font-size: 24px;
+      margin-right: 24px;
+    }
+
+    p {
+      margin: 0;
+      color: $black-6;
+      width: 117px;
+
+      @media screen and (-webkit-device-pixel-ratio: 1.25) {
+        width: 85px;
+      }
+    }
+    
+    b {
+      color: $gunmetal;
+    }
+  }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .sb-edit-top-panel {
+    padding: 15px 0;
+  }
+}

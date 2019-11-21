@@ -1,0 +1,40 @@
+.sb-main-tabs {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 8px;
+
+  .container-fluid {
+    padding-left: 14px;
+  }
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 24px;
+  }
+
+  a {
+    color: $black;
+    opacity: 0.6;
+  }
+
+  .active {
+    font-weight: 600;
+    opacity: 1;
+  }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .sb-main-tabs {
+    font-size: 0.875*0.79rem;
+    margin-bottom: round(8*0.79px);
+
+    .container-fluid {
+      padding-left: round(14*0.79px);
+    }
+
+    li {
+      margin-right: round(24*0.79px);
+    }
+  }  
+}

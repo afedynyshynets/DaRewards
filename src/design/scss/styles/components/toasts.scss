@@ -1,0 +1,57 @@
+.Toastify__toast {
+  font-family: "Open Sans", sans-serif;
+}
+
+.Toastify__toast-container {
+  width: 747px;
+
+  &--top-center {
+    margin-left: -400px
+  }
+
+  .sb-text {
+    strong {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .sb-subtitle {
+      font-size: 16px;
+
+      a {
+        color: blue;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.Toastify__toast--success {
+  background: $success-toast-background;
+  height: 72px;
+}
+
+.Toastify__toast--info {
+  background: $azure;
+  height: 72px;
+}
+
+.Toastify__toast--error { 
+  background: $error-toast-background;
+  height: 72px;
+}
+
+.multi-line-content-toast {
+  height: auto;
+}
+
+.sb-toast-close-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    color: rgba(white, 0.5);
+  }
+}

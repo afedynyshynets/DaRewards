@@ -1,0 +1,86 @@
+/* Customize the label (the container) */
+.sb-checkbox {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  user-select: none;
+  line-height: 20px;
+  color: $black-two;
+
+  &.vert-center {
+      vertical-align: middle;
+      margin-bottom: 0px;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .sb-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: $white;
+    border: 1px solid $white-two;
+    border-radius: 6px;
+
+    &:hover {
+      border: 1px solid $azure;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 6px;
+      top: 3px;
+      width: 7px;
+      height: 9px;
+      border: solid $white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  input:checked ~ .sb-checkmark {
+    background: $azure;
+    border-color: $azure;
+  }
+
+  input:checked ~ .sb-checkmark:after {
+    display: block;
+  }
+
+  .sb-sub {
+    color: $black-6;
+  }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .sb-checkbox {
+    padding-left: round(32*0.79px);
+    margin-bottom: round(16*0.79px);
+    line-height: round(20*0.79px);
+
+    .sb-checkmark {
+      height: round(20*0.79px);
+      width: round(20*0.79px);
+      border-radius: round(6*0.79px);
+
+      &:after {
+        left: 4px;
+        top: round(3*0.79px);
+        width: round(7*0.79px);
+        height: round(9*0.79px);
+        border-width: 0 2px 2px 0;
+      }
+    }
+  }  
+}

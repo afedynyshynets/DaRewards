@@ -1,0 +1,428 @@
+.sb-select {
+
+  > span {
+    display: none;
+  }
+
+  &.sb-select-no-transition input {
+    transition: none;
+  }
+
+  &.sb-searchable {
+    &.sb-searchable-max-width input {
+      // important is required due to react-select changing inline styles on each symbol is entered
+      width: 130% !important;
+    }
+
+    // .sb-select {
+    //   &__value-container {
+    //     &:after {
+    //       @extend .sb-icomoon;
+    //       content: "\e925";
+    //       color: $warm-grey;
+    //       font-size: 16px;
+    //       border: 0;
+    //       margin: 0;
+    //       width: auto;
+    //       height: auto;
+    //       right: 8px;
+    //       top: 8px;
+    //       transform: rotate(0deg) !important;
+    //     }
+    //   }
+    // }
+  }
+  
+  & .sb-select__control {    
+    &--is-disabled {
+      background-color: #e9ecef !important;
+      opacity: 1;
+
+      & .sb-select__single-value--is-disabled {
+        color: #333 !important;
+      }
+    }
+  }
+
+  &.sb-select-title {
+	  .sb-select__control {
+		  &:before {
+			  content: "Contact:";
+			  display: inline-block;
+			  padding-left: 8px;
+      }
+	  }
+
+		.sb-select__input input,
+	  .sb-select__value-container {
+		  font-weight: bold;
+	  }
+  }
+
+  &.sb-success {
+		.sb-select {
+			&__control {
+				&--is-focused {
+					border-color: $shamrock-green !important;
+
+					.sb-select__value-container {
+						&:after {
+							color: $shamrock-green;
+						}
+					}
+				}
+			}
+
+			&__option--is-selected {
+				background: $shamrock-green !important;
+			}
+
+			&__menu {
+				border-color: $shamrock-green;
+			}
+		}
+	}
+
+  .sb-select__value-container{
+    line-height: 1.43;
+  }
+
+  .sb-select {
+    &__control {
+      @include transition;
+			min-height: 32px;
+			height: 32px;
+      box-shadow: none;
+      border-radius: 6px;
+      border-color: $white-two;
+      background: $white;
+
+      &:hover {
+        border-color: $white-two;
+      }
+
+      &--is-focused {
+        border-color: $azure !important;
+
+        .sb-select__value-container {
+          padding: 2px 26px 2px 6px;
+    
+          &:after {
+            transform: rotate(180deg);
+            color: $azure;
+          }
+        }
+      }
+    }
+
+    &__value-container {
+      padding: 2px 26px 2px 6px;
+    }
+
+    &__placeholder {
+      color: $black-4;
+      text-overflow: ellipsis;
+      max-width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    &__menu {
+      box-shadow: none;
+      border-radius: 6px;
+      border: 1px solid $azure;
+      background: $white;
+      z-index: 99;
+
+      &-notice--no-options {
+        text-align: left;
+        padding: 7px 8px;
+        font-size: 12px;
+        color: $black-4;
+      }
+    }
+
+    &__menu-list {
+      padding: 0;
+    }
+
+    &__option {
+      @include transition;
+      padding: 0.375rem 8px;
+      cursor: pointer;
+
+      &--is-focused,
+      &:hover {
+        background: $white-two;
+      }
+
+      &:first-child {
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+      }
+
+      &:last-child {
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+      }
+
+      &--is-selected {
+        background: $azure !important;
+      }
+    }
+  }
+}
+
+
+.sb-select .sb-select__indicator-separator {
+  display: none;
+
+  i[class=icon-search] {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1) {
+
+.sb-select {
+  .sb-select__indicators{
+    height: 30px;
+   .sb-select__indicator {
+      padding-top: 0;
+      padding-bottom: 0;
+   }
+  }
+}
+}
+
+.sb-select.sb-select-industry .sb-select__value-container {
+  padding-bottom: 7px;
+}
+
+.sb-select__single-value {
+  max-width: calc(100% - 30px) !important;
+}
+.sb-select__clear-indicator + .sb-select__indicator-separator {
+  display: block !important;
+}
+
+.sb-option-item-ag-grid {
+  display: flex !important;
+  align-items: center;
+
+  label {
+    margin-left: 6px;
+    margin-bottom: 0;
+  }
+}
+
+.sb-option-multi-level-item {
+  padding-right: 0 !important;
+  margin-right: 8px;
+}
+
+.sb-select-ag-grid input[id^="react-select"] {
+  height: 100%;
+}
+
+// this colors must match react-select colors
+.custom-select-option-selected {
+  background-color: #2684FF;
+}
+
+.custom-select-option-focused {
+  background-color: #DEEBFF;
+}
+
+
+.sb-select-ag-grid {
+  .sb-select__control--is-focused .sb-select__value-container {
+    padding-right: 0;
+  }
+
+  .sb-select__input input {
+    position: absolute;
+    top: 0;
+  } 
+}
+
+@supports (-ms-ime-align:auto) {
+  .sb-select-ag-grid {
+    .sb-select__control .sb-select__value-container {
+      padding-bottom: 5px !important;
+
+      @media screen and (-webkit-device-pixel-ratio: 1.25) {
+        margin-top: -2px;
+      }
+    }
+    .sb-select__indicators > div {
+      padding-top: 5px;
+      @media screen and (-webkit-device-pixel-ratio: 1.25) {
+        & > svg {
+          margin-top: -4px;
+        }
+      }
+    }
+  }
+}
+
+// This is a custom arrow at dropdown. But since we switching to react-native ones, this is commented in case this switch would be rejected
+//
+// .sb-select:not(.sb-select-show-indicators) .sb-select__value-container:after {
+//   @include transition(color);
+//   position: absolute;
+//   right: 12px;
+//   top: 15px;
+//   width: 0;
+//   height: 0;
+//   margin-left: 0.255em;
+//   vertical-align: 0.255em;
+//   content: "";
+//   border-top: 0.3em solid;
+//   border-right: 0.3em solid transparent;
+//   border-bottom: 0;
+//   border-left: 0.3em solid transparent;
+// }
+
+// .sb-select.sb-select-source .sb-select__value-container:after {
+//   top: 12px;
+// }
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .sb-select {
+
+
+
+    &.sb-select-title {
+      .sb-select__control {
+        &:before {
+          padding-left: round(8*0.79px);
+        }
+      }
+    }
+
+
+    .sb-select {
+      &__control {
+        min-height: round(32*0.79px);
+        height: round(32*0.79px);
+        border-radius: round(6*0.79px);
+        align-items: center;
+
+        &--is-focused {
+
+          .sb-select__value-container {
+            padding: 0 0 0 round(6*0.79px);
+          }
+        }
+      }
+
+      &__value-container {
+        padding: 0 0 0 round(6*0.79px);
+      }
+
+      &__menu {
+        border-radius: round(6*0.79px);
+
+        &-notice--no-options {
+          padding: round(7*0.79px) round(8*0.79px);
+          font-size: round(12*0.79px);
+        }
+      }
+
+      &__menu-list {
+        padding: 0;
+      }
+
+      &__option {
+        padding: 0.375*0.79rem round(8*0.79px);
+
+        &:first-child {
+          border-top-right-radius: round(6*0.79px);
+          border-top-left-radius: round(6*0.79px);
+        }
+
+        &:last-child {
+          border-bottom-right-radius: round(6*0.79px);
+          border-bottom-left-radius: round(6*0.79px);
+        }
+
+      }
+    }
+  }
+
+
+  .sb-select .sb-select__indicator-separator {
+
+    i[class=icon-search] {
+      font-size: round(16*0.79px);
+      padding: round(10*0.79px);
+    }
+  }
+
+  .sb-select.sb-select-industry .sb-select__value-container {
+    padding-bottom: round(7*0.79px);
+  }
+
+  .sb-select__single-value {
+    max-width: calc(100% - 24px) !important;
+  }
+
+  .sb-option-item-ag-grid {
+    label {
+      margin-left: round(6*0.79px);
+      margin-bottom: 0;
+    }
+  }
+
+  .sb-option-multi-level-item {
+    padding-right: 0 !important;
+    margin-right: round(8*0.79px);
+  }
+
+  .sb-select__indicators {
+    height: 23px;
+  }
+
+  .sb-select__indicator-separator {
+    margin-bottom: 5px !important;
+    margin-top: 5px !important;
+  }
+  div.sb-select__indicator{
+    padding: round(8*0.79px);
+    
+    svg {
+      width: round(20*0.79px);
+      margin-top: -1px
+    }
+
+    i.icon-search {
+      font-size: 10px;
+      margin-top: 1px;
+    }
+    
+    &.sb-select__clear-indicator {
+      margin-top: -5px;
+      padding-bottom: 0;
+      padding-right: 4px;
+      
+      svg {
+        width: 14px;
+        height: 14px;
+        margin-top: -1px;
+      }
+    }
+  }
+
+  .sb-option-item-ag-grid{
+    padding: round(8*0.79px) round(12*0.79px);
+  }
+
+  .sb-select__clear-indicator svg{
+    width:round(20*0.79px);
+    height:round(20*0.79px);
+  }
+
+
+}

@@ -1,0 +1,47 @@
+.sb-text-overflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sb-overflow-hidden {
+  overflow: hidden !important;
+}
+
+//usage: @include transition([property],[duration],[easing]);
+@mixin transition($property: all, $duration: .15s, $ease: ease-in-out){
+	transition: $property $duration $ease;
+}
+
+//usage: @include background($warm-grey);
+@mixin background($color) {
+  background: $color;
+
+  &:hover {
+    background: $primary;
+  }
+}
+
+@mixin icon-in-circle($icon-color: $white, $bg-color: $white-six, $diameter: 32px, $icon-size: 24px) {
+  background-color: $bg-color;
+  width: #{$diameter};
+  height: #{$diameter};
+  line-height: #{$diameter};
+
+  i {
+    color: $icon-color;
+    font-size: #{$icon-size};
+  }
+}
+
+@mixin icon-in-circle-zoom($icon-color: $white, $bg-color: $white-six, $diameter: 25px, $icon-size: 19px) {
+  background-color: $bg-color;
+  width: #{$diameter};
+  height: #{$diameter};
+  line-height: #{$diameter};
+
+  i {
+    color: $icon-color;
+    font-size: #{$icon-size};
+  }
+}

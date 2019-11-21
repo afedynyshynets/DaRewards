@@ -1,0 +1,1007 @@
+.chart-legend {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  >:first-child {
+    margin-right: 70px;
+  }
+
+  .font-weight-bold {
+    margin-left: 8px;
+  }
+}
+
+.new-logo-count {
+  color: #00a17f;
+  font-size: 19px;
+
+  @media screen and (-webkit-device-pixel-ratio: 1.25) {
+    font-size: 16px;
+  }
+}
+
+.mql-count {
+  color: $mql-color;
+  font-size: 19px;
+
+  @media screen and (-webkit-device-pixel-ratio: 1.25) {
+    font-size: 16px;
+  }
+}
+
+.statistics-container {
+  height: calc(100vh - 106px);
+}
+
+.statistics-body {
+  height: 100%;
+  overflow: auto;
+}
+
+.new-logo-icon {
+  width: 16px;
+  margin-left: 10px;
+}
+
+.modal-dialog.opportunities-modal .new-logo-icon {
+  margin-left: 20px;
+}
+
+.statistics-page {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .row {
+    margin: 0;
+    flex-wrap: nowrap;
+  }
+
+  .sb-panel-header strong {
+    font-size: 1rem;
+  }
+
+  .sb-icon-input.datetime-width,
+  .sb-icon-input .rdt .form-control {
+    padding-right: 0;
+    width: 146px;
+  }
+
+  .rdtPicker {
+    left: -75px;
+  }
+
+  .no-data-container {
+    height: 94%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-size: 1rem;
+      color: $black-two;
+    }
+  }
+
+  .title-with-tooltip {
+    padding-bottom: 1rem;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+.sb-loader-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $warm-grey;
+  height: 100%;
+  z-index: 999;
+  opacity: 0.6;
+  display: flex;
+
+  path {
+    stroke: white !important;
+  }
+}
+
+// TODO: rewrite styles for panel component (perhaps not only styles but entire component)
+.sb-panel.month-overview-widget {
+  padding: 0;
+  width: 444px;
+  height: 542px;
+  margin-right: 32px;
+  position: relative;
+
+  .sb-panel-header {
+    margin: 0;
+    min-height: 56px;
+    line-height: initial;
+  }
+
+  .sb-panel-body {
+    margin: 0;
+    padding: 0;
+    height: 484px;
+
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      min-height: 170px;
+      height: 50%;
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 123px;
+      padding: 0 15px;
+    }
+
+    .row:first-of-type {
+      border-bottom: 1px solid #ddd;
+    }
+  }
+}
+
+.sb-panel.total-leads-and-opportunities {
+  height: 542px;
+  flex: 1;
+  position: relative;
+
+  .sb-panel-header {
+    min-height: 56px;
+  }
+
+  .sb-panel-body {
+    padding: 0;
+    height: 100%;
+    width: calc(100% - 20px);
+
+    &>div {
+      height: 45%;
+    }
+  }
+}
+
+.sb-panel.month-overview-and-total {
+  padding: 2rem;
+  padding-top: 1rem;
+}
+
+.sb-panel.leads-and-opportunities {
+  padding: 2rem;
+  padding-top: 1rem;
+
+  .leads-and-opportunities-header {
+    justify-content: space-between;
+  }
+
+  .toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .toolbar-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #ddd;
+      padding: 8px 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      width: 124px;
+      height: 32px;
+
+      &:hover {
+        border-color: $azure;
+      }
+
+      &.active {
+        background-color: $azure;
+        color: white;
+      }
+
+      &:first-of-type {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      &:not(:first-of-type) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+
+  .sb-panel {
+    .sb-panel-header {
+      height: 56px;
+      min-height: 56px;
+    }
+  }
+
+  .lead-monthly-overview {
+    position: relative;
+    width: 412px;
+    margin-right: 32px;
+
+    .engaged-leads-divider {
+      border-top: 1px solid $grey-300;
+      width: 123px;
+      margin: 0 auto;
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 32px;
+      font-size: 1rem;
+    }
+
+    .created-leads-section {
+      padding-bottom: 32px;
+      border-bottom: 1px solid $grey-300;
+      width: 109%;
+      margin-left: -1rem;
+
+      .previous-month {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+          color: $warm-grey;
+        }
+      }
+
+      .current-month {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-right: 1px solid $grey-300;
+      }
+    }
+
+    .engaged-leads-section {
+      padding-top: 16px;
+      margin-bottom: 16px;
+      text-align: center;
+
+      h1 {
+        margin-bottom: 8px;
+      }
+    }
+
+    .arrow-down {
+      transform: rotate(180deg);
+    }
+  }
+
+  .total-overview {
+    position: relative;
+    flex: 1;
+    border: 1px solid $grey-300;
+
+    .no-data-container {
+      height: auto;
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+
+    .total-overview-header {
+      display: flex;
+      border-bottom: 1px solid $grey-300;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 22px 12px 22px;
+
+      strong {
+        font-size: 1rem;
+      }
+    }
+
+    .total-overview-table {
+      display: flex;
+      border-top: none;
+
+      .table-left {
+        width: 10%;
+        border-right: 1px solid $grey-300;
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        z-index: 99;
+        background-color: white;
+
+        &>* {
+          padding: 0.5rem;
+          font-weight: 600;
+          padding: 1rem;
+          flex: 1;
+          padding-right: 0;
+        }
+
+        &>*:not(:last-child) {
+          border-bottom: 1px solid $grey-300;
+        }
+
+        .left-arrow-container {
+          border-bottom: none;
+          align-self: flex-end;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-right: 12px;
+          height: 47px;
+        }
+
+        .left-arrow {
+          border-left: 3px solid $warm-grey;
+          border-bottom: 3px solid $warm-grey;
+          width: 12px;
+          height: 12px;
+          transform: rotateZ(45deg);
+          cursor: pointer;
+        }
+      }
+
+      .table-right {
+        width: 25%;
+        border-left: 1px solid $grey-300;
+        display: flex;
+        z-index: 99;
+        background-color: white;
+
+        .right-arrow-container {
+          border-bottom: none;
+          align-self: start;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 53px;
+          width: 24px;
+        }
+
+        .right-arrow {
+          border-left: 3px solid #828282;
+          border-bottom: 3px solid #828282;
+          width: 12px;
+          margin-left: 10px;
+          height: 12px;
+          -webkit-transform: rotateZ(-135deg);
+          transform: rotateZ(-135deg);
+          cursor: pointer;
+        }
+
+        .statistics {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          margin-left: 32px;
+
+          strong {
+            font-size: 20px;
+          }
+        }
+
+      }
+
+      .left-arrow.disabled,
+      .right-arrow.disabled {
+        border-color: $white-three;
+        cursor: initial;
+      }
+
+      .table-viewport-container {
+        flex: 1;
+        overflow: hidden;
+      }
+
+      .table-viewport {
+        @include transition($duration: .3s);
+        display: flex;
+        // flex: 1;
+        // overflow: hidden;
+        // transform: translate(-260px, 0);
+
+        .column:nth-of-type(2n) {
+          background-color: #f7f7f7;
+        }
+
+        .column {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          min-width: 8.33%;
+
+          &>* {
+            padding: 1rem 0;
+            font-size: 12px;
+          }
+
+          &>*:not(:last-child) {
+            border-bottom: 1px solid $grey-300;
+            width: 100%;
+            text-align: center;
+          }
+
+          &:hover {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.opportunities-table {
+  .table-container {
+    &>:first-child {
+      font-weight: 600;
+    }
+    
+    .opportunities-table-wrapper {
+      max-height: 230px;
+      overflow-y: scroll;
+    }
+
+    .table-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $grey-300;
+      padding: 12px 0;
+      font-size: 12px;
+
+      & > div {
+        display: flex;
+        align-items: center;
+      }
+
+      .opportunity-name-column {
+        width: 130px;
+      }
+
+      .value-column {
+        width: 65px;
+        justify-content: center;
+      }
+
+      .expected-closed-date-column {
+        width: 135px;
+        justify-content: flex-end;
+
+        &.overdue-alert {
+          border-radius: 3px;
+          height: 24px;
+          width: 80px;
+          align-self: center;
+          background-color: #df2c2c;
+          color: white;
+          margin-left: 65px;
+          padding: 3px;
+          display: flex;
+          justify-content: center;
+
+          @media screen and (-webkit-device-pixel-ratio: 1.25) {
+            width: 76px;
+            margin-left: 54px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.opportunity-monthly-overview {
+  width: 412px;
+  margin-right: 32px;
+
+  & > .sb-panel-body {
+    padding-bottom: 16px;
+    height: 100%;
+  }
+
+  .engaged-leads-divider {
+    border-top: 1px solid $grey-300;
+    width: 123px;
+    margin: 0 auto;
+    margin-bottom: 22px;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 1rem;
+  }
+
+  .created-opportunities-section {
+    padding-bottom: 32px;
+    border-bottom: 1px solid $grey-300;
+    width: 109%;
+    margin-left: -1rem;
+
+    .previous-month {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      @media screen and (-webkit-device-pixel-ratio: 1.25) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+
+    .current-month {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-right: 1px solid $grey-300;
+    }
+  }
+
+  .opportunities-expected-section {
+    padding-top: 30px;
+    margin-bottom: 32px;
+    text-align: center;
+    min-height: 265px;
+
+    h1 {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.sb-panel.entities-by-stage {
+  flex: 1 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .sb-panel-body {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .graph-container {
+    // flex: 1;
+    height: 100px;
+  }
+
+  .graphs {
+    width: 75%;
+    padding-right: 20px;
+    margin-bottom: 25px;
+  }
+
+  .graphs-with-legend {
+    display: flex;
+  }
+  
+  .graph-legend-container {
+    width: 25%;
+    padding-top: 15px;
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+
+      .semi-visible {
+        margin-left: 8px;
+      }
+    }
+
+    .color-box {
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
+      margin-right: 8px;
+    }
+
+    .finance-color-box { background-color: #17468b; }
+    .travel-color-box { background-color: #00a17f; }
+    .healthcare-color-box { background-color: #21c1e1; }
+    .igaming-color-box { background-color: $tangerine; }
+    .digital-transformation-color-box { background-color: #e3402c; }
+    .media-color-box { background-color: $goldenrod; }
+  }
+
+  .trash-disqualified-panels {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 2rem;
+
+    .sb-panel {
+      flex: 1;
+    }
+
+    .bottom-panel {
+      border: 1px dashed $white-three;
+      margin-right: 8px;
+      height: 81px;
+      flex: 1;
+      display: flex;
+      
+      .bottom-panel-icon {
+        font-weight: 600;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        padding: 0 1.5rem;
+        border-right: 1px dashed $white-three;
+      }
+
+      i {
+        color: $warm-grey;
+        font-size: 24px;
+        margin-right: 8px;
+      }
+
+      .bottom-panel-stats {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0 1.5rem;
+
+        @supports(-ms-ime-align: auto) {
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+}
+
+.graph-tooltip {
+  background-color: white;
+  border: 1px solid $white-three;
+  padding: 8px;
+}
+
+.graph-bar-label {
+  fill: black;
+  opacity: 1;
+  font-weight: 600;
+}
+
+// .recharts-tooltip-wrapper {
+//   z-index: 9999;
+// }
+
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .chart-legend {
+
+    >:first-child {
+      margin-right: round(70*0.79px);
+    }
+
+    .font-weight-bold {
+      margin-left: round(8*0.79px);
+    }
+  }
+
+  .statistics-container {
+    height: calc(100vh - 84px);
+  }
+
+  .statistics-page {
+    padding-top: round(20*0.79px);
+    padding-bottom: round(20*0.79px);
+
+    h1 {
+      font-size: 4*0.79rem;
+    }
+
+    .sb-panel-header strong {
+      font-size: 1*0.79rem;
+    }
+  }
+
+  // TODO: rewrite styles for panel component (perhaps not only styles but entire component)
+  .sb-panel.month-overview-widget {
+    width: round(444*0.79px);
+    height: round(542*0.79px);
+    margin-right: round(32*0.79px);
+
+    .sb-panel-header {
+      min-height: round(56*0.79px);
+    }
+
+    .sb-panel-body {
+      height: round(484*0.79px);
+
+      .row {
+        min-height: round(170*0.79px);
+      }
+    }
+  }
+
+  .sb-panel.total-leads-and-opportunities {
+    height: round(542*0.79px);
+
+    .sb-panel-header {
+      min-height: round(56*0.79px);
+    }
+
+    .sb-panel-body {
+      width: calc(100% - 16px);
+    }
+  }
+
+  .sb-panel.month-overview-and-total {
+    padding: 2*0.79rem;
+    padding-top: 1*0.79rem;
+  }
+
+  .sb-panel.leads-and-opportunities {
+    padding: 2*0.79rem;
+    padding-top: 1*0.79rem;
+
+    .toolbar {
+
+      .toolbar-item {
+        padding: round(8*0.79px) round(16*0.79px);
+        border-radius: round(25*0.79px);
+        width: round(124*0.79px);
+        height: round(32*0.79px);
+      }
+    }
+
+    .sb-panel {
+      .sb-panel-header {
+        height: round(56*0.79px);
+        min-height: round(56*0.79px);
+      }
+    }
+
+    .lead-monthly-overview {
+      width: round(412*0.79px);
+      margin-right: round(32*0.79px);
+
+      .engaged-leads-divider {
+        width: round(123*0.79px);
+        margin-bottom: round(22*0.79px);
+      }
+
+      .section-title {
+        margin-bottom: round(32*0.79px);
+        font-size: 1*0.79rem;
+      }
+
+      .created-leads-section {
+        padding-bottom: round(32*0.79px);
+        
+        svg{
+          width:round(36*0.79px);
+        }
+
+      }
+
+      .engaged-leads-section {
+        padding-top: round(16*0.79px);
+        margin-bottom: round(16*0.79px);
+
+        h1 {
+          margin-bottom: round(8*0.79px);
+        }
+      }
+    }
+
+    .total-overview {
+
+      .total-overview-header {
+        padding: round(14*0.79px) round(22*0.79px) round(12*0.79px) round(22*0.79px);
+
+        strong {
+          font-size: 1*0.79rem;
+        }
+      }
+
+      .total-overview-table {
+
+        .table-left {
+          font-size: round(12*0.79px);
+
+          &>* {
+            padding: 0.5*0.79rem;
+            padding: 1*0.79rem;
+            padding-right: 0;
+          }
+
+          .left-arrow-container {
+            padding-right: round(12*0.79px);
+            height: round(47*0.79px);
+          }
+
+          .left-arrow {
+            width: round(12*0.79px);
+            height: round(12*0.79px);
+          }
+        }
+
+        .table-right {
+
+          .right-arrow-container {
+            height: round(53*0.79px);
+            width: round(24*0.79px);
+          }
+
+          .right-arrow {
+            width: round(12*0.79px);
+            margin-left: round(10*0.79px);
+            height: round(12*0.79px);
+          }
+
+          .statistics {
+            margin-left: round(32*0.79px);
+
+            strong {
+              font-size: round(20*0.79px);
+            }
+          }
+
+        }
+
+        .table-viewport {
+
+
+          .column {
+
+            &>* {
+              padding: 1*0.79rem 0;
+              font-size: round(12*0.79px);
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  .opportunity-monthly-overview {
+    width: round(412*0.79px);
+    margin-right: round(32*0.79px);
+
+    .engaged-leads-divider {
+      width: round(123*0.79px);
+      margin-bottom: round(22*0.79px);
+    }
+
+    .section-title {
+      margin-bottom: round(32*0.79px);
+      font-size: 1*0.79rem;
+    }
+
+    .created-opportunities-section {
+      padding-bottom: round(32*0.79px);
+    }
+
+    .opportunities-expected-section {
+      padding-top: round(30*0.79px);
+      margin-bottom: round(32*0.79px);
+      min-height: round(265*0.79px);
+
+      h1 {
+        margin-bottom: round(8*0.79px);
+      }
+    }
+
+    .table-container {
+      
+      .table-row {
+        font-size: 12 * 0.79px;
+        padding: round(12*0.79px) 0;
+      }
+
+      .opportunity-name-column {
+        width: round(130*0.79px);
+      }
+
+      .value-column {
+        width: 43px !important;
+      }
+
+      .expected-closed-date-column {
+        width: round(135*0.79px);
+      }
+    }
+  }
+
+  .sb-panel.entities-by-stage {
+
+    .graph-container {
+      //height: round(100*0.79px);
+      height: 87px;
+      
+      .recharts-wrapper{
+        svg{
+          text[text-anchor="start"]{
+                font-size: round(14*0.79px);
+          }
+        }
+      }
+
+    }
+
+    .graphs {
+      padding-right: round(20*0.79px);
+    }
+    
+    .graph-legend-container {
+      padding-top: round(15*0.79px);
+
+      .legend-item {
+        margin-bottom: round(24*0.79px);
+
+        .semi-visible {
+          margin-left: round(8*0.79px);
+        }
+      }
+
+      .color-box {
+        width: round(20*0.79px);
+        height: round(20*0.79px);
+        border-radius: round(6*0.79px);
+        margin-right: round(8*0.79px);
+      }
+    }
+
+    .trash-disqualified-panels {
+      margin-top: round(24*0.79px);
+      padding: 0 2*0.79rem;
+
+      .bottom-panel {
+        margin-right: round(8*0.79px);
+        height: round(81*0.79px);
+        
+        .bottom-panel-icon {
+          padding: 0 1.5*0.79rem;
+        }
+
+        i {
+          font-size: round(24*0.79px);
+          margin-right: round(8*0.79px);
+        }
+
+        .bottom-panel-stats {
+          padding: 0 1.5*0.79rem;
+        }
+      }
+    }
+  } 
+
+  .graph-tooltip {
+    padding: round(8*0.79px);
+  }
+
+}

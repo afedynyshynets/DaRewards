@@ -1,0 +1,499 @@
+.ag-theme-balham {
+  width: 100%;
+  font: 0.875rem/1.43 $font-family-base;
+  
+  .sb-rounded-bar {
+    font-size: 10px;
+  }
+
+  .ag-ltr {
+    .ag-cell-focus {
+      border-color: transparent;
+    }
+  }
+
+  .ag-header-cell-label {
+    width: 100%;
+  }
+
+  .ag-row-selected {
+	background: $azure-5 !important;
+  }
+
+  .ag-header,
+  .ag-header-row,
+  .ag-row,
+  .ag-root {
+    border-color: $white-three;
+  }
+
+  .ag-root {
+    border-width: 1px 1px 0;
+  }
+
+  .ag-header {
+    color: $black-6;
+    font: 0.875rem/1.43 $font-family-base;
+    background: $white;
+  }
+
+  .ag-header-cell {
+    &:after {
+      display: none;
+    }
+
+    &[col-id="favorite"] {
+      padding-left: 19px;
+    }
+  }
+
+  .ag-cell,
+  .ag-header-cell,
+  .ag-header-group-cell {
+    padding-left: 14px;
+    padding-right: 0;
+  }
+
+  .ag-header-cell-text {
+    padding-top: 9px;
+  }
+  
+  .ag-icon-desc,
+  .ag-icon-asc {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4gICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJub256ZXJvIj4gICAgICAgIDxwYXRoIGQ9Ik0wIDBoMTZ2MTZIMHoiLz4gICAgICAgIDxwYXRoIGZpbGw9IiM4MjgyODIiIGQ9Ik00IDExVjRoMnY3aDJsLTMgMy0zLTNoMnoiLz4gICAgICAgIDxwYXRoIGZpbGw9IiMwMUEwRUMiIGQ9Ik0xMiA1djdoLTJWNUg4bDMtMyAzIDNoLTJ6Ii8+ICAgIDwvZz48L3N2Zz4=);
+  }
+
+  
+  .ag-icon-none {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4gICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJub256ZXJvIj4gICAgICAgIDxwYXRoIGQ9Ik0wIDBoMTZ2MTZIMHoiLz4gICAgICAgIDxwYXRoIGZpbGw9IiM4MjgyODIiIGQ9Ik00IDExVjRoMnY3aDJsLTMgMy0zLTNoMnpNMTIgNXY3aC0yVjVIOGwzLTMgMyAzaC0yeiIvPiAgICA8L2c+PC9zdmc+);
+  }
+  
+  .ag-icon-desc {
+    transform: rotate(180deg);
+    top: 1px;
+    position: relative;
+  }
+  
+  .ag-cell {
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  .sb-grid-sub {
+    font-size: 0.75rem;
+  }
+  .ag-lead-name-cell .ag-react-container {
+    overflow: hidden;
+
+    .sb-grid-sub {
+      display: flex;
+
+      a, div {
+        text-overflow: ellipsis;
+        font-size: 0.75rem;
+        overflow: hidden;
+        display: block;
+      }
+    }
+  }
+
+  .sb-grid-lead-name {
+    font-weight: 600;
+    width: 325px;
+  }
+
+  .ag-cell[col-id=companyName] {
+    width: 188px;
+    top: 30%;
+  }
+
+  .sb-grid-lead-name,
+  div[col-id=companyName] {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+
+    a {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .sb-industry-col {
+    padding-left: 24px;
+  }
+
+  .sb-favorite-col .ag-react-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sb-is-stale-col {
+    border: 0;
+
+    .ag-react-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .sb-icon {
+    margin-right: 8px;
+  }
+
+  .ag-row {
+    @include transition;
+  }
+
+  .ag-row-odd {
+    background-color: white;
+  }
+
+  .ag-row-hover {
+    background-color: $white-four;
+  }
+
+  .ag-overlay-wrapper.ag-overlay-no-rows-wrapper {
+    height: 100%;
+    display: table-cell;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // fix for the floating advanced filter
+  .ag-root-wrapper > .ag-theme-balham {
+    width: auto;
+    height: auto;
+    z-index: 9999;
+  }
+
+  .ag-pinned-left-header .ag-header-cell,
+  .ag-pinned-right-header .ag-header-cell {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  .ag-floating-filter-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    input.form-control {
+      height: 32px;
+    }
+
+    [ref=eColumnFloatingFilter] {
+      height: 32px;
+      border: 1px solid #d7d7d7;
+      border-radius: 6px;
+    }
+
+    .sb-select .sb-select__control {
+      height: 24px;
+      max-height: 24px;
+    }
+  }
+  .ag-floating-filter-button {
+    display: none;
+  }
+}
+.ag-theme-balham.ag-dnd-ghost{
+  width: auto;
+}
+.ag-pinned-left-cols-viewport-wrapper {
+  border-right: 1px solid #bdc3c7;
+}
+.ag-pinned-right-cols-viewport-wrapper {
+  border-left: 1px solid #bdc3c7;
+}
+
+.sb-grid-pagination {
+  background: $white;
+  border: solid $white-three;
+  border-width: 0 1px 1px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 0.75rem;
+  padding: 15px 0;
+
+  [class^="icon-"], 
+  [class*=" icon-"] {
+    color: $warm-grey;
+    font-size: 24px;
+  }
+
+  .sb-btns {
+    margin-bottom: 12px;
+    line-height: 24px;
+
+    button {
+      margin: 0 4px;
+      vertical-align: top;
+    }
+
+    .icon-arrow-next {
+      position: relative;
+      top: 1px;
+
+      &.icon-h-rotate {
+        top: 0;
+      }
+    }
+  }
+
+  .sb-total {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 4px;
+  }
+
+  p {
+    color: $black-6;
+    margin-bottom: 0;
+  }
+}
+
+div[col-id=coSeller] .ag-react-container {
+  width: 60px;
+}
+
+.ag-grid-set-column-filter-hide-input input[id^=react-select] {
+  position: absolute;
+}
+
+.lead-source-renderer div.d-flex > * {
+  margin-right: 2px;
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  .lead-source-renderer {
+    margin: auto 0;
+
+    div.d-flex > * {
+      line-height: 12px;
+      font-size: 9px;
+    }
+  }
+
+  .ag-theme-balham {
+    font: 0.691rem/1.43 $font-family-base;
+
+    .sb-rounded-bar {
+      font-size: round(10*0.79px);
+    }
+
+    .ag-header {
+      font: 0.691rem/1.43 $font-family-base;
+      height: 82px!important;
+      min-height: 82px!important;      
+    }
+
+    .ag-header-cell {
+      &[col-id="favorite"] {
+        padding-left: round(19*0.79px);
+      }
+    }
+
+    .ag-cell,
+    .ag-header-cell,
+    .ag-header-group-cell {
+      padding-left: round(14*0.79px);
+    }
+
+    .ag-header-cell-text {
+      padding-top: 4px;
+    }
+    
+    .ag-cell {
+      line-height: round(20*0.79px);
+    }
+
+    .sb-grid-sub {
+      font-size: 0.75*0.79rem;
+    }
+    .ag-lead-name-cell .ag-react-container {
+      a {
+        font-size: 0.75*0.79rem;
+      }
+    }
+
+    .sb-grid-lead-name {
+      width: 235px;
+    }
+
+    .ag-cell[col-id=companyName] {
+      width: round(188*0.79px);
+    }
+
+    .sb-industry-col {
+      padding-left: round(24*0.79px);
+    }
+
+    .sb-icon {
+      margin-right: round(8*0.79px);
+    }
+
+    .ag-pinned-left-header .ag-header-cell,
+    .ag-pinned-right-header .ag-header-cell {
+      padding-left: round(7*0.79px);
+      padding-right: round(7*0.79px);
+    }
+
+    .ag-floating-filter-body {
+
+      input.form-control {
+        height: round(32*0.79px);
+      }
+
+      [ref=eColumnFloatingFilter] {
+        height: round(32*0.79px);
+        border-radius: round(6*0.79px);
+      }
+
+      .sb-select .sb-select__control {
+        height: round(24*0.79px);
+        max-height: round(24*0.79px);
+      }
+      div.sb-select__indicator.sb-select__clear-indicator svg {
+        margin-top: 0;
+      }
+
+      .sb-icon-input .icon-calendar[class^="icon-"]{
+        top: 10px;
+      }
+
+      .sb-icon-input { 
+        div.DayPickerInput ~ i.icon-close {
+          top: 10px;
+          font-size: 12px;
+
+          @supports(-ms-ime-align: auto) {
+            top: 10px;
+          }
+        }
+      }
+    }
+
+    .ag-icon-none{
+      background-size: round(16*0.79px) round(16*0.79px);
+      width: round(16*0.79px);
+    }
+
+    .ag-row [col-id=industry] .sb-icon-in-circle i{
+      font-size: round(20*0.79px)!important;
+    }
+
+    .ag-row [col-id=industry] .sb-icon-in-circle .icon-industry-travel{
+      font-size: round(10*0.79px)!important;
+    }     
+
+    // .ag-row{
+    //   height:round(60*0.79px)!important;
+    // }
+
+    // .ag-header-cell[col-id=industry]{
+    //   width:round(90*0.79px)!important;
+    // }
+
+    // .ag-header-cell[col-id=name]{
+    //   width:round(340*0.79px)!important;
+    //   left:round(90*0.79px)!important;
+    // }
+    // .ag-header-cell[col-id=companyName]{
+    //   width:round(200*0.79px)!important;
+    //   left:round(430*0.79px)!important;
+    // }
+    // .ag-header-cell[col-id=potential]{
+    //   width:round(100*0.79px)!important;
+    //   left:round(630*0.79px)!important;
+    // }
+    // .ag-header-cell[col-id=score]{
+    //   width:round(90*0.79px)!important;
+    //   left:round(630*0.79px)!important;
+    // }
+    // .ag-header-cell[col-id=source]{
+    //   width:round(250*0.79px)!important;
+    // }
+    // .ag-header-cell[col-id="owner.fullName"]{
+    //   width:round(230*0.79px)!important;
+    // }
+    // .ag-header-cell[col-id="coSeller.fullName"]{
+    //   width:round(230*0.79px)!important;
+    // }                                    
+
+
+  }
+
+  .sb-grid-pagination {
+    font-size: 0.75*0.79rem;
+    padding: round(15*0.79px) 0;
+
+    [class^="icon-"], 
+    [class*=" icon-"] {
+      font-size: round(24*0.79px);
+    }
+
+    .sb-btns {
+      margin-bottom: round(12*0.79px);
+      line-height: round(24*0.79px);
+
+      button {
+        margin: 0 round(4*0.79px);
+      }
+    }
+
+    .sb-total {
+      margin: 0 round(4*0.79px);
+    }
+  }
+
+  div[col-id=coSeller] .ag-react-container {
+    width: round(60*0.79px);
+  }
+
+  div[col-id=industry]{
+    .sb-icon-in-circle {
+        width: round(36*0.79px)!important;
+        height: round(36*0.79px)!important;
+        line-height: round(36*0.79px)!important;    
+    }
+    .icon-industry-finance{
+      font-size: round(20*0.79px)!important;
+    }    
+  }
+
+  .sb-select__dropdown-indicator{
+    padding: round(8*0.79px);
+  }
+
+  .ag-header-row{
+    height: round(52*0.79px)!important;
+  }
+
+  .ag-header-container .ag-header-row:nth-child(2),
+  .ag-pinned-left-header .ag-header-row:nth-child(2),
+  .ag-pinned-right-header .ag-header-row:nth-child(2) {
+    top: 41px!important;
+  }
+
+  .ag-theme-balham.ag-dnd-ghost{
+    padding: round(4*0.79px);
+    font-size:round(12*0.79px);
+    height: round(32*0.79px) !important;
+    line-height: round(32*0.79px);
+    padding: 0 round(8*0.79px);
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);    
+  }
+  .ag-dnd-ghost.ag-theme-balham .ag-icon-arrows{
+    background-size: round(16*0.79px) round(16*0.79px);
+    width: round(16*0.79px);  
+  }  
+}
