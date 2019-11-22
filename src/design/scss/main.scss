@@ -21,3 +21,25 @@ body {
   text-align: left;
   background-color: #fff;
 }
+
+.b_card {
+  padding: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  margin-bottom: 20px;
+  &__ver {
+    text-align: right;
+  }
+  &__deal {
+    font-weight: bold;
+  }
+  &__draft {
+    font-weight: bold;
+  }
+  .sb-icon-in-circle {
+    i {
+      font-size: 20px;
+      color: rgb(130, 130, 130);
+    }
+  }
+}

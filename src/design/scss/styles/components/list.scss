@@ -27,12 +27,16 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+
   .list_head_fix {
     border-bottom: 1px solid #ccc;
+    background-color: #fff;
   }
+
   .collapse_list_head {
     font-weight: bold;
   }
+
   .list_head_fix_cont {
     display: flex;
     flex: auto;
@@ -58,11 +62,18 @@
       }
     }
   }
+
   .progress {
     height: 0.4rem;
   }
+
   .row {
     align-items: center;
+  }
+
+  .board_head_fix {
+    border-bottom: 0;
+    font-weight: bold;
   }
 }
 .ico_cell {
