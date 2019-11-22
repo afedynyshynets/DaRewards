@@ -1,5 +1,5 @@
 .dropdown-menu {
-  margin-left: -15px;
+  // margin-left: -15px;
   margin-top: 8px;
   padding: 0;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.02);
@@ -27,39 +27,39 @@
 }
 
 .dropdown-item {
-	&:focus,
-	&:active,
-	&.active {
-		.sb-color-black {
-			color: $white
-		}
-	}
+  &:focus,
+  &:active,
+  &.active {
+    .sb-color-black {
+      color: $white;
+    }
+  }
 }
 
 @media screen and (-webkit-device-pixel-ratio: 1.25) {
   .dropdown-menu {
-    margin-left: round(-15*0.79px);
-    margin-top: round(8*0.79px);
-    font-size: 0.875*0.79rem;
-    min-width: round(10*0.79rem);
-    margin: 0.125*0.79rem 0 0;
+    margin-left: round(-15 * 0.79px);
+    margin-top: round(8 * 0.79px);
+    font-size: 0.875 * 0.79rem;
+    min-width: round(10 * 0.79rem);
+    margin: 0.125 * 0.79rem 0 0;
 
     .sb-dropdown-holder {
-      padding: round(24*0.79px);
+      padding: round(24 * 0.79px);
 
       &.sb-drop-mw {
-        min-width: round(286*0.79px);
+        min-width: round(286 * 0.79px);
       }
 
       &.sb-drop-sm {
-        min-width: round(200*0.79px);
+        min-width: round(200 * 0.79px);
       }
     }
 
     .sb-dropdown-scroll {
-      height: round(200*0.79px);
-      margin: 0 round(-24*0.79px);
-      padding: 0 round(24*0.79px);
+      height: round(200 * 0.79px);
+      margin: 0 round(-24 * 0.79px);
+      padding: 0 round(24 * 0.79px);
     }
   }
 }

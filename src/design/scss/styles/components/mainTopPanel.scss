@@ -6,11 +6,28 @@
   button a {
     color: $white;
   }
+
+  .dropdown-toggle {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sb-btn-group .btn-group {
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  .sb-icon-input {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 @media screen and (-webkit-device-pixel-ratio: 1.25) {
-	.sb-main-top-panel {
-	  padding: round(20*0.79px) 0 round(20*0.79px);
-	}
-
+  .sb-main-top-panel {
+    padding: round(20 * 0.79px) 0 round(20 * 0.79px);
+  }
 }

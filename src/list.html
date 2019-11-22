@@ -21,7 +21,7 @@
     />
     <link rel="stylesheet" href="./design/css/main.css" />
 
-    <title>Hello, world!</title>
+    <title>DaRewards</title>
   </head>
 
   <body>
@@ -75,46 +75,6 @@
               <div class="sb-dropdown-holder sb-drop-mw">
                 <div class="position-relative form-group">
                   <label class=""><strong>Reason</strong></label>
-                  <div class="css-1pcexqc-container sb-select sb-success">
-                    <div class="css-bg1rzq-control sb-select__control">
-                      <div class="css-1hwfws3 sb-select__value-container">
-                        <div
-                          class="css-151xaom-placeholder sb-select__placeholder"
-                        >
-                          Choose a reason
-                        </div>
-                        <input
-                          id="react-select-2-input"
-                          readonly=""
-                          tabindex="0"
-                          class="css-gj7qu5-dummyInput"
-                          value=""
-                        />
-                      </div>
-                      <div class="css-1wy0on6 sb-select__indicators">
-                        <span
-                          class="css-bgvzuu-indicatorSeparator sb-select__indicator-separator"
-                        ></span>
-                        <div
-                          aria-hidden="true"
-                          class="css-16pqwjk-indicatorContainer sb-select__indicator sb-select__dropdown-indicator"
-                        >
-                          <svg
-                            height="20"
-                            width="20"
-                            viewBox="0 0 20 20"
-                            aria-hidden="true"
-                            focusable="false"
-                            class="css-19bqh2r"
-                          >
-                            <path
-                              d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                            ></path>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
                 <div class="position-relative form-group">
                   <textarea
@@ -207,6 +167,7 @@
               alt="Alexander Fedynyshynets"
             />
           </div>
+          <span class="badge badge-pill badge-danger">9</span>
         </div>
       </div>
     </header>
@@ -216,147 +177,647 @@
     <div class="sb-main-container">
       <div class="sb-main-top-panel">
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-auto col-lg-auto col-xl-auto">
-              <div class="sb-mb-16">
-                <div>
-                  <ul class="sb-main-tabs list-unstyled">
-                    <li><a href="/leads/board">Board</a></li>
-                    <li>
-                      <a class="active" aria-current="page" href="/leads/list"
-                        >List</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-                <div class="sb-btn-group d-flex">
-                  <div class="btn-group">
-                    <button
-                      type="button"
-                      title="All scores"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                      class="dropdown-toggle btn btn-secondary"
-                    >
-                      All scores
-                    </button>
-                    <div
-                      tabindex="-1"
-                      role="menu"
-                      aria-hidden="true"
-                      class="dropdown-menu"
-                    >
-                      <div class="sb-dropdown-holder sb-drop-mw">
-                        <div>
-                          <label class="sb-checkbox"
-                            >All scores<input type="checkbox" checked=""/><span
-                              class="sb-checkmark"
-                            ></span
-                          ></label>
-                        </div>
-                        <div>
-                          <label class="sb-checkbox"
-                            >High <span class="sb-sub">(80% - 100%)</span
-                            ><input type="checkbox"/><span
-                              class="sb-checkmark"
-                            ></span
-                          ></label>
-                        </div>
-                        <div>
-                          <label class="sb-checkbox"
-                            >Medium <span class="sb-sub">(50% - 79%)</span
-                            ><input type="checkbox"/><span
-                              class="sb-checkmark"
-                            ></span
-                          ></label>
-                        </div>
-                        <div>
-                          <label class="sb-checkbox"
-                            >Low <span class="sb-sub">(0% - 49%)</span
-                            ><input type="checkbox"/><span
-                              class="sb-checkmark"
-                            ></span
-                          ></label>
-                        </div>
-                        <div class="d-flex justify-content-between sb-pt-16">
-                          <button type="button" class="btn btn-link">
-                            Clear</button
-                          ><button type="button" class="btn btn-primary">
-                            <i class="icon-confirm"></i>Apply
-                          </button>
-                        </div>
-                      </div>
-                    </div>
+          <div>
+            <ul class="sb-main-tabs list-unstyled">
+              <li><a href="/leads/board">Board</a></li>
+              <li>
+                <a class="active" aria-current="page" href="/leads/list"
+                  >List</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="sb-btn-group d-flex row">
+            <div class="btn-group col-3">
+              <button
+                type="button"
+                title="Reviewer & Co-Reviewer"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                class="dropdown-toggle form-control"
+              >
+                Reviewer & Co-Reviewer
+              </button>
+              <div
+                tabindex="-1"
+                role="menu"
+                aria-hidden="true"
+                class="dropdown-menu"
+              >
+                <div class="sb-dropdown-holder sb-drop-mw">
+                  <div>
+                    <label class="sb-checkbox"
+                      >All scores<input type="checkbox" checked=""/><span
+                        class="sb-checkmark"
+                      ></span
+                    ></label>
                   </div>
-                  <div class="btn-group">
-                    <button
-                      type="button"
-                      title="All scores"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                      class="dropdown-toggle btn btn-secondary"
-                    >
-                      All scores
+                  <div>
+                    <label class="sb-checkbox"
+                      >High <span class="sb-sub">(80% - 100%)</span
+                      ><input type="checkbox"/><span class="sb-checkmark"></span
+                    ></label>
+                  </div>
+                  <div>
+                    <label class="sb-checkbox"
+                      >Medium <span class="sb-sub">(50% - 79%)</span
+                      ><input type="checkbox"/><span class="sb-checkmark"></span
+                    ></label>
+                  </div>
+                  <div>
+                    <label class="sb-checkbox"
+                      >Low <span class="sb-sub">(0% - 49%)</span
+                      ><input type="checkbox"/><span class="sb-checkmark"></span
+                    ></label>
+                  </div>
+                  <div class="d-flex justify-content-between sb-pt-16">
+                    <button type="button" class="btn btn-link">
+                      Clear</button
+                    ><button type="button" class="btn btn-primary">
+                      <i class="icon-confirm"></i>Apply
                     </button>
-                    <div
-                      tabindex="-1"
-                      role="menu"
-                      aria-hidden="true"
-                      class="dropdown-menu"
-                    >
-                      <div class="sb-dropdown-holder sb-drop-mw">
-                        <div>
-                          <label class="sb-checkbox"
-                            >All scores<input type="checkbox" checked=""/><span
-                              class="sb-checkmark"
-                            ></span
-                          ></label>
-                        </div>
-                        <div>
-                          <label class="sb-checkbox"
-                            >High <span class="sb-sub">(80% - 100%)</span
-                            ><input type="checkbox"/><span
-                              class="sb-checkmark"
-                            ></span
-                          ></label>
-                        </div>
-                        <div>
-                          <label class="sb-checkbox"
-                            >Medium <span class="sb-sub">(50% - 79%)</span
-                            ><input type="checkbox"/><span
-                              class="sb-checkmark"
-                            ></span
-                          ></label>
-                        </div>
-                        <div>
-                          <label class="sb-checkbox"
-                            >Low <span class="sb-sub">(0% - 49%)</span
-                            ><input type="checkbox"/><span
-                              class="sb-checkmark"
-                            ></span
-                          ></label>
-                        </div>
-                        <div class="d-flex justify-content-between sb-pt-16">
-                          <button type="button" class="btn btn-link">
-                            Clear</button
-                          ><button type="button" class="btn btn-primary">
-                            <i class="icon-confirm"></i>Apply
-                          </button>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="btn-group col-3">
+              <button
+                type="button"
+                title="Statuses"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                class="dropdown-toggle form-control"
+              >
+                Statuses
+              </button>
+              <div
+                tabindex="-1"
+                role="menu"
+                aria-hidden="true"
+                class="dropdown-menu"
+              >
+                <div class="sb-dropdown-holder sb-drop-mw">
+                  <div>
+                    <label class="sb-checkbox"
+                      >All scores<input type="checkbox" checked=""/><span
+                        class="sb-checkmark"
+                      ></span
+                    ></label>
+                  </div>
+                  <div>
+                    <label class="sb-checkbox"
+                      >High <span class="sb-sub">(80% - 100%)</span
+                      ><input type="checkbox"/><span class="sb-checkmark"></span
+                    ></label>
+                  </div>
+                  <div>
+                    <label class="sb-checkbox"
+                      >Medium <span class="sb-sub">(50% - 79%)</span
+                      ><input type="checkbox"/><span class="sb-checkmark"></span
+                    ></label>
+                  </div>
+                  <div>
+                    <label class="sb-checkbox"
+                      >Low <span class="sb-sub">(0% - 49%)</span
+                      ><input type="checkbox"/><span class="sb-checkmark"></span
+                    ></label>
+                  </div>
+                  <div class="d-flex justify-content-between sb-pt-16">
+                    <button type="button" class="btn btn-link">
+                      Clear</button
+                    ><button type="button" class="btn btn-primary">
+                      <i class="icon-confirm"></i>Apply
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-group col-2">
+              <div class="sb-icon-input sb-icon-input-clickable">
+                <input
+                  class="form-control"
+                  data-provide="datepicker"
+                  placeholder="Period"
+                  value=""
+                />
+                <i class="icon-calendar"></i>
+              </div>
+            </div>
+            <div class="btn-group col-2">
+              <div class="sb-icon-input sb-icon-input-clickable">
+                <input
+                  class="form-control"
+                  data-provide="datepicker"
+                  placeholder="Period"
+                  value=""
+                />
+                <i class="icon-calendar"></i>
+              </div>
+            </div>
+            <div class="btn-group col-2">
+              <button
+                type="button"
+                class="btn btn-xs btn-toggle"
+                data-toggle="button"
+                aria-pressed="false"
+                autocomplete="off"
+              >
+                <div class="handle"></div>
+              </button>
+              <span>Assigned to me</span>
             </div>
           </div>
         </div>
       </div>
       <div class="sb-main-container-holder">
         <div class="sb-main-content-holder">
-          <div class="sb-lead-list-container"></div>
+          <div class="sb-lead-list-container">
+            <div class="list_head_fix">
+              <div class="list_head row">
+                <div class="col-1 ico_cell">
+                  <div class="row">
+                    <div class="col-6">Assign</div>
+                    <div class="col-6">Status</div>
+                  </div>
+                </div>
+                <div class="col-2">Deal Name</div>
+                <div class="col-2">Deal With</div>
+                <div class="col-2">Type</div>
+                <div class="col-2">Attachments</div>
+                <div class="col-2">Modified</div>
+                <div class="col-1 ico_cell">Actions</div>
+              </div>
+              <div class="list_head_act row">
+                <div class="col-1">
+                  <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6"></div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="sb-icon-input sb-icon-input-clickable">
+                    <input
+                      placeholder="Type to search"
+                      class="form-control"
+                      type="text"
+                      value=""
+                    /><i class="icon-search"></i>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      class="dropdown-toggle form-control"
+                    >
+                      All scores
+                    </button>
+                    <div
+                      tabindex="-1"
+                      role="menu"
+                      aria-hidden="true"
+                      class="dropdown-menu"
+                    >
+                      <div class="sb-dropdown-holder sb-drop-mw">
+                        <div>
+                          <label class="sb-checkbox"
+                            >All scores<input type="checkbox" checked=""/><span
+                              class="sb-checkmark"
+                            ></span
+                          ></label>
+                        </div>
+                        <div>
+                          <label class="sb-checkbox"
+                            >High <span class="sb-sub">(80% - 100%)</span
+                            ><input type="checkbox"/><span
+                              class="sb-checkmark"
+                            ></span
+                          ></label>
+                        </div>
+                        <div>
+                          <label class="sb-checkbox"
+                            >Medium <span class="sb-sub">(50% - 79%)</span
+                            ><input type="checkbox"/><span
+                              class="sb-checkmark"
+                            ></span
+                          ></label>
+                        </div>
+                        <div>
+                          <label class="sb-checkbox"
+                            >Low <span class="sb-sub">(0% - 49%)</span
+                            ><input type="checkbox"/><span
+                              class="sb-checkmark"
+                            ></span
+                          ></label>
+                        </div>
+                        <div class="d-flex justify-content-between sb-pt-16">
+                          <button type="button" class="btn btn-link">
+                            Clear</button
+                          ><button type="button" class="btn btn-primary">
+                            <i class="icon-confirm"></i>Apply
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      class="dropdown-toggle form-control"
+                    >
+                      All scores
+                    </button>
+                    <div
+                      tabindex="-1"
+                      role="menu"
+                      aria-hidden="true"
+                      class="dropdown-menu"
+                    >
+                      <div class="sb-dropdown-holder sb-drop-mw">
+                        <div>
+                          <label class="sb-checkbox"
+                            >All scores<input type="checkbox" checked=""/><span
+                              class="sb-checkmark"
+                            ></span
+                          ></label>
+                        </div>
+                        <div>
+                          <label class="sb-checkbox"
+                            >High <span class="sb-sub">(80% - 100%)</span
+                            ><input type="checkbox"/><span
+                              class="sb-checkmark"
+                            ></span
+                          ></label>
+                        </div>
+                        <div>
+                          <label class="sb-checkbox"
+                            >Medium <span class="sb-sub">(50% - 79%)</span
+                            ><input type="checkbox"/><span
+                              class="sb-checkmark"
+                            ></span
+                          ></label>
+                        </div>
+                        <div>
+                          <label class="sb-checkbox"
+                            >Low <span class="sb-sub">(0% - 49%)</span
+                            ><input type="checkbox"/><span
+                              class="sb-checkmark"
+                            ></span
+                          ></label>
+                        </div>
+                        <div class="d-flex justify-content-between sb-pt-16">
+                          <button type="button" class="btn btn-link">
+                            Clear</button
+                          ><button type="button" class="btn btn-primary">
+                            <i class="icon-confirm"></i>Apply
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2"></div>
+                <div class="col-2">
+                  <div class="sb-icon-input sb-icon-input-clickable">
+                    <input
+                      class="form-control"
+                      data-provide="datepicker"
+                      placeholder="Select date range..."
+                      value=""
+                    />
+                    <i class="icon-calendar"></i>
+                  </div>
+                </div>
+                <div class="col-1"></div>
+              </div>
+            </div>
+            <div class="list_head_fix_cont">
+              <div
+                class="row"
+                data-toggle="collapse"
+                data-target="#collapseExample"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
+                <div class="col-1 ico_cell">
+                  <div class="row">
+                    <div class="col-6">
+                      <i class="icomoon_l icon-user-check"></i>
+                    </div>
+                    <div class="col-6">
+                      <i class="icomoon_l icon-media-fast-forward"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2">Deal 1</div>
+                <div class="col-2">Daniel</div>
+                <div class="col-2">Dilivery Director</div>
+                <div class="col-2">FileName0001</div>
+                <div class="col-2">08.03.2019 at 6:33 PM</div>
+                <div class="col-1 ico_cell">
+                  <i class="icomoon_l icon-dots-three-vertical"></i>
+                </div>
+                <div class="col-12 collapse" id="collapseExample">
+                  <div class="col-11 offset-1">
+                    <div class="collapse_list_head row">
+                      <div class="col-4">Individual Goals</div>
+                      <div class="col-1">Reviewer</div>
+                      <div class="col-1">Next Review:</div>
+                      <div class="col-2">Period</div>
+                      <div class="col-1">Baseline</div>
+                      <div class="col-1">Traget</div>
+                      <div class="col-2">
+                        <div class="row">
+                          <div class="col-4">Weight</div>
+                          <div class="col-2">Progress</div>
+                          <div class="col-2"></div>
+                          <div class="col-2"></div>
+                          <div class="col-2"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-4">
+                        Design Design Design Design Design Design Design
+                      </div>
+                      <div class="col-1">Alexey Filimonov</div>
+                      <div class="col-1">09.05.2019</div>
+                      <div class="col-2">04.05.2019 - 06.05.2019</div>
+                      <div class="col-1">$7,000,000</div>
+                      <div class="col-1">$10,000,000</div>
+                      <div class="col-2">
+                        <div class="row">
+                          <div class="col-4">20%</div>
+                          <div class="col-2">
+                            <div class="progress">
+                              <div
+                                class="progress-bar bg-success"
+                                role="progressbar"
+                                style="width: 50%"
+                                aria-valuenow="50"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                            </div>
+                          </div>
+                          <div class="col-2">-</div>
+                          <div class="col-2">-</div>
+                          <div class="col-2">60%</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-4">
+                        Design Design Design Design Design Design Design
+                      </div>
+                      <div class="col-1">Alexey Filimonov</div>
+                      <div class="col-1">09.05.2019</div>
+                      <div class="col-2">04.05.2019 - 06.05.2019</div>
+                      <div class="col-1">$7,000,000</div>
+                      <div class="col-1">$10,000,000</div>
+                      <div class="col-2">
+                        <div class="row">
+                          <div class="col-4">20%</div>
+                          <div class="col-2">
+                            <div class="progress">
+                              <div
+                                class="progress-bar bg-warning"
+                                role="progressbar"
+                                style="width: 50%"
+                                aria-valuenow="50"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                            </div>
+                          </div>
+                          <div class="col-2">-</div>
+                          <div class="col-2">-</div>
+                          <div class="col-2">60%</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-4">
+                        Design Design Design Design Design Design Design
+                      </div>
+                      <div class="col-1">Alexey Filimonov</div>
+                      <div class="col-1">09.05.2019</div>
+                      <div class="col-2">04.05.2019 - 06.05.2019</div>
+                      <div class="col-1">$7,000,000</div>
+                      <div class="col-1">$10,000,000</div>
+                      <div class="col-2">
+                        <div class="row">
+                          <div class="col-4">20%</div>
+                          <div class="col-2">
+                            <div class="progress">
+                              <div
+                                class="progress-bar bg-info"
+                                role="progressbar"
+                                style="width: 50%"
+                                aria-valuenow="50"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                            </div>
+                          </div>
+                          <div class="col-2">-</div>
+                          <div class="col-2">-</div>
+                          <div class="col-2">60%</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="row"
+                data-toggle="collapse"
+                data-target="#collapseExample1"
+                aria-expanded="false"
+                aria-controls="collapseExample1"
+              >
+                <div class="col-1 ico_cell">
+                  <div class="row">
+                    <div class="col-6">
+                      <i class="icomoon_l icon-user-check"></i>
+                    </div>
+                    <div class="col-6">
+                      <i class="icomoon_l icon-media-fast-forward"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2">Deal 1</div>
+                <div class="col-2">Daniel</div>
+                <div class="col-2">Dilivery Director</div>
+                <div class="col-2">FileName0001</div>
+                <div class="col-2">08.03.2019 at 6:33 PM</div>
+                <div class="col-1 ico_cell">
+                  <i class="icomoon_l icon-dots-three-vertical"></i>
+                </div>
+                <div class="col-12 collapse" id="collapseExample1">
+                  <div class="col-11 offset-1">
+                    <div class="collapse_list_head row">
+                      <div class="col-4">Individual Goals</div>
+                      <div class="col-1">Reviewer</div>
+                      <div class="col-1">Next Review:</div>
+                      <div class="col-2">Period</div>
+                      <div class="col-1">Baseline</div>
+                      <div class="col-1">Traget</div>
+                      <div class="col-2">
+                        <div class="row">
+                          <div class="col-4">Weight</div>
+                          <div class="col-2">Progress</div>
+                          <div class="col-2"></div>
+                          <div class="col-2"></div>
+                          <div class="col-2"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-4">
+                        Design Design Design Design Design Design Design
+                      </div>
+                      <div class="col-1">Alexey Filimonov</div>
+                      <div class="col-1">09.05.2019</div>
+                      <div class="col-2">04.05.2019 - 06.05.2019</div>
+                      <div class="col-1">$7,000,000</div>
+                      <div class="col-1">$10,000,000</div>
+                      <div class="col-2">
+                        <div class="row">
+                          <div class="col-4">20%</div>
+                          <div class="col-2">
+                            <div class="progress">
+                              <div
+                                class="progress-bar bg-success"
+                                role="progressbar"
+                                style="width: 50%"
+                                aria-valuenow="50"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                            </div>
+                          </div>
+                          <div class="col-2">-</div>
+                          <div class="col-2">-</div>
+                          <div class="col-2">60%</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-4">
+                        Design Design Design Design Design Design Design
+                      </div>
+                      <div class="col-1">Alexey Filimonov</div>
+                      <div class="col-1">09.05.2019</div>
+                      <div class="col-2">04.05.2019 - 06.05.2019</div>
+                      <div class="col-1">$7,000,000</div>
+                      <div class="col-1">$10,000,000</div>
+                      <div class="col-2">
+                        <div class="row">
+                          <div class="col-4">20%</div>
+                          <div class="col-2">
+                            <div class="progress">
+                              <div
+                                class="progress-bar bg-warning"
+                                role="progressbar"
+                                style="width: 50%"
+                                aria-valuenow="50"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                            </div>
+                          </div>
+                          <div class="col-2">-</div>
+                          <div class="col-2">-</div>
+                          <div class="col-2">60%</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-4">
+                        Design Design Design Design Design Design Design
+                      </div>
+                      <div class="col-1">Alexey Filimonov</div>
+                      <div class="col-1">09.05.2019</div>
+                      <div class="col-2">04.05.2019 - 06.05.2019</div>
+                      <div class="col-1">$7,000,000</div>
+                      <div class="col-1">$10,000,000</div>
+                      <div class="col-2">
+                        <div class="row">
+                          <div class="col-4">20%</div>
+                          <div class="col-2">
+                            <div class="progress">
+                              <div
+                                class="progress-bar bg-info"
+                                role="progressbar"
+                                style="width: 50%"
+                                aria-valuenow="50"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                            </div>
+                          </div>
+                          <div class="col-2">-</div>
+                          <div class="col-2">-</div>
+                          <div class="col-2">60%</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-1 ico_cell">
+                  <div class="row">
+                    <div class="col-6">
+                      <i class="icomoon_l icon-user-check"></i>
+                    </div>
+                    <div class="col-6">
+                      <i class="icomoon_l icon-media-fast-forward"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2">Deal 1</div>
+                <div class="col-2">Daniel</div>
+                <div class="col-2">Dilivery Director</div>
+                <div class="col-2">FileName0001</div>
+                <div class="col-2">08.03.2019 at 6:33 PM</div>
+                <div class="col-1 ico_cell">
+                  <i class="icomoon_l icon-dots-three-vertical"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-1 ico_cell">
+                  <div class="row">
+                    <div class="col-6">
+                      <i class="icomoon_l icon-user-check"></i>
+                    </div>
+                    <div class="col-6">
+                      <i class="icomoon_l icon-media-fast-forward"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2">Deal 1</div>
+                <div class="col-2">Daniel</div>
+                <div class="col-2">Dilivery Director</div>
+                <div class="col-2">FileName0001</div>
+                <div class="col-2">08.03.2019 at 6:33 PM</div>
+                <div class="col-1 ico_cell">
+                  <i class="icomoon_l icon-dots-three-vertical"></i>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -378,5 +839,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="./design/js/bootstrap-datepicker.min.js"></script>
+    <script src="./design/js/main.js"></script>
   </body>
 </html>
