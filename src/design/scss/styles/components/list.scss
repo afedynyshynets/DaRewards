@@ -1,5 +1,8 @@
 .list_head {
   font-weight: bold;
+  font-size: 12px;
+  color: #7c99a1;
+  padding-bottom: 4px;
 }
 .list_head_act {
   .btn-group {
@@ -28,37 +31,74 @@
   flex-direction: column;
   width: 100%;
 
-  .list_head_fix {
-    border-bottom: 1px solid #ccc;
-    background-color: #fff;
+  .form-control {
+    color: #7c99a1;
   }
 
-  .collapse_list_head {
-    font-weight: bold;
+  .list_head_fix {
+    border-bottom: 1px solid #d5e2e6;
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 15px;
   }
 
   .list_head_fix_cont {
     display: flex;
     flex: auto;
     flex-direction: column;
-    overflow: auto;
-    & > .row {
-      border-bottom: 1px solid #ccc;
-      min-height: 40px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      align-items: center;
-      &:nth-child(2n) {
-        background-color: #eee;
+    overflow-x: auto;
+    width: 100%;
+    &__row {
+      // border-bottom: 1px solid #d5e2e6;
+      & > .row {
+        min-height: 40px;
       }
-      & > [class^="col-"],
-      & > [class*=" col-"] {
-        // min-height: 40px;
-        // align-items: center;
-        // display: flex;
+    }
+    &__wr {
+      width: 100%;
+      & > .row {
+        width: 100%;
+        margin: 0;
+        font-size: 12px;
+        color: #7c99a1;
+        align-items: center;
+        border-bottom: 1px solid #d5e2e6;
+        &:nth-child(2n) {
+          background-color: #fafcfc;
+        }
+        & > [class^="col-"],
+        & > [class*=" col-"] {
+          // min-height: 40px;
+          // align-items: center;
+          // display: flex;
+        }
+        &:not(.collapsed) {
+          .list_head_fix_cont__row {
+            border-bottom: 1px solid #d5e2e6;
+          }
+        }
+        .collapse {
+          min-height: 0;
+
+          & > .row:not(.collapse_list_head) {
+            margin-bottom: 10px;
+          }
+        }
       }
-      .collapse {
-        min-height: 0;
+    }
+    .collapse_list {
+      &__head {
+        font-weight: bold;
+        padding-top: 9px;
+        padding-bottom: 20px;
+        color: #7c99a1;
+      }
+      &__row {
+        color: $black;
+        margin-bottom: 10px;
+        a {
+          color: #019ce6;
+        }
       }
     }
   }
@@ -76,6 +116,50 @@
     font-weight: bold;
   }
 }
-.ico_cell {
-  text-align: center;
+
+.chart_perc {
+  &__blue {
+    color: #4ec1e2;
+  }
+  &__red {
+    color: #f07030;
+  }
+  &__green {
+    color: #5acc80;
+  }
+}
+
+.progress {
+  .bg {
+    &-info {
+      background-color: #4ec1e2 !important;
+    }
+    &-success {
+      background-color: #5acc80 !important;
+    }
+    &-warning {
+      background-color: #f07030 !important;
+    }
+  }
+}
+
+.cell {
+  &__ico {
+    text-align: center;
+  }
+  &__deal_name,
+  &__deal_with {
+    color: $black;
+    font-weight: bold;
+  }
+  &__deal_name {
+  }
+  &__deal_with {
+  }
+  &__type {
+  }
+  &__atach {
+  }
+  &__modif {
+  }
 }

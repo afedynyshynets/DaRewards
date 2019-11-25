@@ -122,7 +122,7 @@
               data-toggle="dropdown"
               class="dropdown-toggle btn btn-primary"
             >
-              <i class="icon-plus"></i>Create
+              + Add Deal
             </button>
             <div
               tabindex="-1"
@@ -161,13 +161,15 @@
         </div>
         <div class="sb-header-user">
           <span class="sb-name sb-text-overflow">Alexander Fedynyshynets</span>
-          <div class="sb-icon">
-            <img
-              src="/api/users/photo?id=de9a3498-6b0c-ea11-812f-005056942bfc"
-              alt="Alexander Fedynyshynets"
-            />
-          </div>
-          <span class="badge badge-pill badge-danger">9</span>
+          <div class="sb-icon__wr">
+              <span class="badge badge-pill badge-danger">9</span>
+              <div class="sb-icon">
+                <img
+                  src="/api/users/photo?id=de9a3498-6b0c-ea11-812f-005056942bfc"
+                  alt="Alexander Fedynyshynets"
+                />
+              </div>
+          </div>          
         </div>
       </div>
     </header>
@@ -332,9 +334,9 @@
       <div class="sb-main-container-holder">
         <div class="sb-main-content-holder">
           <div class="sb-lead-list-container">
-            <div class="list_head_fix">
+            <div class="list_head_fix container-fluid">
               <div class="list_head row">
-                <div class="col-1 ico_cell">
+                <div class="col-1 cell__ico">
                   <div class="row">
                     <div class="col-6">Assign</div>
                     <div class="col-6">Status</div>
@@ -345,7 +347,7 @@
                 <div class="col-2">Type</div>
                 <div class="col-2">Attachments</div>
                 <div class="col-2">Modified</div>
-                <div class="col-1 ico_cell">Actions</div>
+                <div class="col-1 cell__ico">Actions</div>
               </div>
               <div class="list_head_act row">
                 <div class="col-1">
@@ -361,7 +363,9 @@
                       class="form-control"
                       type="text"
                       value=""
-                    /><i class="icon-search"></i>
+                    />
+                    <!-- <i class="icon-close"></i> -->
+                    <i class="icon-search"></i>
                   </div>
                 </div>
                 <div class="col-2">
@@ -500,319 +504,647 @@
               </div>
             </div>
             <div class="list_head_fix_cont">
-              <div
-                class="row"
-                data-toggle="collapse"
-                data-target="#collapseExample"
-                aria-expanded="false"
-                aria-controls="collapseExample"
-              >
-                <div class="col-1 ico_cell">
-                  <div class="row">
-                    <div class="col-6">
-                      <i class="icomoon_l icon-user-check"></i>
-                    </div>
-                    <div class="col-6">
-                      <i class="icomoon_l icon-media-fast-forward"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2">Deal 1</div>
-                <div class="col-2">Daniel</div>
-                <div class="col-2">Dilivery Director</div>
-                <div class="col-2">FileName0001</div>
-                <div class="col-2">08.03.2019 at 6:33 PM</div>
-                <div class="col-1 ico_cell">
-                  <i class="icomoon_l icon-dots-three-vertical"></i>
-                </div>
-                <div class="col-12 collapse" id="collapseExample">
-                  <div class="col-11 offset-1">
-                    <div class="collapse_list_head row">
-                      <div class="col-4">Individual Goals</div>
-                      <div class="col-1">Reviewer</div>
-                      <div class="col-1">Next Review:</div>
-                      <div class="col-2">Period</div>
-                      <div class="col-1">Baseline</div>
-                      <div class="col-1">Traget</div>
-                      <div class="col-2">
+              <div class="list_head_fix_cont__wr">
+                <div
+                  class="row collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapseExample1"
+                  aria-expanded="false"
+                  aria-controls="collapseExample1"
+                >
+                  <div class="col-12 list_head_fix_cont__row">
+                    <div class="row align-items-center">
+                      <div class="col-1 cell__ico">
                         <div class="row">
-                          <div class="col-4">Weight</div>
-                          <div class="col-2">Progress</div>
-                          <div class="col-2"></div>
-                          <div class="col-2"></div>
-                          <div class="col-2"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-4">
-                        Design Design Design Design Design Design Design
-                      </div>
-                      <div class="col-1">Alexey Filimonov</div>
-                      <div class="col-1">09.05.2019</div>
-                      <div class="col-2">04.05.2019 - 06.05.2019</div>
-                      <div class="col-1">$7,000,000</div>
-                      <div class="col-1">$10,000,000</div>
-                      <div class="col-2">
-                        <div class="row">
-                          <div class="col-4">20%</div>
-                          <div class="col-2">
-                            <div class="progress">
-                              <div
-                                class="progress-bar bg-success"
-                                role="progressbar"
-                                style="width: 50%"
-                                aria-valuenow="50"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                              ></div>
-                            </div>
+                          <div class="col-6">
+                            <i class="icomoon_l icon-reviewed"></i>
                           </div>
-                          <div class="col-2">-</div>
-                          <div class="col-2">-</div>
-                          <div class="col-2">60%</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-4">
-                        Design Design Design Design Design Design Design
-                      </div>
-                      <div class="col-1">Alexey Filimonov</div>
-                      <div class="col-1">09.05.2019</div>
-                      <div class="col-2">04.05.2019 - 06.05.2019</div>
-                      <div class="col-1">$7,000,000</div>
-                      <div class="col-1">$10,000,000</div>
-                      <div class="col-2">
-                        <div class="row">
-                          <div class="col-4">20%</div>
-                          <div class="col-2">
-                            <div class="progress">
-                              <div
-                                class="progress-bar bg-warning"
-                                role="progressbar"
-                                style="width: 50%"
-                                aria-valuenow="50"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                              ></div>
-                            </div>
+                          <div class="col-6">
+                            <i class="icomoon_l icon-in-progress"></i>
                           </div>
-                          <div class="col-2">-</div>
-                          <div class="col-2">-</div>
-                          <div class="col-2">60%</div>
                         </div>
                       </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-4">
-                        Design Design Design Design Design Design Design
-                      </div>
-                      <div class="col-1">Alexey Filimonov</div>
-                      <div class="col-1">09.05.2019</div>
-                      <div class="col-2">04.05.2019 - 06.05.2019</div>
-                      <div class="col-1">$7,000,000</div>
-                      <div class="col-1">$10,000,000</div>
-                      <div class="col-2">
-                        <div class="row">
-                          <div class="col-4">20%</div>
-                          <div class="col-2">
-                            <div class="progress">
-                              <div
-                                class="progress-bar bg-info"
-                                role="progressbar"
-                                style="width: 50%"
-                                aria-valuenow="50"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                              ></div>
-                            </div>
-                          </div>
-                          <div class="col-2">-</div>
-                          <div class="col-2">-</div>
-                          <div class="col-2">60%</div>
-                        </div>
+                      <div class="col-2 cell__deal_name">Deal 1</div>
+                      <div class="col-2 cell__deal_with">Daniel</div>
+                      <div class="col-2 cell__type">Dilivery Director</div>
+                      <div class="col-2 cell__attach">FileName0001</div>
+                      <div class="col-2 cell__modif">08.03.2019 at 6:33 PM</div>
+                      <div class="col-1 cell__ico">
+                        <i class="icomoon_l icon-actions"></i>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div
-                class="row"
-                data-toggle="collapse"
-                data-target="#collapseExample1"
-                aria-expanded="false"
-                aria-controls="collapseExample1"
-              >
-                <div class="col-1 ico_cell">
-                  <div class="row">
-                    <div class="col-6">
-                      <i class="icomoon_l icon-user-check"></i>
-                    </div>
-                    <div class="col-6">
-                      <i class="icomoon_l icon-media-fast-forward"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2">Deal 1</div>
-                <div class="col-2">Daniel</div>
-                <div class="col-2">Dilivery Director</div>
-                <div class="col-2">FileName0001</div>
-                <div class="col-2">08.03.2019 at 6:33 PM</div>
-                <div class="col-1 ico_cell">
-                  <i class="icomoon_l icon-dots-three-vertical"></i>
-                </div>
-                <div class="col-12 collapse" id="collapseExample1">
-                  <div class="col-11 offset-1">
-                    <div class="collapse_list_head row">
-                      <div class="col-4">Individual Goals</div>
-                      <div class="col-1">Reviewer</div>
-                      <div class="col-1">Next Review:</div>
-                      <div class="col-2">Period</div>
-                      <div class="col-1">Baseline</div>
-                      <div class="col-1">Traget</div>
-                      <div class="col-2">
-                        <div class="row">
-                          <div class="col-4">Weight</div>
-                          <div class="col-2">Progress</div>
-                          <div class="col-2"></div>
-                          <div class="col-2"></div>
-                          <div class="col-2"></div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="col-12 collapse" id="collapseExample1">
                     <div class="row">
-                      <div class="col-4">
-                        Design Design Design Design Design Design Design
-                      </div>
-                      <div class="col-1">Alexey Filimonov</div>
-                      <div class="col-1">09.05.2019</div>
-                      <div class="col-2">04.05.2019 - 06.05.2019</div>
-                      <div class="col-1">$7,000,000</div>
-                      <div class="col-1">$10,000,000</div>
-                      <div class="col-2">
-                        <div class="row">
-                          <div class="col-4">20%</div>
-                          <div class="col-2">
-                            <div class="progress">
-                              <div
-                                class="progress-bar bg-success"
-                                role="progressbar"
-                                style="width: 50%"
-                                aria-valuenow="50"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                              ></div>
+                      <div class="col-11 offset-1">
+                        <div class="collapse_list__head row">
+                          <div class="col-3">Individual Goals</div>
+                          <div class="col-1">Reviewer</div>
+                          <div class="col-1">Next Review:</div>
+                          <div class="col-2">Period</div>
+                          <div class="col-1">Baseline</div>
+                          <div class="col-1">Traget</div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-4">Weight</div>
+                              <div class="col-2">Progress</div>
+                              <div class="col-2"></div>
+                              <div class="col-2"></div>
+                              <div class="col-2"></div>
                             </div>
                           </div>
-                          <div class="col-2">-</div>
-                          <div class="col-2">-</div>
-                          <div class="col-2">60%</div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-4">
-                        Design Design Design Design Design Design Design
-                      </div>
-                      <div class="col-1">Alexey Filimonov</div>
-                      <div class="col-1">09.05.2019</div>
-                      <div class="col-2">04.05.2019 - 06.05.2019</div>
-                      <div class="col-1">$7,000,000</div>
-                      <div class="col-1">$10,000,000</div>
-                      <div class="col-2">
-                        <div class="row">
-                          <div class="col-4">20%</div>
-                          <div class="col-2">
-                            <div class="progress">
-                              <div
-                                class="progress-bar bg-warning"
-                                role="progressbar"
-                                style="width: 50%"
-                                aria-valuenow="50"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                              ></div>
+                        <div class="collapse_list__row row">
+                          <div class="col-3">
+                            Design Design Design Design Design Design Design
+                          </div>
+                          <div class="col-1">Alexey Filimonov</div>
+                          <div class="col-1">09.05.2019</div>
+                          <div class="col-2">04.05.2019 - 06.05.2019</div>
+                          <div class="col-1">$7,000,000</div>
+                          <div class="col-1">$10,000,000</div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-4">20%</div>
+                              <div class="col-2">
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar bg-success"
+                                    role="progressbar"
+                                    style="width: 50%"
+                                    aria-valuenow="50"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                              </div>
+                              <div class="col-2">
+                                <i class="icomoon_l icon-trend-up"></i>
+                              </div>
+                              <div class="col-2">
+                                <span class="chart_perc__green">+2%</span>
+                              </div>
+                              <div class="col-2">60%</div>
                             </div>
                           </div>
-                          <div class="col-2">-</div>
-                          <div class="col-2">-</div>
-                          <div class="col-2">60%</div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-4">
-                        Design Design Design Design Design Design Design
-                      </div>
-                      <div class="col-1">Alexey Filimonov</div>
-                      <div class="col-1">09.05.2019</div>
-                      <div class="col-2">04.05.2019 - 06.05.2019</div>
-                      <div class="col-1">$7,000,000</div>
-                      <div class="col-1">$10,000,000</div>
-                      <div class="col-2">
-                        <div class="row">
-                          <div class="col-4">20%</div>
-                          <div class="col-2">
-                            <div class="progress">
-                              <div
-                                class="progress-bar bg-info"
-                                role="progressbar"
-                                style="width: 50%"
-                                aria-valuenow="50"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                              ></div>
+                        <div class="collapse_list__row row">
+                          <div class="col-3">
+                            Design Design Design Design Design Design Design
+                          </div>
+                          <div class="col-1">Alexey Filimonov</div>
+                          <div class="col-1">09.05.2019</div>
+                          <div class="col-2">04.05.2019 - 06.05.2019</div>
+                          <div class="col-1">$7,000,000</div>
+                          <div class="col-1">$10,000,000</div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-4">20%</div>
+                              <div class="col-2">
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar bg-warning"
+                                    role="progressbar"
+                                    style="width: 50%"
+                                    aria-valuenow="50"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                              </div>
+                              <div class="col-2">
+                                <i class="icomoon_l icon-trend-down"></i>
+                              </div>
+                              <div class="col-2">
+                                <span class="chart_perc__red">-2%</span>
+                              </div>
+                              <div class="col-2">60%</div>
                             </div>
                           </div>
-                          <div class="col-2">-</div>
-                          <div class="col-2">-</div>
-                          <div class="col-2">60%</div>
+                        </div>
+                        <div class="collapse_list__row row">
+                          <div class="col-3">
+                            Design Design Design Design Design Design Design
+                          </div>
+                          <div class="col-1">Alexey Filimonov</div>
+                          <div class="col-1">09.05.2019</div>
+                          <div class="col-2">04.05.2019 - 06.05.2019</div>
+                          <div class="col-1">$7,000,000</div>
+                          <div class="col-1">$10,000,000</div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-4">20%</div>
+                              <div class="col-2">
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar bg-info"
+                                    role="progressbar"
+                                    style="width: 50%"
+                                    aria-valuenow="50"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                              </div>
+                              <div class="col-2">
+                                <i class="icomoon_l icon-trend-none"></i>
+                              </div>
+                              <div class="col-2">
+                                <span class="chart_perc__blue">+0%</span>
+                              </div>
+                              <div class="col-2">60%</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="collapse_list__row row">
+                          <div class="col-12">
+                            <a href="#">+ Create New Goal</a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-1 ico_cell">
-                  <div class="row">
-                    <div class="col-6">
-                      <i class="icomoon_l icon-user-check"></i>
+                <div
+                  class="row collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapseExample2"
+                  aria-expanded="false"
+                  aria-controls="collapseExample2"
+                >
+                  <div class="col-12 list_head_fix_cont__row">
+                    <div class="row align-items-center">
+                      <div class="col-1 cell__ico">
+                        <div class="row">
+                          <div class="col-6">
+                            <i class="icomoon_l icon-reviewed"></i>
+                          </div>
+                          <div class="col-6">
+                            <i class="icomoon_l icon-draft"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-2 cell__deal_name">Deal 1</div>
+                      <div class="col-2 cell__deal_with">Daniel</div>
+                      <div class="col-2 cell__type">Dilivery Director</div>
+                      <div class="col-2 cell__attach">FileName0001</div>
+                      <div class="col-2 cell__modif">08.03.2019 at 6:33 PM</div>
+                      <div class="col-1 cell__ico">
+                        <i class="icomoon_l icon-actions"></i>
+                      </div>
                     </div>
-                    <div class="col-6">
-                      <i class="icomoon_l icon-media-fast-forward"></i>
+                  </div>
+                  <div class="col-12 collapse" id="collapseExample2">
+                    <div class="row">
+                      <div class="col-11 offset-1">
+                        <div class="collapse_list__head row">
+                          <div class="col-3">Individual Goals</div>
+                          <div class="col-1">Reviewer</div>
+                          <div class="col-1">Next Review:</div>
+                          <div class="col-2">Period</div>
+                          <div class="col-1">Baseline</div>
+                          <div class="col-1">Traget</div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-4">Weight</div>
+                              <div class="col-2">Progress</div>
+                              <div class="col-2"></div>
+                              <div class="col-2"></div>
+                              <div class="col-2"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="collapse_list__row row">
+                          <div class="col-3">
+                            Design Design Design Design Design Design Design
+                          </div>
+                          <div class="col-1">Alexey Filimonov</div>
+                          <div class="col-1">09.05.2019</div>
+                          <div class="col-2">04.05.2019 - 06.05.2019</div>
+                          <div class="col-1">$7,000,000</div>
+                          <div class="col-1">$10,000,000</div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-4">20%</div>
+                              <div class="col-2">
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar bg-success"
+                                    role="progressbar"
+                                    style="width: 50%"
+                                    aria-valuenow="50"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                              </div>
+                              <div class="col-2">
+                                <i class="icomoon_l icon-trend-up"></i>
+                              </div>
+                              <div class="col-2">
+                                <span class="chart_perc__green">+2%</span>
+                              </div>
+                              <div class="col-2">60%</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="collapse_list__row row">
+                          <div class="col-3">
+                            Design Design Design Design Design Design Design
+                          </div>
+                          <div class="col-1">Alexey Filimonov</div>
+                          <div class="col-1">09.05.2019</div>
+                          <div class="col-2">04.05.2019 - 06.05.2019</div>
+                          <div class="col-1">$7,000,000</div>
+                          <div class="col-1">$10,000,000</div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-4">20%</div>
+                              <div class="col-2">
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar bg-warning"
+                                    role="progressbar"
+                                    style="width: 50%"
+                                    aria-valuenow="50"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                              </div>
+                              <div class="col-2">
+                                <i class="icomoon_l icon-trend-down"></i>
+                              </div>
+                              <div class="col-2">
+                                <span class="chart_perc__red">-2%</span>
+                              </div>
+                              <div class="col-2">60%</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="collapse_list__row row">
+                          <div class="col-3">
+                            Design Design Design Design Design Design Design
+                          </div>
+                          <div class="col-1">Alexey Filimonov</div>
+                          <div class="col-1">09.05.2019</div>
+                          <div class="col-2">04.05.2019 - 06.05.2019</div>
+                          <div class="col-1">$7,000,000</div>
+                          <div class="col-1">$10,000,000</div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-4">20%</div>
+                              <div class="col-2">
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar bg-info"
+                                    role="progressbar"
+                                    style="width: 50%"
+                                    aria-valuenow="50"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                              </div>
+                              <div class="col-2">
+                                <i class="icomoon_l icon-trend-none"></i>
+                              </div>
+                              <div class="col-2">
+                                <span class="chart_perc__blue">+0%</span>
+                              </div>
+                              <div class="col-2">60%</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="collapse_list__row row">
+                            <div class="col-12">
+                              <a href="#">+ Create New Goal</a>
+                            </div>
+                          </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-2">Deal 1</div>
-                <div class="col-2">Daniel</div>
-                <div class="col-2">Dilivery Director</div>
-                <div class="col-2">FileName0001</div>
-                <div class="col-2">08.03.2019 at 6:33 PM</div>
-                <div class="col-1 ico_cell">
-                  <i class="icomoon_l icon-dots-three-vertical"></i>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-1 ico_cell">
-                  <div class="row">
-                    <div class="col-6">
-                      <i class="icomoon_l icon-user-check"></i>
+                <div
+                  class="row collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapseExample3"
+                  aria-expanded="false"
+                  aria-controls="collapseExample3"
+                >
+                  <div class="col-12 list_head_fix_cont__row">
+                    <div class="row align-items-center">
+                      <div class="col-1 cell__ico">
+                        <div class="row">
+                          <div class="col-6">
+                            <i class="icomoon_l icon-reviewed"></i>
+                          </div>
+                          <div class="col-6">
+                            <i class="icomoon_l icon-eye1"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-2 cell__deal_name">Deal 1</div>
+                      <div class="col-2 cell__deal_with">Daniel</div>
+                      <div class="col-2 cell__type">Dilivery Director</div>
+                      <div class="col-2 cell__attach">FileName0001</div>
+                      <div class="col-2 cell__modif">08.03.2019 at 6:33 PM</div>
+                      <div class="col-1 cell__ico">
+                        <i class="icomoon_l icon-actions"></i>
+                      </div>
                     </div>
-                    <div class="col-6">
-                      <i class="icomoon_l icon-media-fast-forward"></i>
+                  </div>
+                  <div class="col-12 collapse" id="collapseExample3">
+                    <div class="row">
+                      <div class="col-11 offset-1">
+                        <div class="collapse_list__head row">
+                          <div class="col-3">Individual Goals</div>
+                          <div class="col-1">Reviewer</div>
+                          <div class="col-1">Next Review:</div>
+                          <div class="col-2">Period</div>
+                          <div class="col-1">Baseline</div>
+                          <div class="col-1">Traget</div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-4">Weight</div>
+                              <div class="col-2">Progress</div>
+                              <div class="col-2"></div>
+                              <div class="col-2"></div>
+                              <div class="col-2"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="collapse_list__row row">
+                          <div class="col-3">
+                            Design Design Design Design Design Design Design
+                          </div>
+                          <div class="col-1">Alexey Filimonov</div>
+                          <div class="col-1">09.05.2019</div>
+                          <div class="col-2">04.05.2019 - 06.05.2019</div>
+                          <div class="col-1">$7,000,000</div>
+                          <div class="col-1">$10,000,000</div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-4">20%</div>
+                              <div class="col-2">
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar bg-success"
+                                    role="progressbar"
+                                    style="width: 50%"
+                                    aria-valuenow="50"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                              </div>
+                              <div class="col-2">
+                                <i class="icomoon_l icon-trend-up"></i>
+                              </div>
+                              <div class="col-2">
+                                <span class="chart_perc__green">+2%</span>
+                              </div>
+                              <div class="col-2">60%</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="collapse_list__row row">
+                          <div class="col-3">
+                            Design Design Design Design Design Design Design
+                          </div>
+                          <div class="col-1">Alexey Filimonov</div>
+                          <div class="col-1">09.05.2019</div>
+                          <div class="col-2">04.05.2019 - 06.05.2019</div>
+                          <div class="col-1">$7,000,000</div>
+                          <div class="col-1">$10,000,000</div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-4">20%</div>
+                              <div class="col-2">
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar bg-warning"
+                                    role="progressbar"
+                                    style="width: 50%"
+                                    aria-valuenow="50"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                              </div>
+                              <div class="col-2">
+                                <i class="icomoon_l icon-trend-down"></i>
+                              </div>
+                              <div class="col-2">
+                                <span class="chart_perc__red">-2%</span>
+                              </div>
+                              <div class="col-2">60%</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="collapse_list__row row">
+                          <div class="col-3">
+                            Design Design Design Design Design Design Design
+                          </div>
+                          <div class="col-1">Alexey Filimonov</div>
+                          <div class="col-1">09.05.2019</div>
+                          <div class="col-2">04.05.2019 - 06.05.2019</div>
+                          <div class="col-1">$7,000,000</div>
+                          <div class="col-1">$10,000,000</div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-4">20%</div>
+                              <div class="col-2">
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar bg-info"
+                                    role="progressbar"
+                                    style="width: 50%"
+                                    aria-valuenow="50"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                              </div>
+                              <div class="col-2">
+                                <i class="icomoon_l icon-trend-none"></i>
+                              </div>
+                              <div class="col-2">
+                                <span class="chart_perc__blue">+0%</span>
+                              </div>
+                              <div class="col-2">60%</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="collapse_list__row row">
+                            <div class="col-12">
+                              <a href="#">+ Create New Goal</a>
+                            </div>
+                          </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-2">Deal 1</div>
-                <div class="col-2">Daniel</div>
-                <div class="col-2">Dilivery Director</div>
-                <div class="col-2">FileName0001</div>
-                <div class="col-2">08.03.2019 at 6:33 PM</div>
-                <div class="col-1 ico_cell">
-                  <i class="icomoon_l icon-dots-three-vertical"></i>
-                </div>
+                <div
+                  class="row collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapseExample4"
+                  aria-expanded="false"
+                  aria-controls="collapseExample4"
+                >
+                  <div class="col-12 list_head_fix_cont__row">
+                    <div class="row align-items-center">
+                      <div class="col-1 cell__ico">
+                        <div class="row">
+                          <div class="col-6">
+                            <i class="icomoon_l icon-reviewed"></i>
+                          </div>
+                          <div class="col-6">
+                            <i class="icomoon_l icon-archived"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-2 cell__deal_name">Deal 1</div>
+                      <div class="col-2 cell__deal_with">Daniel</div>
+                      <div class="col-2 cell__type">Dilivery Director</div>
+                      <div class="col-2 cell__attach">FileName0001</div>
+                      <div class="col-2 cell__modif">08.03.2019 at 6:33 PM</div>
+                      <div class="col-1 cell__ico">
+                        <i class="icomoon_l icon-actions"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 collapse" id="collapseExample4">
+                    <div class="row">
+                      <div class="col-11 offset-1">
+                        <div class="collapse_list__head row">
+                          <div class="col-3">Individual Goals</div>
+                          <div class="col-1">Reviewer</div>
+                          <div class="col-1">Next Review:</div>
+                          <div class="col-2">Period</div>
+                          <div class="col-1">Baseline</div>
+                          <div class="col-1">Traget</div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-4">Weight</div>
+                              <div class="col-2">Progress</div>
+                              <div class="col-2"></div>
+                              <div class="col-2"></div>
+                              <div class="col-2"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="collapse_list__row row">
+                          <div class="col-3">
+                            Design Design Design Design Design Design Design
+                          </div>
+                          <div class="col-1">Alexey Filimonov</div>
+                          <div class="col-1">09.05.2019</div>
+                          <div class="col-2">04.05.2019 - 06.05.2019</div>
+                          <div class="col-1">$7,000,000</div>
+                          <div class="col-1">$10,000,000</div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-4">20%</div>
+                              <div class="col-2">
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar bg-success"
+                                    role="progressbar"
+                                    style="width: 50%"
+                                    aria-valuenow="50"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                              </div>
+                              <div class="col-2">
+                                <i class="icomoon_l icon-trend-up"></i>
+                              </div>
+                              <div class="col-2">
+                                <span class="chart_perc__green">+2%</span>
+                              </div>
+                              <div class="col-2">60%</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="collapse_list__row row">
+                          <div class="col-3">
+                            Design Design Design Design Design Design Design
+                          </div>
+                          <div class="col-1">Alexey Filimonov</div>
+                          <div class="col-1">09.05.2019</div>
+                          <div class="col-2">04.05.2019 - 06.05.2019</div>
+                          <div class="col-1">$7,000,000</div>
+                          <div class="col-1">$10,000,000</div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-4">20%</div>
+                              <div class="col-2">
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar bg-warning"
+                                    role="progressbar"
+                                    style="width: 50%"
+                                    aria-valuenow="50"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                              </div>
+                              <div class="col-2">
+                                <i class="icomoon_l icon-trend-down"></i>
+                              </div>
+                              <div class="col-2">
+                                <span class="chart_perc__red">-2%</span>
+                              </div>
+                              <div class="col-2">60%</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="collapse_list__row row">
+                          <div class="col-3">
+                            Design Design Design Design Design Design Design
+                          </div>
+                          <div class="col-1">Alexey Filimonov</div>
+                          <div class="col-1">09.05.2019</div>
+                          <div class="col-2">04.05.2019 - 06.05.2019</div>
+                          <div class="col-1">$7,000,000</div>
+                          <div class="col-1">$10,000,000</div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-4">20%</div>
+                              <div class="col-2">
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar bg-info"
+                                    role="progressbar"
+                                    style="width: 50%"
+                                    aria-valuenow="50"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                              </div>
+                              <div class="col-2">
+                                <i class="icomoon_l icon-trend-none"></i>
+                              </div>
+                              <div class="col-2">
+                                <span class="chart_perc__blue">+0%</span>
+                              </div>
+                              <div class="col-2">60%</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="collapse_list__row row">
+                            <div class="col-12">
+                              <a href="#">+ Create New Goal</a>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>                
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 .sb-main-tabs {
-  font-size: 0.875rem;
-  line-height: 1.5;
+  font-size: 14px;
   margin-bottom: 8px;
+  border-bottom: 1px solid $pale-sky-blue;
 
   .container-fluid {
     padding-left: 14px;
@@ -10,31 +10,33 @@
   li {
     display: inline-block;
     vertical-align: top;
-    margin-right: 24px;
+    // margin-right: 24px;
   }
 
   a {
-    color: $black;
-    opacity: 0.6;
+    color: #627980;
+    display: block;
+    padding: 0 20px 11px 20px;
   }
 
   .active {
     font-weight: 600;
-    opacity: 1;
+    color: #019ce6;
+    border-bottom: 3px solid #019ce6;
   }
 }
 
 @media screen and (-webkit-device-pixel-ratio: 1.25) {
   .sb-main-tabs {
-    font-size: 0.875*0.79rem;
-    margin-bottom: round(8*0.79px);
+    font-size: 0.875 * 0.79rem;
+    margin-bottom: round(8 * 0.79px);
 
     .container-fluid {
-      padding-left: round(14*0.79px);
+      padding-left: round(14 * 0.79px);
     }
 
     li {
-      margin-right: round(24*0.79px);
+      margin-right: round(24 * 0.79px);
     }
-  }  
+  }
 }

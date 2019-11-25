@@ -1,7 +1,11 @@
 .sb-main-top-panel {
-  padding: 20px 0 20px;
+  padding: 13px 0 24px;
   background: $white;
-  border-bottom: 1px solid $white-three;
+  border-bottom: 1px solid #d5e2e6;
+
+  .sb-main-tabs {
+    margin-bottom: 28px;
+  }
 
   button a {
     color: $white;
@@ -17,6 +21,9 @@
     margin: 0;
     display: flex;
     align-items: center;
+    .form-control {
+      color: #7c99a1;
+    }
   }
   .sb-icon-input {
     width: 100%;

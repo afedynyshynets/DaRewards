@@ -295,30 +295,62 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
+  font-size: 24px;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-dots-three-vertical:before {
-  content: "\e900";
+.icon-actions:before {
+  content: "\e904";
+  color: #019ce6;
 }
-.icon-box:before {
-  content: "\e901";
+.icon-archived:before {
+  content: "\e906";
+  color: #7c99a1;
 }
-.icon-media-rewind:before {
-  content: "\e902";
+.icon-calendar-1:before {
+  content: "\e907";
+  color: #7e9ba3;
 }
-.icon-media-fast-forward:before {
-  content: "\e903";
+.icon-chevron:before {
+  content: "\e908";
+  color: #7e9ba3;
 }
-.icon-pencil:before {
-  content: "\e905";
+.icon-draft:before {
+  content: "\e909";
+  color: rgb(182, 199, 204);
 }
-.icon-user-check:before {
-  content: "\e975";
+// .icon-draft:before {
+//   content: "\e90a";
+//   margin-left: -1em;
+//   color: rgb(213, 226, 230);
+// }
+.icon-eye1:before {
+  content: "\e90b";
+  color: #019ce6;
 }
-.icon-eye:before {
-  content: "\e9ce";
+.icon-in-progress:before {
+  content: "\e90c";
+  color: #5acc80;
+}
+.icon-reviewed:before {
+  content: "\e90d";
+  color: #7acccb;
+}
+.icon-sorted-down:before {
+  content: "\e90e";
+  color: #7c99a1;
+}
+.icon-trend-down:before {
+  content: "\e90f";
+  color: #f07030;
+}
+.icon-trend-none:before {
+  content: "\e910";
+  color: #4ec1e2;
+}
+.icon-trend-up:before {
+  content: "\e911";
+  color: #5acc80;
 }

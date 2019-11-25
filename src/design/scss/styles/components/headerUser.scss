@@ -1,5 +1,5 @@
 .sb-header-user {
-  background: $white-9;
+  // background: $white-9;
   margin-left: 16px;
   padding: 0 14px 0 20px;
   display: flex;
@@ -7,13 +7,25 @@
   // min-width: 255px;
   color: $white;
 
-  // .sb-icon {
-  //   width: 32px;
-  //   height: 32px;
-  // }
+  .sb-icon {
+    margin-right: 0;
+    &__wr {
+      position: relative;
+      .badge {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(-30%, 30%);
+        font-size: 12px;
+      }
+    }
+  }
 
   .sb-name {
-    width: 150px;
+    max-width: 200px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 16px;
   }
 
   .sb-btn-wrapper {
