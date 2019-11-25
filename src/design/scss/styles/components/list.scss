@@ -53,6 +53,9 @@
       & > .row {
         min-height: 40px;
       }
+      &:not(.collapsed) {
+        border-bottom: 1px solid #d5e2e6;
+      }
     }
     &__wr {
       width: 100%;
@@ -71,11 +74,6 @@
           // min-height: 40px;
           // align-items: center;
           // display: flex;
-        }
-        &:not(.collapsed) {
-          .list_head_fix_cont__row {
-            border-bottom: 1px solid #d5e2e6;
-          }
         }
         .collapse {
           min-height: 0;
