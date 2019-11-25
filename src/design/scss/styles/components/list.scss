@@ -40,6 +40,27 @@
     background-color: #fff;
     padding-top: 10px;
     padding-bottom: 15px;
+
+    &.board_head_fix {
+      border-bottom: 0;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #54686e;
+      padding-top: 14px;
+      padding-bottom: 9px;
+      border-bottom: none;
+      .row > div {
+        align-items: center;
+      }
+      &__cell {
+        display: flex;
+        align-items: center;
+        i {
+          margin-right: 8px;
+        }
+      }
+    }
   }
 
   .list_head_fix_cont {
@@ -107,11 +128,6 @@
 
   .row {
     align-items: center;
-  }
-
-  .board_head_fix {
-    border-bottom: 0;
-    font-weight: bold;
   }
 }
 

@@ -23,18 +23,27 @@ body {
 }
 
 .b_card {
-  padding: 20px;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  padding: 16px;
+  border-radius: 4px;
+  border: solid 1px #d5e2e6;
+  background-color: #ffffff;
   margin-bottom: 20px;
   &__ver {
     text-align: right;
   }
   &__deal {
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 14px;
+    color: #323f42;
+  }
+  &__name {
+    font-size: 12px;
+    color: $black;
   }
   &__draft {
-    font-weight: bold;
+    font-size: 12px;
+    color: #627980;
+    margin-top: 6px;
   }
   .sb-icon-in-circle {
     i {
