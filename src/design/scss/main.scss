@@ -49,6 +49,13 @@ body {
   border-color: #019ce6;
 }
 
+select.form-control {
+  padding-right: 8%;
+  appearance: none;
+  background-image: url(../../static/media/chevron.svg);
+  background-position: 98% center;
+  background-repeat: no-repeat;
+}
 .form-control {
   border-radius: 4px;
   border: solid 1px #d5e2e6;
@@ -73,4 +80,18 @@ body {
   content: "\e908";
   color: #7e9ba3;
   border: none;
+}
+.datepicker-days {
+  padding: 15px;
+}
+.datepicker table tr td.active.active,
+.datepicker table tr td.active.disabled.active,
+.datepicker table tr td.active.disabled:active,
+.datepicker table tr td.active.disabled:hover.active,
+.datepicker table tr td.active.disabled:hover:active,
+.datepicker table tr td.active:active,
+.datepicker table tr td.active:hover.active,
+.datepicker table tr td.active:hover:active {
+  background-color: rgb(1, 156, 230);
+  background-image: none;
 }
