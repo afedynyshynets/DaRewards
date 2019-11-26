@@ -135,7 +135,7 @@
       min-height: 40px;
     }
     &:not(.collapsed) {
-      border-bottom: 1px solid #d5e2e6;
+      // border-bottom: 1px solid #d5e2e6;
     }
   }
   &__wr {
@@ -152,8 +152,14 @@
       }
       .collapse {
         min-height: 0;
-        & > .row:not(.collapse_list_head) {
-          margin-bottom: 10px;
+      }
+      .collapsed_wr {
+        & > .row {
+          margin-top: 5px;
+          margin-bottom: 5px;
+          &:nth-last-child(1) {
+            margin-bottom: 10px;
+          }
         }
       }
     }
