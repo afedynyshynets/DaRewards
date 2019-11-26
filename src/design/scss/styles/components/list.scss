@@ -150,6 +150,9 @@
       &:nth-child(2n) {
         background-color: #fafcfc;
       }
+      &:hover {
+        background-color: #f5f5f5;
+      }
       .collapse {
         min-height: 0;
       }
