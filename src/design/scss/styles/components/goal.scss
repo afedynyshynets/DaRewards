@@ -1,0 +1,140 @@
+.goal {
+  &__wr {
+    padding: 20px 0 0;
+    width: 100%;
+    &:after {
+      content: "";
+      display: block;
+      position: relative;
+      height: 20px;
+      width: 100%;
+    }
+  }
+  &__back {
+    margin-top: -20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    color: #323f42;
+    a {
+      display: inline-block;
+      margin-right: 8px;
+    }
+  }
+  &__content {
+    padding: 32px 16px 16px;
+    border-radius: 6px;
+    border: solid 1px #d5e2e6;
+    &_title {
+      margin-top: -32px;
+      margin-left: -16px;
+      margin-right: -16px;
+      padding: 15px 16px;
+      border-bottom: 1px solid #d5e2e6;
+      font-size: 14px;
+      font-weight: bold;
+      color: #323f42;
+    }
+  }
+}
+
+.timeline {
+  &__wr {
+  }
+  &__ul {
+    list-style-type: none;
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    padding: 0px 0 35px 48px;
+    position: relative;
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+      &::before {
+        bottom: auto;
+        height: 24px;
+      }
+      &.timeline__item_draft {
+        padding-top: 5px;
+        &::before {
+          display: none;
+        }
+      }
+    }
+    &:nth-child(1) {
+      margin-top: 0;
+      padding-top: 24px;
+      .timeline__item_photo {
+        top: 24px;
+      }
+      &::before {
+        display: block !important;
+      }
+      &.timeline__item_draft {
+        padding-top: 5px;
+      }
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      width: 1px;
+      top: 0;
+      bottom: 0;
+      left: 16px;
+      border-left: 1px dashed #d5e2e6;
+    }
+    &_draft {
+      background-color: #f5f9fa;
+      margin: 0 -16px;
+      padding: 5px 16px 5px 64px;
+      margin-bottom: 20px;
+      &:before {
+        left: 32px;
+        top: 100%;
+        bottom: -20px;
+      }
+      .timeline__item_name {
+        font-size: 12px;
+        font-weight: 600;
+        color: #627980;
+      }
+    }
+    &_photo {
+      background-color: #ebf8f8;
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 0;
+    }
+    &_date {
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: right;
+      color: #627980;
+    }
+    &_name {
+      font-size: 12px;
+      color: #627980;
+      margin-bottom: 5px;
+    }
+    &_title {
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.43;
+      color: #161f21;
+    }
+    &_text {
+      font-size: 12px;
+      line-height: 1.67;
+      color: #161f21;
+    }
+  }
+}
