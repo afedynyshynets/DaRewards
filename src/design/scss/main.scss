@@ -104,3 +104,105 @@ select.form-control {
   background-color: rgb(1, 156, 230);
   background-image: none;
 }
+
+.modal-lg {
+  hr {
+    border-top: 1px solid #d5e2e6;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .modal {
+    &-content {
+      padding: 40px;
+    }
+    &-footer {
+      padding: 29px 0 0;
+      border-top: 1px solid #d5e2e6;
+    }
+    &-header {
+      padding: 0 0 21px;
+      border-bottom: none;
+    }
+    &-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #323f42;
+    }
+    &-body {
+      padding: 0;
+    }
+    &-row-border {
+      padding-bottom: 15px;
+      border-bottom: 1px solid #d5e2e6;
+    }
+    &-draft-btn {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      color: #627980;
+    }
+  }
+}
+
+.alert {
+  font-size: 12px;
+  line-height: 1.67;
+  color: #333333;
+  border-radius: 6px;
+  border: none;
+  p {
+    margin-bottom: 5px;
+  }
+  &-info {
+    background-color: #e6f6fd;
+  }
+}
+
+.btn {
+  height: 32px;
+  border-radius: 18px;
+  line-height: 1;
+}
+
+.form {
+  &-group {
+    margin-bottom: 17px;
+    label {
+      display: block;
+      font-size: 12px;
+      color: #627980;
+      margin-bottom: 3px;
+    }
+  }
+  &-control {
+    &-file {
+      color: transparent;
+      &::-webkit-file-upload-button {
+        visibility: hidden;
+      }
+      &::before {
+        content: "Attach";
+        color: black;
+        display: inline-block;
+        outline: none;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        cursor: pointer;
+        border-radius: 18px;
+        border: solid 1px #019ce6;
+        padding: 5px 16px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #019ce6;
+      }
+      &:active {
+        outline: 0;
+      }
+      &:hover::before,
+      &:active::before {
+        background-color: #019ce6;
+        color: #fff;
+      }
+    }
+  }
+}

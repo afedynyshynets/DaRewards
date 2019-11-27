@@ -116,47 +116,13 @@
         <div class="sb-header-create">
           <div class="btn-group">
             <button
-              type="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-              data-toggle="dropdown"
-              class="dropdown-toggle btn btn-primary"
-            >
-              + Add Deal
-            </button>
-            <div
-              tabindex="-1"
-              role="menu"
-              aria-hidden="true"
-              class="dropdown-menu"
-            >
-              <a class="sb-color-black" href="/leads/edit"
-                ><button type="button" tabindex="0" class="dropdown-item">
-                  Create Lead
-                </button></a
-              ><a
-                class="sb-color-black"
-                href="https://testcrmvm:8081//Opportunity/Add"
-                target="_blank"
-                ><button type="button" tabindex="0" class="dropdown-item">
-                  Create Opportunity
-                </button></a
-              ><a
-                class="sb-color-black"
-                href="https://testcrmvm:8081//Company/Add"
-                target="_blank"
-                ><button type="button" tabindex="0" class="dropdown-item">
-                  Create Account
-                </button></a
-              ><a
-                class="sb-color-black"
-                href="https://testcrmvm:8081//Contact/Add"
-                target="_blank"
-                ><button type="button" tabindex="0" class="dropdown-item">
-                  Create Contact
-                </button></a
-              >
-            </div>
+            type="button"
+            data-toggle="modal"
+            data-target="#exampleModal"
+            class="dropdown-toggle btn btn-primary"
+          >
+            + Add Deal
+          </button>
           </div>
         </div>
         <div class="sb-header-user">
@@ -882,6 +848,178 @@
         </div>
       </div>
     </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header align-items-center">
+        <h5 class="modal-title" id="exampleModalLabel">New Deal</h5>
+        <a href="#" class="modal-draft-btn"><i class="icomoon_l icon-draft"></i> Draft</a>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-7">
+            <form action="">
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">New Deal</label>
+                    <input type="text" class="form-control" placeholder="New Deal">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Assign to</label>
+                    <div class="btn-group d-block">
+                      <button type="button" title="Reviewer &amp; Co-Reviewer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle form-control d-flex align-items-center justify-content-between">
+                        Person
+                      </button>
+                      <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu">
+                        <div class="sb-dropdown-holder sb-drop-mw">
+                          <div>
+                            <label class="sb-checkbox">All scores<input type="checkbox" checked=""><span class="sb-checkmark"></span></label>
+                          </div>
+                          <div>
+                            <label class="sb-checkbox">High <span class="sb-sub">(80% - 100%)</span><input type="checkbox"><span class="sb-checkmark"></span></label>
+                          </div>
+                          <div>
+                            <label class="sb-checkbox">Medium <span class="sb-sub">(50% - 79%)</span><input type="checkbox"><span class="sb-checkmark"></span></label>
+                          </div>
+                          <div>
+                            <label class="sb-checkbox">Low <span class="sb-sub">(0% - 49%)</span><input type="checkbox"><span class="sb-checkmark"></span></label>
+                          </div>
+                          <div class="d-flex justify-content-between sb-pt-16">
+                            <button type="button" class="btn btn-link">
+                              Clear</button><button type="button" class="btn btn-primary">
+                              <i class="icon-confirm"></i>Apply
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Deal With</label>
+                    <div class="btn-group d-block">
+                      <button type="button" title="Reviewer &amp; Co-Reviewer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle form-control d-flex align-items-center justify-content-between">
+                        Person
+                      </button>
+                      <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu">
+                        <div class="sb-dropdown-holder sb-drop-mw">
+                          <div>
+                            <label class="sb-checkbox">All scores<input type="checkbox" checked=""><span class="sb-checkmark"></span></label>
+                          </div>
+                          <div>
+                            <label class="sb-checkbox">High <span class="sb-sub">(80% - 100%)</span><input type="checkbox"><span class="sb-checkmark"></span></label>
+                          </div>
+                          <div>
+                            <label class="sb-checkbox">Medium <span class="sb-sub">(50% - 79%)</span><input type="checkbox"><span class="sb-checkmark"></span></label>
+                          </div>
+                          <div>
+                            <label class="sb-checkbox">Low <span class="sb-sub">(0% - 49%)</span><input type="checkbox"><span class="sb-checkmark"></span></label>
+                          </div>
+                          <div class="d-flex justify-content-between sb-pt-16">
+                            <button type="button" class="btn btn-link">
+                              Clear</button><button type="button" class="btn btn-primary">
+                              <i class="icon-confirm"></i>Apply
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Person</label>
+                    <div class="btn-group d-block">
+                      <button type="button" title="Reviewer &amp; Co-Reviewer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle form-control d-flex align-items-center justify-content-between">
+                        Person
+                      </button>
+                      <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu">
+                        <div class="sb-dropdown-holder sb-drop-mw">
+                          <div>
+                            <label class="sb-checkbox">All scores<input type="checkbox" checked=""><span class="sb-checkmark"></span></label>
+                          </div>
+                          <div>
+                            <label class="sb-checkbox">High <span class="sb-sub">(80% - 100%)</span><input type="checkbox"><span class="sb-checkmark"></span></label>
+                          </div>
+                          <div>
+                            <label class="sb-checkbox">Medium <span class="sb-sub">(50% - 79%)</span><input type="checkbox"><span class="sb-checkmark"></span></label>
+                          </div>
+                          <div>
+                            <label class="sb-checkbox">Low <span class="sb-sub">(0% - 49%)</span><input type="checkbox"><span class="sb-checkmark"></span></label>
+                          </div>
+                          <div class="d-flex justify-content-between sb-pt-16">
+                            <button type="button" class="btn btn-link">
+                              Clear</button><button type="button" class="btn btn-primary">
+                              <i class="icon-confirm"></i>Apply
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Role</label>
+                    <select name="" id="" class="form-control">
+                        <option value="">Statuses</option>
+                        <option value="">Statuses</option>
+                        <option value="">Statuses</option>
+                        <option value="">Statuses</option>
+                        <option value="">Statuses</option>
+                      </select>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Description</label>
+                    <input type="text" class="form-control" placeholder="New Deal">
+                  </div>
+                </div>
+              </div> 
+            </form>
+          </div>
+          <div class="col-5">
+              <div class="alert alert-info" role="alert">
+                <b>Hint</b>
+                <p>WordPress, the premier free open-source blogging utility, has gone through several upgrades in its life. Today it’s one of the most popular blogging tools on the Internet; it’s easy to use, powerful, and very versatile. It also has a very active base of skilled users who are eager to improve the product and to help out those who haven’t tried it before. Though the Strayhorn 1.5 version is the favorite for many, it is not as stable or as secure as the newest version 2.0.3. The best part of the new version is the security patch; the new “nonce” security </p>
+              </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row">     
+          <div class="col-7">
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1"><b>Attachment</b></label>
+                  <input type="file" class="form-control-file">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-5">
+            <div class="alert alert-info" role="alert">
+              <b>Hint 3</b>
+              <p>WordPress, the premier free open-source blogging utility, has gone through several upgrades in its life.</p>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- !!! -->
     <!-- SCRIPT -->
