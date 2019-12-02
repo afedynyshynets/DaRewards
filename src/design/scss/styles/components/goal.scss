@@ -86,7 +86,7 @@
       display: flex;
       padding-left: 16px;
       padding-right: 16px;
-      flex-direction: column-reverse;
+      // flex-direction: column-reverse;
     }
   }
   &__item {
@@ -172,6 +172,17 @@
       font-size: 12px;
       line-height: 1.67;
       color: #161f21;
+      height: 20px;
+      overflow: hidden;
+      &.show {
+        height: auto !important;
+      }
+    }
+    &_expand {
+      font-size: 12px;
+      cursor: pointer;
+      color: #019ce6;
+      margin-top: 2px;
     }
   }
 }

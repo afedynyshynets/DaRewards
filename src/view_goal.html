@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1, min-width=1440"
     />
 
     <!-- Bootstrap CSS -->
@@ -31,7 +31,7 @@
         <strong class="sb-logo"
           ><a href="https://testcrmvm:8081/" target="_blank"
             ><img
-              src="/static/media/logo.7df90f08.svg"
+              src="static/media/logo.7df90f08.svg"
               alt="DataArt SalesBoard"/></a
         ></strong>
         <ul class="nav">
@@ -357,12 +357,13 @@
                             </div>
                           </div>
                           <div class="timeline__item_title">Goal Added</div>
-                          <div class="timeline__item_text">
+                          <div class="timeline__item_text show">
                             In addition to the 2.0.3 install, you should be
                             aware that some bugs have already been found, and
                             that a plugin will need to be installed to repair
                             those bugs.
                           </div>
+                          <div class="timeline__item_expand">Show More</div>
                         </li>
                         <li class="timeline__item timeline__item_draft">
                           <div class="d-flex justify-content-between">
@@ -394,6 +395,7 @@
                             that a plugin will need to be installed to repair
                             those bugs.
                           </div>
+                          <div class="timeline__item_expand">Show More</div>
                         </li>
                         <li class="timeline__item">
                           <div class="timeline__item_photo sb-icon">
@@ -417,29 +419,7 @@
                             that a plugin will need to be installed to repair
                             those bugs.
                           </div>
-                        </li>
-                        <li class="timeline__item">
-                          <div class="timeline__item_photo sb-icon">
-                            <img
-                              src="/api/users/photo?id=de9a3498-6b0c-ea11-812f-005056942bfc"
-                              alt="Alexander Fedynyshynets"
-                            />
-                          </div>
-                          <div class="d-flex justify-content-between">
-                            <div class="timeline__item_name">
-                              by Maximilian Pivovarov
-                            </div>
-                            <div class="timeline__item_date">
-                              07.25.2019 at 6:44 PM
-                            </div>
-                          </div>
-                          <div class="timeline__item_title">Goal Added</div>
-                          <div class="timeline__item_text">
-                            In addition to the 2.0.3 install, you should be
-                            aware that some bugs have already been found, and
-                            that a plugin will need to be installed to repair
-                            those bugs.
-                          </div>
+                          <div class="timeline__item_expand">Show More</div>
                         </li>
                       </ul>
                     </div>
@@ -742,7 +722,24 @@
                       <label for="exampleFormControlInput1"
                         ><b>Attachment</b></label
                       >
-                      <input type="file" class="form-control-file" />
+                    </div>
+                    <div class="form-group">
+                      <div class="custom-file">
+                        <input
+                          type="file"
+                          class="custom-file-input"
+                          id="validatedCustomFile"
+                          required=""
+                        />
+                        <label
+                          class="custom-file-label"
+                          for="validatedCustomFile"
+                          >Choose file...</label
+                        >
+                        <div class="invalid-feedback">
+                          Example invalid custom file feedback
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

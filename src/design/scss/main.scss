@@ -20,6 +20,7 @@ body {
   color: #000;
   text-align: left;
   background-color: #fff;
+  min-width: 1440px;
 }
 
 .b_card {
@@ -51,32 +52,6 @@ body {
       color: rgb(130, 130, 130);
     }
   }
-}
-
-.btn-primary {
-  background-color: #019ce6;
-  border-color: #019ce6;
-}
-
-textarea.form-control {
-  line-height: 1.67;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-select.form-control {
-  padding-right: 8%;
-  appearance: none;
-  background-image: url(../../static/media/chevron.svg);
-  background-position: 98% center;
-  background-repeat: no-repeat;
-}
-.form-control {
-  border-radius: 4px;
-  border: solid 1px #d5e2e6;
-  height: 32px;
-  font-size: 12px;
-  line-height: 1;
-  padding: 0 8px;
 }
 
 .dropdown-toggle::after {
@@ -173,12 +148,30 @@ select.form-control {
   font-weight: bold;
   &-primary {
     min-width: 120px;
+    background-color: #019ce6;
+    border-color: #019ce6;
   }
   &-link {
     color: #019ce6;
   }
+  [class*=" icon-"]:before,
+  [class^="icon-"]:before {
+    vertical-align: middle;
+  }
 }
 
+textarea.form-control {
+  line-height: 1.67;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+select.form-control {
+  padding-right: 8%;
+  appearance: none;
+  background-image: url(../../static/media/chevron.svg);
+  background-position: 98% center;
+  background-repeat: no-repeat;
+}
 .form {
   &-group {
     margin-bottom: 17px;
@@ -194,6 +187,12 @@ select.form-control {
     }
   }
   &-control {
+    border-radius: 4px;
+    border: solid 1px #d5e2e6;
+    height: 32px;
+    font-size: 12px;
+    line-height: 32px;
+    padding: 0 8px;
     &-file {
       color: transparent;
       &::-webkit-file-upload-button {
