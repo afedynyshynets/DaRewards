@@ -1,9 +1,11 @@
 .sb-main-top-panel {
-  padding: 13px 0 24px;
+  // padding: 13px 0 24px;
+  padding: 24px 0;
   background: $white;
   border-bottom: 1px solid #d5e2e6;
 
   .sb-main-tabs {
+    margin-top: -11px;
     margin-bottom: 28px;
   }
 
