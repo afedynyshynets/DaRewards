@@ -257,7 +257,7 @@
                 <option value="">Statuses</option>
               </select>
             </div>
-            <div class="btn-group col-2">
+            <div class="btn-group col-3">
               <div class="sb-icon-input sb-icon-input-clickable">
                 <input
                   class="form-control datepicker"
@@ -267,7 +267,7 @@
                 <i class="icon-calendar"></i>
               </div>
             </div>
-            <div class="btn-group col-2">
+            <div class="btn-group col-3">
               <div class="sb-icon-input sb-icon-input-clickable">
                 <input
                   class="form-control datepicker"
@@ -276,18 +276,6 @@
                 />
                 <i class="icon-calendar"></i>
               </div>
-            </div>
-            <div class="btn-group col-2">
-              <button
-                type="button"
-                class="btn btn-xs btn-toggle"
-                data-toggle="button"
-                aria-pressed="false"
-                autocomplete="off"
-              >
-                <div class="handle"></div>
-              </button>
-              <span>Assigned to me</span>
             </div>
           </div>
         </div>
@@ -299,30 +287,30 @@
               <div class="list_head row">
                 <div class="col-1">
                   <div class="row">
-                    <div class="col-6">Status</div>
-                    <div class="col-6">Type</div>
-                  </div>
-                </div>
-                <div class="col-2">Party</div>
-                <div class="col-2">Brief</div>
-                <div class="col-3">
-                  <div class="row">
-                    <div class="col-4">Period</div>
-                    <div class="col-4">Baseline</div>
-                    <div class="col-4">Target</div>
-                  </div>
-                </div>
-                <div class="col-1">
-                  <div class="row">
-                    <div class="col-6">Progress</div>
-                    <div class="col-6">Weight</div>
+                    <div class="col-5 text-center">Status</div>
+                    <div class="col-7">Type</div>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="row">
-                    <div class="col-4">Next Review</div>
-                    <div class="col-6">Reviewer</div>
-                    <div class="col-2">Actions</div>
+                    <div class="col-6">Party</div>
+                    <div class="col-6">Brief</div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-3">Period</div>
+                    <div class="col-2">Baseline</div>
+                    <div class="col-2">Target</div>
+                    <div class="col-2">Actual</div>
+                    <div class="col-1">Progress</div>
+                    <div class="col-2">Next Review</div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="row">
+                    <div class="col-9">Reviewer</div>
+                    <div class="col-3">Actions</div>
                   </div>
                 </div>
               </div>
@@ -517,30 +505,30 @@
                     <div class="row align-items-center">
                       <div class="col-1">
                           <div class="row">
-                            <div class="col-6"><i class="icomoon_l icon-in-progress"></i></div>
-                            <div class="col-6">DealType</div>
-                          </div>
-                        </div>
-                        <div class="col-2 cell__deal_with">Daniel</div>
-                        <div class="col-2 cell__deal_name">Deal 1</div>
-                        <div class="col-3">
-                          <div class="row">
-                            <div class="col-4">04.05.19-06.05.19</div>
-                            <div class="col-4"></div>
-                            <div class="col-4"></div>
-                          </div>
-                        </div>
-                        <div class="col-1">
-                          <div class="row">
-                            <div class="col-6">60%</div>
-                            <div class="col-6"></div>
+                            <div class="col-5 text-center"><i class="icomoon_l icon-in-progress"></i></div>
+                            <div class="col-7 cell__type">DealType</div>
                           </div>
                         </div>
                         <div class="col-3">
                           <div class="row">
-                            <div class="col-4">09.05.19</div>
-                            <div class="col-6">Alexey Filimonov</div>
-                            <div class="col-2 cell__ico">
+                            <div class="col-6 cell__deal_with">Daniel Frost</div>
+                            <div class="col-6 cell__deal_name">Deal 1</div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="row">
+                            <div class="col-3">04.05.19 - 06.05.19</div>
+                            <div class="col-2"></div>
+                            <div class="col-2"></div>
+                            <div class="col-2"></div>
+                            <div class="col-1">60%</div>
+                            <div class="col-2">09.05.19</div>
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="row">
+                            <div class="col-9 cell__rev">Maximilian Pivovarov</div>
+                            <div class="col-3 cell__ico">
                               <i class="icomoon_l icon-attachment"></i>
                               <div class="btn-group" role="group">
                                 <i id="btnGroupDrop1" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
@@ -556,88 +544,127 @@
                   </div>
                   <div class="col-12 collapse" id="collapseExample1">
                     <div class="collapsed_wr">
-                        <div class="row">
-                            <div class="col-1">
-                                <div class="row">
-                                  <div class="col-6"><i class="icomoon_l icon-eye1"></i></div>
-                                  <div class="col-6"></div>
-                                </div>
-                              </div>
-                              <div class="col-2 cell__deal_with"></div>
-                              <div class="col-2 cell__goal_name">Portfolio size</div>
-                              <div class="col-3">
-                                <div class="row">
-                                  <div class="col-4">04.05.19-06.05.19</div>
-                                  <div class="col-4">$7,000,000</div>
-                                  <div class="col-4">$10,000,000</div>
-                                </div>
-                              </div>
-                              <div class="col-1">
-                                <div class="row">
-                                  <div class="col-6">60%</div>
-                                  <div class="col-6">20%</div>
-                                </div>
-                              </div>
-                              <div class="col-3">
-                                <div class="row">
-                                  <div class="col-4">09.05.19</div>
-                                  <div class="col-6">Alexey Filimonov</div>
-                                  <div class="col-2 cell__ico">
-                                    <i class="icomoon_l icon-attachment"></i>
-                                    <div class="btn-group" role="group">
-                                      <i id="btnGroupDrop2" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                                      <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
-                                        <a class="dropdown-item" href="#">Dropdown link</a>
-                                        <a class="dropdown-item" href="#">Dropdown link</a>
-                                      </div>
+                      <div class="row">
+                        <div class="col-1">
+                            <div class="row">
+                              <div class="col-5 text-center"><i class="icomoon_l icon-eye1"></i></div>
+                              <div class="col-7 cell__type"></div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-6 cell__deal_with"></div>
+                              <div class="col-6 cell__goal_name">Portfolio size</div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="row">
+                              <div class="col-3">04.05.19 - 06.05.19</div>
+                              <div class="col-2">$7,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-1">60%</div>
+                              <div class="col-2">09.05.19</div>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                              <div class="row">
+                                <div class="col-9 cell__rev">Maximilian Pivovarov</div>
+                                <div class="col-3 cell__ico">
+                                  <i class="icomoon_l icon-attachment"></i>
+                                  <div class="btn-group" role="group">
+                                    <i id="btnGroupDrop1" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-1">
-                                <div class="row">
-                                  <div class="col-6"><i class="icomoon_l icon-eye1"></i></div>
-                                  <div class="col-6"></div>
-                                </div>
-                              </div>
-                              <div class="col-2 cell__deal_with"></div>
-                              <div class="col-2 cell__goal_name">Portfolio size</div>
-                              <div class="col-3">
-                                <div class="row">
-                                  <div class="col-4">04.05.19-06.05.19</div>
-                                  <div class="col-4">$7,000,000</div>
-                                  <div class="col-4">$10,000,000</div>
-                                </div>
-                              </div>
-                              <div class="col-1">
-                                <div class="row">
-                                  <div class="col-6">60%</div>
-                                  <div class="col-6">20%</div>
-                                </div>
-                              </div>
-                              <div class="col-3">
-                                <div class="row">
-                                  <div class="col-4">09.05.19</div>
-                                  <div class="col-6">Alexey Filimonov</div>
-                                  <div class="col-2 cell__ico">
-                                    <i class="icomoon_l icon-attachment"></i>
-                                    <div class="btn-group" role="group">
-                                      <i id="btnGroupDrop3" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                                      <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
-                                        <a class="dropdown-item" href="#">Dropdown link</a>
-                                        <a class="dropdown-item" href="#">Dropdown link</a>
-                                      </div>
+                            </div>
+                      </div>    
+                      <div class="row">
+                        <div class="col-1">
+                            <div class="row">
+                              <div class="col-5 text-center"><i class="icomoon_l icon-eye1"></i></div>
+                              <div class="col-7 cell__type"></div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-6 cell__deal_with"></div>
+                              <div class="col-6 cell__goal_name">Portfolio size</div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="row">
+                              <div class="col-3">04.05.19 - 06.05.19</div>
+                              <div class="col-2">$7,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-1">60%</div>
+                              <div class="col-2">09.05.19</div>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                              <div class="row">
+                                <div class="col-9 cell__rev">Maximilian Pivovarov</div>
+                                <div class="col-3 cell__ico">
+                                  <i class="icomoon_l icon-attachment"></i>
+                                  <div class="btn-group" role="group">
+                                    <i id="btnGroupDrop1" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                        </div>
-                        <div class="row"><div class="col-12"><a href="create_goal.html">Create a Goal</a></div></div>
+                            </div>
+                      </div>   
+                      <div class="row">
+                        <div class="col-1">
+                            <div class="row">
+                              <div class="col-5 text-center"><i class="icomoon_l icon-eye1"></i></div>
+                              <div class="col-7 cell__type"></div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-6 cell__deal_with"></div>
+                              <div class="col-6 cell__goal_name">Portfolio size</div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="row">
+                              <div class="col-3">04.05.19 - 06.05.19</div>
+                              <div class="col-2">$7,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-1">60%</div>
+                              <div class="col-2">09.05.19</div>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                              <div class="row">
+                                <div class="col-9 cell__rev">Maximilian Pivovarov</div>
+                                <div class="col-3 cell__ico">
+                                  <i class="icomoon_l icon-attachment"></i>
+                                  <div class="btn-group" role="group">
+                                    <i id="btnGroupDrop1" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                      </div>                
+                      <a href="create_goal.html" class="cell__add_goal">+ Add Goal</a>
                     </div>
-                  </div>
-                </div>         
+                  </div> 
+                </div>    
                 <div
                   class="row"
                 >
@@ -649,118 +676,166 @@
                     <div class="row align-items-center">
                       <div class="col-1">
                           <div class="row">
-                            <div class="col-6"><i class="icomoon_l icon-draft"></i></div>
-                            <div class="col-6">DealType</div>
-                          </div>
-                        </div>
-                        <div class="col-2 cell__deal_with">Daniel</div>
-                        <div class="col-2 cell__deal_name">Deal 1</div>
-                        <div class="col-3">
-                          <div class="row">
-                            <div class="col-4">04.05.19-06.05.19</div>
-                            <div class="col-4"></div>
-                            <div class="col-4"></div>
-                          </div>
-                        </div>
-                        <div class="col-1">
-                          <div class="row">
-                            <div class="col-6">60%</div>
-                            <div class="col-6"></div>
+                            <div class="col-5 text-center"><i class="icomoon_l icon-in-progress"></i></div>
+                            <div class="col-7 cell__type">DealType</div>
                           </div>
                         </div>
                         <div class="col-3">
                           <div class="row">
-                            <div class="col-4">09.05.19</div>
-                            <div class="col-6">Alexey Filimonov</div>
-                            <div class="col-2 cell__ico"><i class="icomoon_l icon-actions"></i></div>
+                            <div class="col-6 cell__deal_with">Daniel Frost</div>
+                            <div class="col-6 cell__deal_name">Deal 1</div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="row">
+                            <div class="col-3">04.05.19 - 06.05.19</div>
+                            <div class="col-2"></div>
+                            <div class="col-2"></div>
+                            <div class="col-2"></div>
+                            <div class="col-1">60%</div>
+                            <div class="col-2">09.05.19</div>
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="row">
+                            <div class="col-9 cell__rev">Maximilian Pivovarov</div>
+                            <div class="col-3 cell__ico">
+                              <i class="icomoon_l icon-attachment"></i>
+                              <div class="btn-group" role="group">
+                                <i id="btnGroupDrop1" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                  <a class="dropdown-item" href="#">Dropdown link</a>
+                                  <a class="dropdown-item" href="#">Dropdown link</a>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                     </div>
                   </div>
                   <div class="col-12 collapse" id="collapseExample2">
                     <div class="collapsed_wr">
-                        <div class="row">
-                            <div class="col-1">
-                                <div class="row">
-                                  <div class="col-6"><i class="icomoon_l icon-eye1"></i></div>
-                                  <div class="col-6"></div>
-                                </div>
-                              </div>
-                              <div class="col-2 cell__deal_with"></div>
-                              <div class="col-2 cell__goal_name">Portfolio size</div>
-                              <div class="col-3">
-                                <div class="row">
-                                  <div class="col-4">04.05.19-06.05.19</div>
-                                  <div class="col-4">$7,000,000</div>
-                                  <div class="col-4">$10,000,000</div>
-                                </div>
-                              </div>
-                              <div class="col-1">
-                                <div class="row">
-                                  <div class="col-6">60%</div>
-                                  <div class="col-6">20%</div>
-                                </div>
-                              </div>
-                              <div class="col-3">
-                                <div class="row">
-                                  <div class="col-4">09.05.19</div>
-                                  <div class="col-6">Alexey Filimonov</div>
-                                  <div class="col-2 cell__ico">
-                                    <i class="icomoon_l icon-attachment"></i>
-                                    <div class="btn-group" role="group">
-                                      <i id="btnGroupDrop2" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                                      <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
-                                        <a class="dropdown-item" href="#">Dropdown link</a>
-                                        <a class="dropdown-item" href="#">Dropdown link</a>
-                                      </div>
+                      <div class="row">
+                        <div class="col-1">
+                            <div class="row">
+                              <div class="col-5 text-center"><i class="icomoon_l icon-eye1"></i></div>
+                              <div class="col-7 cell__type"></div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-6 cell__deal_with"></div>
+                              <div class="col-6 cell__goal_name">Portfolio size</div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="row">
+                              <div class="col-3">04.05.19 - 06.05.19</div>
+                              <div class="col-2">$7,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-1">60%</div>
+                              <div class="col-2">09.05.19</div>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                              <div class="row">
+                                <div class="col-9 cell__rev">Maximilian Pivovarov</div>
+                                <div class="col-3 cell__ico">
+                                  <i class="icomoon_l icon-attachment"></i>
+                                  <div class="btn-group" role="group">
+                                    <i id="btnGroupDrop1" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-1">
-                                <div class="row">
-                                  <div class="col-6"><i class="icomoon_l icon-eye1"></i></div>
-                                  <div class="col-6"></div>
-                                </div>
-                              </div>
-                              <div class="col-2 cell__deal_with"></div>
-                              <div class="col-2 cell__goal_name">Portfolio size</div>
-                              <div class="col-3">
-                                <div class="row">
-                                  <div class="col-4">04.05.19-06.05.19</div>
-                                  <div class="col-4">$7,000,000</div>
-                                  <div class="col-4">$10,000,000</div>
-                                </div>
-                              </div>
-                              <div class="col-1">
-                                <div class="row">
-                                  <div class="col-6">60%</div>
-                                  <div class="col-6">20%</div>
-                                </div>
-                              </div>
-                              <div class="col-3">
-                                <div class="row">
-                                  <div class="col-4">09.05.19</div>
-                                  <div class="col-6">Alexey Filimonov</div>
-                                  <div class="col-2 cell__ico">
-                                    <i class="icomoon_l icon-attachment"></i>
-                                    <div class="btn-group" role="group">
-                                      <i id="btnGroupDrop3" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                                      <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
-                                        <a class="dropdown-item" href="#">Dropdown link</a>
-                                        <a class="dropdown-item" href="#">Dropdown link</a>
-                                      </div>
+                            </div>
+                      </div>    
+                      <div class="row">
+                        <div class="col-1">
+                            <div class="row">
+                              <div class="col-5 text-center"><i class="icomoon_l icon-eye1"></i></div>
+                              <div class="col-7 cell__type"></div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-6 cell__deal_with"></div>
+                              <div class="col-6 cell__goal_name">Portfolio size</div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="row">
+                              <div class="col-3">04.05.19 - 06.05.19</div>
+                              <div class="col-2">$7,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-1">60%</div>
+                              <div class="col-2">09.05.19</div>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                              <div class="row">
+                                <div class="col-9 cell__rev">Maximilian Pivovarov</div>
+                                <div class="col-3 cell__ico">
+                                  <i class="icomoon_l icon-attachment"></i>
+                                  <div class="btn-group" role="group">
+                                    <i id="btnGroupDrop1" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                        </div>
-                        <div class="row"><div class="col-12"><a href="create_goal.html">Create a Goal</a></div></div>
+                            </div>
+                      </div>   
+                      <div class="row">
+                        <div class="col-1">
+                            <div class="row">
+                              <div class="col-5 text-center"><i class="icomoon_l icon-eye1"></i></div>
+                              <div class="col-7 cell__type"></div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-6 cell__deal_with"></div>
+                              <div class="col-6 cell__goal_name">Portfolio size</div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="row">
+                              <div class="col-3">04.05.19 - 06.05.19</div>
+                              <div class="col-2">$7,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-1">60%</div>
+                              <div class="col-2">09.05.19</div>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                              <div class="row">
+                                <div class="col-9 cell__rev">Maximilian Pivovarov</div>
+                                <div class="col-3 cell__ico">
+                                  <i class="icomoon_l icon-attachment"></i>
+                                  <div class="btn-group" role="group">
+                                    <i id="btnGroupDrop1" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                      </div>                
+                      <a href="create_goal.html" class="cell__add_goal">+ Add Goal</a>
                     </div>
-                  </div>
-                </div>     
+                  </div> 
+                </div>    
                 <div
                   class="row"
                 >
@@ -772,118 +847,166 @@
                     <div class="row align-items-center">
                       <div class="col-1">
                           <div class="row">
-                            <div class="col-6"><i class="icomoon_l icon-archived"></i></div>
-                            <div class="col-6">DealType</div>
-                          </div>
-                        </div>
-                        <div class="col-2 cell__deal_with">Daniel</div>
-                        <div class="col-2 cell__deal_name">Deal 1</div>
-                        <div class="col-3">
-                          <div class="row">
-                            <div class="col-4">04.05.19-06.05.19</div>
-                            <div class="col-4"></div>
-                            <div class="col-4"></div>
-                          </div>
-                        </div>
-                        <div class="col-1">
-                          <div class="row">
-                            <div class="col-6">60%</div>
-                            <div class="col-6"></div>
+                            <div class="col-5 text-center"><i class="icomoon_l icon-in-progress"></i></div>
+                            <div class="col-7 cell__type">DealType</div>
                           </div>
                         </div>
                         <div class="col-3">
                           <div class="row">
-                            <div class="col-4">09.05.19</div>
-                            <div class="col-6">Alexey Filimonov</div>
-                            <div class="col-2 cell__ico"><i class="icomoon_l icon-actions"></i></div>
+                            <div class="col-6 cell__deal_with">Daniel Frost</div>
+                            <div class="col-6 cell__deal_name">Deal 1</div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="row">
+                            <div class="col-3">04.05.19 - 06.05.19</div>
+                            <div class="col-2"></div>
+                            <div class="col-2"></div>
+                            <div class="col-2"></div>
+                            <div class="col-1">60%</div>
+                            <div class="col-2">09.05.19</div>
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="row">
+                            <div class="col-9 cell__rev">Maximilian Pivovarov</div>
+                            <div class="col-3 cell__ico">
+                              <i class="icomoon_l icon-attachment"></i>
+                              <div class="btn-group" role="group">
+                                <i id="btnGroupDrop1" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                  <a class="dropdown-item" href="#">Dropdown link</a>
+                                  <a class="dropdown-item" href="#">Dropdown link</a>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                     </div>
                   </div>
                   <div class="col-12 collapse" id="collapseExample3">
                     <div class="collapsed_wr">
-                        <div class="row">
-                            <div class="col-1">
-                                <div class="row">
-                                  <div class="col-6"><i class="icomoon_l icon-eye1"></i></div>
-                                  <div class="col-6"></div>
-                                </div>
-                              </div>
-                              <div class="col-2 cell__deal_with"></div>
-                              <div class="col-2 cell__goal_name">Portfolio size</div>
-                              <div class="col-3">
-                                <div class="row">
-                                  <div class="col-4">04.05.19-06.05.19</div>
-                                  <div class="col-4">$7,000,000</div>
-                                  <div class="col-4">$10,000,000</div>
-                                </div>
-                              </div>
-                              <div class="col-1">
-                                <div class="row">
-                                  <div class="col-6">60%</div>
-                                  <div class="col-6">20%</div>
-                                </div>
-                              </div>
-                              <div class="col-3">
-                                <div class="row">
-                                  <div class="col-4">09.05.19</div>
-                                  <div class="col-6">Alexey Filimonov</div>
-                                  <div class="col-2 cell__ico">
-                                    <i class="icomoon_l icon-attachment"></i>
-                                    <div class="btn-group" role="group">
-                                      <i id="btnGroupDrop2" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                                      <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
-                                        <a class="dropdown-item" href="#">Dropdown link</a>
-                                        <a class="dropdown-item" href="#">Dropdown link</a>
-                                      </div>
+                      <div class="row">
+                        <div class="col-1">
+                            <div class="row">
+                              <div class="col-5 text-center"><i class="icomoon_l icon-eye1"></i></div>
+                              <div class="col-7 cell__type"></div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-6 cell__deal_with"></div>
+                              <div class="col-6 cell__goal_name">Portfolio size</div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="row">
+                              <div class="col-3">04.05.19 - 06.05.19</div>
+                              <div class="col-2">$7,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-1">60%</div>
+                              <div class="col-2">09.05.19</div>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                              <div class="row">
+                                <div class="col-9 cell__rev">Maximilian Pivovarov</div>
+                                <div class="col-3 cell__ico">
+                                  <i class="icomoon_l icon-attachment"></i>
+                                  <div class="btn-group" role="group">
+                                    <i id="btnGroupDrop1" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-1">
-                                <div class="row">
-                                  <div class="col-6"><i class="icomoon_l icon-eye1"></i></div>
-                                  <div class="col-6"></div>
-                                </div>
-                              </div>
-                              <div class="col-2 cell__deal_with"></div>
-                              <div class="col-2 cell__goal_name">Portfolio size</div>
-                              <div class="col-3">
-                                <div class="row">
-                                  <div class="col-4">04.05.19-06.05.19</div>
-                                  <div class="col-4">$7,000,000</div>
-                                  <div class="col-4">$10,000,000</div>
-                                </div>
-                              </div>
-                              <div class="col-1">
-                                <div class="row">
-                                  <div class="col-6">60%</div>
-                                  <div class="col-6">20%</div>
-                                </div>
-                              </div>
-                              <div class="col-3">
-                                <div class="row">
-                                  <div class="col-4">09.05.19</div>
-                                  <div class="col-6">Alexey Filimonov</div>
-                                  <div class="col-2 cell__ico">
-                                    <i class="icomoon_l icon-attachment"></i>
-                                    <div class="btn-group" role="group">
-                                      <i id="btnGroupDrop3" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                                      <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
-                                        <a class="dropdown-item" href="#">Dropdown link</a>
-                                        <a class="dropdown-item" href="#">Dropdown link</a>
-                                      </div>
+                            </div>
+                      </div>    
+                      <div class="row">
+                        <div class="col-1">
+                            <div class="row">
+                              <div class="col-5 text-center"><i class="icomoon_l icon-eye1"></i></div>
+                              <div class="col-7 cell__type"></div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-6 cell__deal_with"></div>
+                              <div class="col-6 cell__goal_name">Portfolio size</div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="row">
+                              <div class="col-3">04.05.19 - 06.05.19</div>
+                              <div class="col-2">$7,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-1">60%</div>
+                              <div class="col-2">09.05.19</div>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                              <div class="row">
+                                <div class="col-9 cell__rev">Maximilian Pivovarov</div>
+                                <div class="col-3 cell__ico">
+                                  <i class="icomoon_l icon-attachment"></i>
+                                  <div class="btn-group" role="group">
+                                    <i id="btnGroupDrop1" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                        </div>
-                        <div class="row"><div class="col-12"><a href="create_goal.html">Create a Goal</a></div></div>
+                            </div>
+                      </div>   
+                      <div class="row">
+                        <div class="col-1">
+                            <div class="row">
+                              <div class="col-5 text-center"><i class="icomoon_l icon-eye1"></i></div>
+                              <div class="col-7 cell__type"></div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-6 cell__deal_with"></div>
+                              <div class="col-6 cell__goal_name">Portfolio size</div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="row">
+                              <div class="col-3">04.05.19 - 06.05.19</div>
+                              <div class="col-2">$7,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-1">60%</div>
+                              <div class="col-2">09.05.19</div>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                              <div class="row">
+                                <div class="col-9 cell__rev">Maximilian Pivovarov</div>
+                                <div class="col-3 cell__ico">
+                                  <i class="icomoon_l icon-attachment"></i>
+                                  <div class="btn-group" role="group">
+                                    <i id="btnGroupDrop1" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                      </div>                
+                      <a href="create_goal.html" class="cell__add_goal">+ Add Goal</a>
                     </div>
-                  </div>
-                </div>     
+                  </div> 
+                </div>    
                 <div
                   class="row"
                 >
@@ -895,118 +1018,166 @@
                     <div class="row align-items-center">
                       <div class="col-1">
                           <div class="row">
-                            <div class="col-6"><i class="icomoon_l icon-eye1"></i></div>
-                            <div class="col-6">DealType</div>
-                          </div>
-                        </div>
-                        <div class="col-2 cell__deal_with">Daniel</div>
-                        <div class="col-2 cell__deal_name">Deal 1</div>
-                        <div class="col-3">
-                          <div class="row">
-                            <div class="col-4">04.05.19-06.05.19</div>
-                            <div class="col-4"></div>
-                            <div class="col-4"></div>
-                          </div>
-                        </div>
-                        <div class="col-1">
-                          <div class="row">
-                            <div class="col-6">60%</div>
-                            <div class="col-6"></div>
+                            <div class="col-5 text-center"><i class="icomoon_l icon-in-progress"></i></div>
+                            <div class="col-7 cell__type">DealType</div>
                           </div>
                         </div>
                         <div class="col-3">
                           <div class="row">
-                            <div class="col-4">09.05.19</div>
-                            <div class="col-6">Alexey Filimonov</div>
-                            <div class="col-2 cell__ico"><i class="icomoon_l icon-actions"></i></div>
+                            <div class="col-6 cell__deal_with">Daniel Frost</div>
+                            <div class="col-6 cell__deal_name">Deal 1</div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="row">
+                            <div class="col-3">04.05.19 - 06.05.19</div>
+                            <div class="col-2"></div>
+                            <div class="col-2"></div>
+                            <div class="col-2"></div>
+                            <div class="col-1">60%</div>
+                            <div class="col-2">09.05.19</div>
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="row">
+                            <div class="col-9 cell__rev">Maximilian Pivovarov</div>
+                            <div class="col-3 cell__ico">
+                              <i class="icomoon_l icon-attachment"></i>
+                              <div class="btn-group" role="group">
+                                <i id="btnGroupDrop1" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                  <a class="dropdown-item" href="#">Dropdown link</a>
+                                  <a class="dropdown-item" href="#">Dropdown link</a>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                     </div>
                   </div>
                   <div class="col-12 collapse" id="collapseExample4">
                     <div class="collapsed_wr">
-                        <div class="row">
-                            <div class="col-1">
-                                <div class="row">
-                                  <div class="col-6"><i class="icomoon_l icon-eye1"></i></div>
-                                  <div class="col-6"></div>
-                                </div>
-                              </div>
-                              <div class="col-2 cell__deal_with"></div>
-                              <div class="col-2 cell__goal_name">Portfolio size</div>
-                              <div class="col-3">
-                                <div class="row">
-                                  <div class="col-4">04.05.19-06.05.19</div>
-                                  <div class="col-4">$7,000,000</div>
-                                  <div class="col-4">$10,000,000</div>
-                                </div>
-                              </div>
-                              <div class="col-1">
-                                <div class="row">
-                                  <div class="col-6">60%</div>
-                                  <div class="col-6">20%</div>
-                                </div>
-                              </div>
-                              <div class="col-3">
-                                <div class="row">
-                                  <div class="col-4">09.05.19</div>
-                                  <div class="col-6">Alexey Filimonov</div>
-                                  <div class="col-2 cell__ico">
-                                    <i class="icomoon_l icon-attachment"></i>
-                                    <div class="btn-group" role="group">
-                                      <i id="btnGroupDrop2" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                                      <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
-                                        <a class="dropdown-item" href="#">Dropdown link</a>
-                                        <a class="dropdown-item" href="#">Dropdown link</a>
-                                      </div>
+                      <div class="row">
+                        <div class="col-1">
+                            <div class="row">
+                              <div class="col-5 text-center"><i class="icomoon_l icon-eye1"></i></div>
+                              <div class="col-7 cell__type"></div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-6 cell__deal_with"></div>
+                              <div class="col-6 cell__goal_name">Portfolio size</div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="row">
+                              <div class="col-3">04.05.19 - 06.05.19</div>
+                              <div class="col-2">$7,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-1">60%</div>
+                              <div class="col-2">09.05.19</div>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                              <div class="row">
+                                <div class="col-9 cell__rev">Maximilian Pivovarov</div>
+                                <div class="col-3 cell__ico">
+                                  <i class="icomoon_l icon-attachment"></i>
+                                  <div class="btn-group" role="group">
+                                    <i id="btnGroupDrop1" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-1">
-                                <div class="row">
-                                  <div class="col-6"><i class="icomoon_l icon-eye1"></i></div>
-                                  <div class="col-6"></div>
-                                </div>
-                              </div>
-                              <div class="col-2 cell__deal_with"></div>
-                              <div class="col-2 cell__goal_name">Portfolio size</div>
-                              <div class="col-3">
-                                <div class="row">
-                                  <div class="col-4">04.05.19-06.05.19</div>
-                                  <div class="col-4">$7,000,000</div>
-                                  <div class="col-4">$10,000,000</div>
-                                </div>
-                              </div>
-                              <div class="col-1">
-                                <div class="row">
-                                  <div class="col-6">60%</div>
-                                  <div class="col-6">20%</div>
-                                </div>
-                              </div>
-                              <div class="col-3">
-                                <div class="row">
-                                  <div class="col-4">09.05.19</div>
-                                  <div class="col-6">Alexey Filimonov</div>
-                                  <div class="col-2 cell__ico">
-                                    <i class="icomoon_l icon-attachment"></i>
-                                    <div class="btn-group" role="group">
-                                      <i id="btnGroupDrop3" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                                      <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
-                                        <a class="dropdown-item" href="#">Dropdown link</a>
-                                        <a class="dropdown-item" href="#">Dropdown link</a>
-                                      </div>
+                            </div>
+                      </div>    
+                      <div class="row">
+                        <div class="col-1">
+                            <div class="row">
+                              <div class="col-5 text-center"><i class="icomoon_l icon-eye1"></i></div>
+                              <div class="col-7 cell__type"></div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-6 cell__deal_with"></div>
+                              <div class="col-6 cell__goal_name">Portfolio size</div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="row">
+                              <div class="col-3">04.05.19 - 06.05.19</div>
+                              <div class="col-2">$7,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-1">60%</div>
+                              <div class="col-2">09.05.19</div>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                              <div class="row">
+                                <div class="col-9 cell__rev">Maximilian Pivovarov</div>
+                                <div class="col-3 cell__ico">
+                                  <i class="icomoon_l icon-attachment"></i>
+                                  <div class="btn-group" role="group">
+                                    <i id="btnGroupDrop1" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                        </div>
-                        <div class="row"><div class="col-12"><a href="create_goal.html">Create a Goal</a></div></div>
+                            </div>
+                      </div>   
+                      <div class="row">
+                        <div class="col-1">
+                            <div class="row">
+                              <div class="col-5 text-center"><i class="icomoon_l icon-eye1"></i></div>
+                              <div class="col-7 cell__type"></div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="row">
+                              <div class="col-6 cell__deal_with"></div>
+                              <div class="col-6 cell__goal_name">Portfolio size</div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="row">
+                              <div class="col-3">04.05.19 - 06.05.19</div>
+                              <div class="col-2">$7,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-2">$17,000,000</div>
+                              <div class="col-1">60%</div>
+                              <div class="col-2">09.05.19</div>
+                            </div>
+                          </div>
+                          <div class="col-2">
+                              <div class="row">
+                                <div class="col-9 cell__rev">Maximilian Pivovarov</div>
+                                <div class="col-3 cell__ico">
+                                  <i class="icomoon_l icon-attachment"></i>
+                                  <div class="btn-group" role="group">
+                                    <i id="btnGroupDrop1" class="icomoon_l icon-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
+                                      <a class="dropdown-item" href="#">Dropdown link</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                      </div>                
+                      <a href="create_goal.html" class="cell__add_goal">+ Add Goal</a>
                     </div>
-                  </div>
-                </div>          
+                  </div> 
+                </div>                               
               </div>
             </div>
           </div>
