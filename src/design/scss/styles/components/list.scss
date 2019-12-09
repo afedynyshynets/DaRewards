@@ -105,10 +105,10 @@
   &__goal_name,
   &__type,
   &__rev {
-    color: $black;
+    color: #323f42;
   }
   &__deal_with {
-    color: $black;
+    color: #323f42;
     font-weight: bold;
   }
   &__attach {
@@ -184,7 +184,7 @@
       width: 100%;
       margin: 0;
       font-size: 12px;
-      color: #7c99a1;
+      color: #323f42;
       align-items: center;
       border-bottom: 1px solid #d5e2e6;
       // &:nth-child(1) {
@@ -204,9 +204,11 @@
       i {
         font-size: 24px;
         &.icon-attachment {
+          color: #7c99a1;
           font-size: 18px;
         }
         &.icon-actions {
+          color: #7c99a1;
           font-size: 18px;
         }
       }
@@ -262,7 +264,7 @@
       color: #7c99a1;
     }
     &__row {
-      color: $black;
+      color: #323f42;
       margin-bottom: 10px;
       a {
         color: #019ce6;
