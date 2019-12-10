@@ -322,6 +322,7 @@ body .select2 {
     outline: none !important;
   }
   &-container {
+    width: 100% !important;
     .select2-selection {
       &--single {
         height: 32px;
@@ -360,5 +361,27 @@ body .select2 {
         // box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
       }
     }
+  }
+}
+
+.list-group {
+  &-item {
+    padding: 5px 8px;
+    font-size: 12px;
+    color: #7c99a1;
+    a {
+      color: #7c99a1;
+    }
+    i {
+      font-size: 12px;
+    }
+  }
+  & + .custom-file {
+    margin-top: 10px;
+  }
+}
+.custom-file {
+  input[type="file"] {
+    opacity: 0;
   }
 }
