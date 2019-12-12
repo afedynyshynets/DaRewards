@@ -256,6 +256,7 @@ select.form-control {
 .form {
   &-group {
     margin-bottom: 17px;
+    position: relative;
     label {
       display: block;
       font-size: 12px;
@@ -264,6 +265,20 @@ select.form-control {
       b {
         font-size: 14px;
         color: #323f42;
+      }
+    }
+    .select_wr {
+      position: relative;
+      z-index: 10;
+    }
+    .spinner_wr {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -8px;
+      margin-top: -8px;
+      .spinner-border {
+        display: block;
       }
     }
   }
