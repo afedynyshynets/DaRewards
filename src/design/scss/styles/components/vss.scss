@@ -96,17 +96,10 @@
       color: #7c99a1;
       letter-spacing: 0;
       margin-bottom: 16px;
-      div:nth-child(2),
-      div:nth-child(3) {
-        border-bottom: 1px solid #d5e2e6;
-        min-height: 30px;
-        display: flex;
-        align-items: center;
-      }
     }
     &__item {
       min-height: 30px;
-      align-items: center;
+      align-items: flex-start;
       margin-bottom: 16px;
       div:nth-child(1) {
         font-size: 12px;
