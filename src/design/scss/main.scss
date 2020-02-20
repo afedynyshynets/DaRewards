@@ -231,12 +231,36 @@ body {
   line-height: 32px;
   padding-top: 0;
   padding-bottom: 0;
-  border: none;
   font-weight: bold;
   &-primary {
+    border: 2px solid #019ce6;
     min-width: 120px;
     background-color: #019ce6;
     border-color: #019ce6;
+    line-height: 28px;
+    &:hover {
+      background-color: #32b4f5;
+      border: 2px solid #32b4f5;
+    }
+  }
+  &-secondary {
+    color: #019ce6;
+    border: 2px solid #019ce6;
+    min-width: 120px;
+    background-color: #fff;
+    border-color: #019ce6;
+    line-height: 28px;
+    &:hover {
+      background-color: #32b4f5;
+      border: 2px solid #32b4f5;
+      color: #fff;
+    }
+  }
+  &-success {
+    &:hover {
+      background: #24d0a4;
+      border-color: #24d0a4;
+    }
   }
   &-link {
     color: #019ce6;
