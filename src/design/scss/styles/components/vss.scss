@@ -3,7 +3,7 @@
     div[class*="col"] {
       display: flex;
       align-items: flex-end;
-      * {
+      *:not(.sb-checkmark) {
         width: 100%;
       }
     }
@@ -29,10 +29,9 @@
       height: 30px;
       display: flex;
       align-items: center;
-      padding-left: 38px;
+      padding-left: 28px;
       .sb-checkmark {
-        width: 30px;
-        height: 30px;
+        top: auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -41,8 +40,6 @@
           top: auto;
           position: relative;
           margin-top: -4px;
-          width: 9px;
-          height: 11px;
         }
       }
     }
