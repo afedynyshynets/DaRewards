@@ -364,6 +364,21 @@ select.form-control {
         color: #fff;
       }
     }
+    &.contenteditable {
+      padding: 5px 8px;
+      height: 92px;
+      overflow: auto;
+      line-height: 1.67;
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+      }
+    }
   }
 }
 
