@@ -193,12 +193,12 @@
       -o-transition: 0.3s ease-in-out;
       transition: 0.3s ease-in-out;
       &.vss_bg {
+        &:hover {
+          background-color: #e8e8e8;
+        }
+      }
+      &.mbo_bg {
         background-color: #fbfcfc;
-      }
-      &:hover:not(.vss_bg) {
-        background-color: #e8e8e8;
-      }
-      &.vss_bg {
         .collapsed_wr > .row {
           will-change: transition;
           -webkit-transition: 0.3s ease-in-out;
@@ -206,6 +206,7 @@
           -o-transition: 0.3s ease-in-out;
           transition: 0.3s ease-in-out;
           &:hover {
+            cursor: pointer;
             background-color: #e8e8e8;
           }
         }
