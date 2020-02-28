@@ -194,6 +194,7 @@
       transition: 0.3s ease-in-out;
       &.vss_bg {
         &:hover {
+          cursor: pointer;
           background-color: #e8e8e8;
         }
       }
