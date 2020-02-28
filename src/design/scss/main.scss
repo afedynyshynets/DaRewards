@@ -367,11 +367,14 @@ select.form-control {
     &.contenteditable {
       padding: 5px 8px;
       height: 92px;
-      overflow: auto;
+      overflow-x: auto;
+      overflow-y: scroll;
       line-height: 1.67;
       &::-webkit-scrollbar {
         -webkit-appearance: none;
         width: 7px;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
       }
       &::-webkit-scrollbar-thumb {
         border-radius: 4px;

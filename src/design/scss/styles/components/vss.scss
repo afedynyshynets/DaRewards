@@ -63,6 +63,8 @@
       &::-webkit-scrollbar {
         -webkit-appearance: none;
         height: 7px;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
       }
       &::-webkit-scrollbar-thumb {
         border-radius: 4px;
